@@ -1,5 +1,6 @@
 import os
 
+# Convierte un archivo exe a bin.
 def exe_a_bin(ruta_exe, ruta_bin):
     try:
         # Abrimos el archivo exe como binario.
@@ -21,3 +22,5 @@ def exe_a_bin(ruta_exe, ruta_bin):
         print(f"Error: El archivo '{ruta_exe}' no se encuentra.")
     except Exception as e:
         print(f"Ocurrió un error: {e}")
+
+

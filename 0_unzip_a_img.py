@@ -6,7 +6,6 @@ import shutil
 
 # Scripts creados.
 from unzip import unzip_with_7zip
-from unzip import mover_archivos_exe
 from exe_a_bin import exe_a_bin
 from bin_a_img import bin_a_img
 

@@ -2,6 +2,17 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Esta función se encarga de llevar un registro del los tamaños en bits de los archivos.
+def agregar_numero_a_archivo(ruta_archivo, numero):
+    try:
+        # Abre el archivo en modo de escritura (append), para agregar contenido al final
+        with open(ruta_archivo, 'a') as archivo:
+            # Agrega el número en una nueva línea
+            archivo.write(f"{numero}\n")
+        print(f"Se ha agregado el número {numero} al archivo {ruta_archivo}.")
+    except Exception as e:
+        print(f"Ocurrió un error al intentar escribir en el archivo: {e}")
+
 def bin_a_img(ruta_bin, ruta_img, width=128):
     try:
         # Abrimos y leemos el archivo binario.
@@ -9,6 +20,12 @@ def bin_a_img(ruta_bin, ruta_img, width=128):
             contenido = f.read()
         # Convertimos a un array de 8 bits (valores de 0 a 255)
         byte_array = np.frombuffer(contenido, dtype=np.uint8)
+
+        # Guardamos el número de bytes 
+        ruta = "./2 bin/tam_bytes_arrays.txt"
+        numero_a_agregar = byte_array.nbytes
+        print(numero_a_agregar)
+        agregar_numero_a_archivo(ruta, numero_a_agregar)
 
         # Calculamos la altura de la imagen
         height = len(byte_array) // width
