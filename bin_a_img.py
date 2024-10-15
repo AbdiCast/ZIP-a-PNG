@@ -1,6 +1,7 @@
 import os
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+from PIL import Image
 
 # Esta función se encarga de llevar un registro del los tamaños en bits de los archivos.
 def agregar_numero_a_archivo(ruta_archivo, numero):
@@ -12,6 +13,16 @@ def agregar_numero_a_archivo(ruta_archivo, numero):
         print(f"Se ha agregado el número {numero} al archivo {ruta_archivo}.")
     except Exception as e:
         print(f"Ocurrió un error al intentar escribir en el archivo: {e}")
+
+def guardar_imagen_con_pillow(ruta_img_completa, image_array):
+    # Asegurarse de que el array tiene un rango de 0 a 255 y convertir a tipo uint8
+    image_array = (image_array * 255).astype(np.uint8)
+    
+    # Crear una imagen de Pillow a partir del array de NumPy
+    img = Image.fromarray(image_array)
+    
+    # Guardar la imagen en escala de grises (modo 'L')
+    img.save(ruta_img_completa)
 
 def bin_a_img(ruta_bin, ruta_img, width=128):
     try:
@@ -42,7 +53,8 @@ def bin_a_img(ruta_bin, ruta_img, width=128):
         nombre_sin_extension = os.path.splitext(nombre_con_extension)[0]
         ruta_img_completa = os.path.join(ruta_img, nombre_sin_extension + '.png')
         # Guardar la imagen
-        plt.imsave(ruta_img_completa, image, cmap='gray')
+        guardar_imagen_con_pillow(ruta_img_completa, image)
+        #plt.imsave(ruta_img_completa, image, cmap='gray')
         
         print(f"Archivo img creado: '{ruta_img_completa}'.")
     
