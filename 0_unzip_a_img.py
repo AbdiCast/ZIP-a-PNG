@@ -4,11 +4,13 @@ import glob
 import os
 import shutil
 
-# Scripts creados.
-from unzip import unzip_with_7zip
-from exe_a_bin import exe_a_bin
-from bin_a_img import bin_a_img
+# Scripts para convertir de un tipo de dato a otro.
+from Convertir_datos.unzip import unzip_with_7zip
+from Convertir_datos.exe_a_bin import exe_a_bin
+from Convertir_datos.bin_a_img import bin_a_img
 
+# Scripts para extrar características.
+from Extraer_Caracteristicas.new_format_file import extraer_caractiscticas
 
 # Esta función mueve un archivo dado a una ruta.
 def mover_archivo(archivo, directorio_destino):
@@ -32,13 +34,17 @@ for ruta_zip in rutas_zip:
         password = 'infected' 
         unzip_with_7zip(ruta_zip, dir_destino, password)
 
+        # Procesado de PESTUDIO...
+
+        # Convertir datos a JSON...
+
         # Convertimos de .exe a .bin
         directorio = './1 exe/'
         ruta_bin = './2 bin/'
         rutas_exe = obtener_archivosdeTipo(directorio,'*.exe')
         for ruta_exe in rutas_exe:
             exe_a_bin(ruta_exe, ruta_bin)
-
+        # Convertimos de JSON a PNG...
         # Convertimos de .bin a imagen
         directorio = './2 bin/'
         ruta_img = './3 img/'
