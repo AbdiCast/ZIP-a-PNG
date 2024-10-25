@@ -47,8 +47,9 @@ def unzip_with_7zip(zip_file_path, output_dir, password):
         if result.returncode == 0:
             print(f"Archivo descomprimido con éxito : {output_dir}")
             # Obtenemos las carpetas en pasadas a la ruta destino.
-            carpetas_unzipped = obtener_rutas_carpetas('./1 exe/')
+            carpetas_unzipped = obtener_rutas_carpetas('./Resultados/1 exe/')
             for carpeta_unzipped in carpetas_unzipped:
+                # aquí movemos la carpeta descomprimida y la sacamos de su directorio padre.
                 mover_archivos_exe(carpeta_unzipped)
         else:
             print(f"Error al descomprimir el archivo: {result.stderr}")

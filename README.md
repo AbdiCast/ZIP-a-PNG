@@ -4,9 +4,14 @@ Este proyecto utiliza un ambiente virtual para gestionar las dependencias.
 
 ## Instrucciones de configuración
 
+### Instalar RADARE2
+```sh
+https://github.com/radareorg/radare2/releases/tag/5.9.6
+```
+
 ### 1. Crear un entorno virtual
 
-Primero, crea un entorno virtual en la raíz del proyecto utilizando el siguiente comando:
+Crear un entorno virtual en la raíz del proyecto utilizando el siguiente comando:
 
 ```bash
 python -m venv .venv
@@ -19,3 +24,4 @@ python -m venv .venv
 ```bash
 pip install -r requirements.txt
 ```
+

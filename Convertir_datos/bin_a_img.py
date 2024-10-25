@@ -32,8 +32,8 @@ def bin_a_img(ruta_bin, ruta_img, width=128):
         # Convertimos a un array de 8 bits (valores de 0 a 255)
         byte_array = np.frombuffer(contenido, dtype=np.uint8)
 
-        # Guardamos el número de bytes 
-        ruta = "./2 bin/tam_bytes_arrays.txt"
+        # Guardamos el número de bytes en un archivo 
+        ruta = "./Resultados/2 bin/tam_bytes_arrays.txt"
         numero_a_agregar = byte_array.nbytes
         print(numero_a_agregar)
         agregar_numero_a_archivo(ruta, numero_a_agregar)

@@ -24,8 +24,9 @@ def guardar_imagen_con_pillow(ruta_img_completa, image_array):
     # Guardar la imagen en escala de grises (modo 'L')
     img.save(ruta_img_completa)
 
-def json_a_img(ruta_json, ruta_img, width=128):
+def json_a_img(ruta_json, ruta_folder_img, width=32):
     try:
+        
         # Abrimos y leemos el archivo json.
         with open(ruta_json, 'rb') as f:
             contenido = f.read()
@@ -35,7 +36,6 @@ def json_a_img(ruta_json, ruta_img, width=128):
         # Guardamos el número de bytes en un archivo 
         ruta = "./Resultados/2 json/tam_bytes_arrays.txt"
         numero_a_agregar = byte_array.nbytes
-        print(numero_a_agregar)
         agregar_numero_a_archivo(ruta, numero_a_agregar)
 
         # Calculamos la altura de la imagen
@@ -51,7 +51,7 @@ def json_a_img(ruta_json, ruta_img, width=128):
         #plt.show()
         nombre_con_extension = os.path.split(ruta_json)[1]
         nombre_sin_extension = os.path.splitext(nombre_con_extension)[0]
-        ruta_img_completa = os.path.join(ruta_img, nombre_sin_extension + '.png')
+        ruta_img_completa = os.path.join(ruta_folder_img, nombre_sin_extension + '.png')
         # Guardar la imagen
         guardar_imagen_con_pillow(ruta_img_completa, image)
         #plt.imsave(ruta_img_completa, image, cmap='gray')
