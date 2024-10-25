@@ -25,3 +25,6 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+## Uso
+
+Agrega las carpetas .zip a convertir a imagen a la carpeta ZIP-a-PNG/Resultados/0 zipped/NoProcesados
