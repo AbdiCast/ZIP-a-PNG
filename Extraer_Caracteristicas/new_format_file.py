@@ -2,6 +2,8 @@ import r2pipe
 import hashlib
 import json
 import os
+from Extraer_Caracteristicas.entropia import calculate_entropy
+from Extraer_Caracteristicas.entropia import calculate_file_entropy
 
 def get_file_info(file_path):
     # Obtener nombre y tamaño del archivo
@@ -40,7 +42,7 @@ def extract_json_data(file_path):
     resources = json.loads(r2.cmd("irj")) 
     #metadata = json.loads(r2.cmd("iHj")) 
     timestamp = r2.cmdj("ij") 
-    entropy_data =r2.cmd("iSj") #float(r2.cmd("p= asdfasdf").strip()) # 
+    entropy_data = calculate_file_entropy(file_path) # entropy_data =r2.cmd("iSj") #float(r2.cmd("p= asdfasdf").strip()) # 
     # Procesar strings sospechosos (ejemplo básico)
     #suspicious_strings = [s['string'] for s in strings['strings'] if "http" in s['string'] or "C2" in s['string'] or "APPDATA" in s['string']]
     suspicious_strings = []
@@ -82,7 +84,7 @@ def extract_json_data(file_path):
                 "name": section['name'],
                 "virtual_size": section['vsize'],
                 "raw_size": section['size'],
-                "entropy": section.get('entropy', None)  # Manejo de ausencia de 'entropy'
+                "entropy": calculate_entropy(r2.cmdj(f"pxj {section['size']} @ {section['vaddr']}"))  # Manejo de ausencia de 'entropy'
             } for section in sections
         ],
         "resources": {

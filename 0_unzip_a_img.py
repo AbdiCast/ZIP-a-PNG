@@ -6,12 +6,10 @@ import shutil
 
 # Scripts para convertir de un tipo de dato a otro.
 from Convertir_datos.unzip import unzip_with_7zip
-from Convertir_datos.exe_a_bin import exe_a_bin
-from Convertir_datos.bin_a_img import bin_a_img
 from Convertir_datos.json_a_img import json_a_img
 
 # Scripts para extrar características.
-from Extraer_Caracteristicas.new_format_file import extraer_caractiscticas
+from Extraer_Caracteristicas.new_format_file import extraer_caractiscticas 
 
 
 
