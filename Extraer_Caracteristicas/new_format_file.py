@@ -1,10 +1,10 @@
-import r2pipe
-import hashlib
-import json
-import os
-from collections import defaultdict
 from Extraer_Caracteristicas.entropia import calculate_entropy
 from Extraer_Caracteristicas.entropia import calculate_file_entropy
+from collections import defaultdict
+import hashlib
+import r2pipe
+import json
+import os
 
 def get_file_info(file_path):
     # Obtener nombre y tamaño del archivo
@@ -28,7 +28,6 @@ def get_file_info(file_path):
             "sha256": sha256_hash.hexdigest()
         }
     }
-    
     return file_info
 
 def extract_json_data(file_path):
@@ -43,24 +42,23 @@ def extract_json_data(file_path):
     resources = json.loads(r2.cmd("irj")) 
     timestamp = r2.cmdj("ij") 
 
-    # Agrupar funciones
-    grouped = defaultdict(list)
+    # Agrupar funciones por libreria 
+    grouped_imp = defaultdict(list)
     for imp in imports:
-        grouped[imp["libname"]].append(imp["name"])
+        grouped_imp[imp["libname"]].append(imp["name"])
 
-    # Agrupar funciones
+    # Agrupar recursos por tipo
     grouped_rcs = defaultdict(list)
     for rcs in resources:
         grouped_rcs[rcs['type']].append(rcs["name"])
 
-    # Agrupar funciones
+    # Agrupar strings por secciones
     grouped_str = defaultdict(list)
     for str in strings:
         grouped_str[str['section']].append(str["string"])
         
     # Continuamos
-    suspicious_dll = ["d"]
-    suspicious_functions = []
+    suspicious_imports = []
     suspicious_strings = []
 
     entropy_data = calculate_file_entropy(file_path) # entropy_data =r2.cmd("iSj") #float(r2.cmd("p= asdfasdf").strip()) # 
@@ -72,17 +70,15 @@ def extract_json_data(file_path):
         # Comprobar si alguno de los términos sospechosos está presente en la cadena
         if "http" in string_value or "C2" in string_value or "APPDATA" in string_value:
             suspicious_strings.append(string_value)  # Agregar la cadena sospechosa a la lista
-    
-
-    
+     
     # Armar estructura JSON
     analysis_data = {
         "compilation_timestamp": timestamp["bin"]['compiled'],
         
         "entropy": entropy_data,
         "imports": {
-            "dlls": [{"libname": libname, "functions": functions} for libname, functions in grouped.items()],
-            "suspicious_imports": suspicious_dll
+            "dlls": [{"libname": libname, "functions": functions} for libname, functions in grouped_imp.items()],
+            "suspicious_imports": suspicious_imports
         },
         "strings": {
             "total_strings": len(strings),
@@ -99,8 +95,7 @@ def extract_json_data(file_path):
         ],
         "resources": {
             "total_size": len(resources),
-            "details": [{"type": types, "names": names} for types, names in grouped_rcs.items()],
-           
+            "details": [{"type": types, "names": names} for types, names in grouped_rcs.items()],     
         }
     }
     
@@ -119,8 +114,3 @@ def extraer_caractiscticas(origin_file_path, dest_file_path):
     # Convertir a JSON y guardar en un archivo
     with open(dest_file_path, "w") as outfile:
         json.dump(final_output, outfile, indent=4)
-
-if __name__ == "__main__":
-    origin_file_path = "C:/Users/castr/Downloads/Ledger Live.exe"  # Cambia esto por el path de tu archivo PE
-    dest_file_path = "analysis_output.json"
-    extraer_caractiscticas(origin_file_path,dest_file_path)
