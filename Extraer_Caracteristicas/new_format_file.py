@@ -2,6 +2,7 @@ import r2pipe
 import hashlib
 import json
 import os
+from collections import defaultdict
 from Extraer_Caracteristicas.entropia import calculate_entropy
 from Extraer_Caracteristicas.entropia import calculate_file_entropy
 
@@ -40,12 +41,32 @@ def extract_json_data(file_path):
     imports = json.loads(r2.cmd("iij")) 
     strings = json.loads(r2.cmd("izj")) 
     resources = json.loads(r2.cmd("irj")) 
-    #metadata = json.loads(r2.cmd("iHj")) 
     timestamp = r2.cmdj("ij") 
+
+    # Agrupar funciones
+    grouped = defaultdict(list)
+    for imp in imports:
+        grouped[imp["libname"]].append(imp["name"])
+
+    # Agrupar funciones
+    grouped_rcs = defaultdict(list)
+    for rcs in resources:
+        grouped_rcs[rcs['type']].append(rcs["name"])
+
+    # Agrupar funciones
+    grouped_str = defaultdict(list)
+    for str in strings:
+        grouped_str[str['section']].append(str["string"])
+        
+    # Continuamos
+    suspicious_dll = ["d"]
+    suspicious_functions = []
+    suspicious_strings = []
+
     entropy_data = calculate_file_entropy(file_path) # entropy_data =r2.cmd("iSj") #float(r2.cmd("p= asdfasdf").strip()) # 
     # Procesar strings sospechosos (ejemplo básico)
     #suspicious_strings = [s['string'] for s in strings['strings'] if "http" in s['string'] or "C2" in s['string'] or "APPDATA" in s['string']]
-    suspicious_strings = []
+    
     for s in strings:  # Iterar sobre cada diccionario en la lista de strings
         string_value = s['string']  # Obtener el valor de la cadena
         # Comprobar si alguno de los términos sospechosos está presente en la cadena
@@ -60,23 +81,12 @@ def extract_json_data(file_path):
         
         "entropy": entropy_data,
         "imports": {
-            "dlls": [
-                {
-                    "type": imp["type"],
-                    "name": imp["name"],
-                    "libname": imp["libname"]
-                } for imp in imports
-            ],
-            "suspicious_imports": [imp['name'] for imp in imports if imp['name'] in ["WriteProcessMemory", "CreateRemoteThread", "InternetOpenUrlA"]]
+            "dlls": [{"libname": libname, "functions": functions} for libname, functions in grouped.items()],
+            "suspicious_imports": suspicious_dll
         },
         "strings": {
             "total_strings": len(strings),
-            "detalles": [
-                {
-                    "section": string["section"],    
-                    "string": string["string"]    
-                } for string in strings
-            ],
+            "detalles": [{"section": section, "strings": strings} for section, strings in grouped_str.items()],
             "suspicious_strings": suspicious_strings
         },
         "sections": [
@@ -89,13 +99,8 @@ def extract_json_data(file_path):
         ],
         "resources": {
             "total_size": len(resources),
-            "details": [
-                {
-                    "name": resource['name'],
-                    "type": resource['type'],
-                    "ntype":resource['ntype']
-                } for resource in resources
-            ]
+            "details": [{"type": types, "names": names} for types, names in grouped_rcs.items()],
+           
         }
     }
     

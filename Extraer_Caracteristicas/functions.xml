@@ -1,0 +1,3910 @@
+<!--
+This file is part of the pestudio solution (www.winitor.com).
+Any usage of this file outside of the context of pestudio (e.g. in third-party application, tools
+chain, etc...) must be explicitely authorized.
+Please note that this file can be modified when running pestudio.
+-->
+<xml version="1.0" encoding="utf-8">
+  <libs>
+    <lib name="hal.dll" flag="0" desc="Hardware Abstraction Layer"></lib>
+    <lib name="storageusage.dll" flag="1" desc="Storage Usage Library"></lib>
+    <lib name="xfs_conf.dll" flag="1" desc="Extension for Financial Services (XFS)"></lib>
+    <lib name="metsrv.dll" flag="1" desc="Meterpreter service"></lib>
+    <lib name="msvbvm50.dll" flag="0" desc="Microsoft Virtual Basic Virtual Machine"></lib>
+    <lib name="userenv.dll" flag="0" desc="User Environment Library"></lib>
+    <lib name="esent.dll" flag="0" desc="Extensible Storage Engine Library"></lib>
+    <lib name="mscat32.dll" flag="1" desc="MSCAT32 Forwarder Library"></lib>
+    <lib name="netutils.dll" flag="1" desc="Network Win32 API Helpers"></lib>
+    <lib name="logoncli.dll" flag="1" desc="Logon Client Library"></lib>
+    <lib name="vcruntime140.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="vcruntime140d.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="msvcp60.dll" flag="0" desc="Windows C Runtime Library"></lib>
+    <lib name="msvcp90.dll" flag="0" desc="Microsoft C++ Runtime Library"></lib>
+    <lib name="msvcp100.dll" flag="0" desc="Microsoft C++ Runtime Library"></lib>
+    <lib name="msvcp110.dll" flag="0" desc="Microsoft C++ Runtime Library"></lib>
+    <lib name="msvcp140d.dll" flag="0" desc="Microsoft C++ Runtime Library"></lib>
+    <lib name="msvcp140.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="msvcm90.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="msvcr100.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="msvcr71.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="msvcr80.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="msvcr90.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="msvcr110.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="msvcr120.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="Srclient.dll" flag="0" desc="Microsoft Windows System Restore Client Library"></lib>
+    <lib name="winmm.dll" flag="1" desc="Windows Management Library"></lib>
+    <lib name="mscorwks.dll" flag="0" desc="Microsoft .NET Runtime Common Language Runtime"></lib>
+    <lib name="msimg32.dll" flag="0" desc="GDIEXT Client Library"></lib>
+    <lib name="xolehlp.dll" flag="0" desc="Microsoft Distributed Transaction Coordinator Library"></lib>
+    <lib name="uxtheme.dll" flag="0" desc="Microsoft UxTheme Library"></lib>
+    <lib name="oledlg.dll" flag="0" desc="OLE User Interface Support Library"></lib>
+    <lib name="gdiplus.dll" flag="0" desc="Microsoft GDI+ Library"></lib>
+    <lib name="comdlg32.dll" flag="0" desc="Common Dialogs Library"></lib>
+    <lib name="scrobj.dll" flag="1" desc="Windows Script Component Runtime"></lib>
+    <lib name="dmdskmgr.dll" flag="1" desc="Disk Management Snap-in Support Library"></lib>
+    <lib name="wshrm.dll" flag="0" desc="Windows Sockets Library"></lib>
+    <lib name="propsys.dll" flag="0" desc="Microsoft Property System"></lib>
+    <lib name="resutils.dll" flag="1" desc="Microsoft Cluster Resource Library"></lib>
+    <lib name="scesrv.dll" flag="0" desc="Windows Security Configuration Editor Engine"></lib>
+    <lib name="dsprop.dll" flag="1" desc="Windows Active Directory Property Pages Library"></lib>
+    <lib name="advpack.dll" flag="1" desc="Advanced Pack Library"></lib>
+    <lib name="cryptui.dll" flag="1" desc="Microsoft Trust UI Provider"></lib>
+    <lib name="eappcfg.dll" flag="0" desc="Windows Active Directory Property Pages"></lib>
+    <lib name="ulib.dll" flag="0" desc="File Utilities Support Library"></lib>
+    <lib name="authz.dll" flag="1" desc="Authorization Framework"></lib>
+    <lib name="clb.dll" flag="0" desc="Column List Box"></lib>
+    <lib name="fltlib.dll" flag="0" desc="Filter Library"></lib>
+    <lib name="d3d9.dll" flag="1" desc="Direct3D 9 Runtime Library"></lib>
+    <lib name="comsvcs.dll" flag="0" desc="COM+ Services Library"></lib>
+    <lib name="ncrypt.dll" flag="1" desc="Windows NCrypt Router"></lib>
+    <lib name="rasapi32.dll" flag="0" desc="Remote Access API"></lib>
+    <lib name="cfgmgr32.dll" flag="1" desc="Configuration Manager Library"></lib>
+    <lib name="python27.dll" flag="0" desc="Python Core"></lib>
+    <lib name="mlang.dll" flag="0" desc="Multi Language Support Library"></lib>
+    <lib name="msdart.dll" flag="1" desc="OLE Database Runtime Library"></lib>
+    <lib name="tapi32.dll" flag="0" desc="Telephony API Client Library"></lib>
+    <lib name="url.dll" flag="0" desc="Internet Shortcut Shell Extension Library"></lib>
+    <lib name="rsaenh.dll" flag="1" desc="Microsoft Enhanced Cryptographic Provider"></lib>
+    <lib name="msdmo.dll" flag="0" desc="DMO Runtime"></lib>
+    <lib name="winbrand.dll" flag="0" desc="Windows Branding Resources"></lib>
+    <lib name="glu32.dll" flag="0" desc="OpenGL Utility Library"></lib>
+    <lib name="modemui.dll" flag="0" desc="Windows Modem Properties"></lib>
+    <lib name="opengl32.dll" flag="0" desc="OpenGL Client"></lib>
+    <lib name="clusapi.dll" flag="1" desc="Cluster API Library"></lib>
+    <lib name="msacm32.dll" flag="0" desc="Microsoft ACM Audio Filter"></lib>
+    <lib name="quartz.dll" flag="0" desc="DirectShow Runtime"></lib>
+    <lib name="mozsqlite3.dll" flag="1" desc="SQLite Database Library"></lib>
+    <lib name="sspicli.dll" flag="0" desc="Security Support Provider Interface"></lib>
+    <lib name="xmllite.dll" flag="0" desc="Microsoft XmlLite Library"></lib>
+    <lib name="ifsutil.dll" flag="1" desc="IFS Utility"></lib>
+    <lib name="devobj.dll" flag="1" desc="Device Information Set"></lib>
+    <lib name="untfs.dll" flag="1" desc="NTFS Utility Library"></lib>
+    <lib name="winrnr.dll" flag="1" desc="LDAP RnR Provider Library"></lib>
+    <lib name="dhcpsapi.dll" flag="1" desc="DHCP Server API Stub Library"></lib>
+    <lib name="mmcbase.dll" flag="1" desc="MMC Base Library"></lib>
+    <lib name="hlink.dll" flag="1" desc="Microsoft Office 2000 component"></lib>
+    <lib name="odbctrac.dll" flag="0" desc="ODBC Driver Manager Trace"></lib>
+    <lib name="normaliz.dll" flag="0" desc="Unicode Normalization Library"></lib>
+    <lib name="windowscodecs.dll" flag="0" desc="Microsoft Windows Codecs Library"></lib>
+    <lib name="dwmapi.dll" flag="1" desc="Microsoft Desktop Window Manager API"></lib>
+    <lib name="usbd.sys" flag="1" desc="Universal Serial Bus Driver"></lib>
+    <lib name="wsecedit.dll" flag="1" desc="Security Configuration UI Module"></lib>
+    <lib name="msvcirt.dll" flag="1" desc="Windows NT IOStreams Library"></lib>
+    <lib name="mapistub.dll" flag="0" desc="Extended MAPI Library"></lib>
+    <lib name="ntlanman.dll" flag="1" desc="Microsoft Lan Manager Library"></lib>
+    <lib name="dxgi.dll" flag="0" desc="DirectX Graphics Infrastructure"></lib>
+    <lib name="mspatcha.dll" flag="1" desc="Microsoft File Patch Application API"></lib>
+    <lib name="ntmarta.dll" flag="0" desc="Windows NT MARTA provider"></lib>
+    <lib name="aepic.dll" flag="0" desc="Application Experience Program Cache"></lib>
+    <lib name="twinapi.dll" flag="0" desc="twinapi"></lib>
+    <lib name="shcore.dll" flag="0" desc="Shell Core"></lib>
+    <lib name="cryptsp.dll" flag="1" desc="Cryptographic Service Provider API"></lib>
+    <lib name="wkscli.dll" flag="0" desc="Workstation Service Client Library"></lib>
+    <lib name="systemeventsbrokerclient.dll" flag="0" desc="system Events Broker Client Library"></lib>
+    <lib name="mfplat.dll" flag="0" desc="Media Foundation Platform Library"></lib>
+    <lib name="slc.dll" flag="1" desc="Software Licensing Client Dll"></lib>
+    <lib name="nsi.dll" flag="1" desc="NSI User-mode Library"></lib>
+    <lib name="dbnmpntw.dll" flag="1" desc="Named Pipes Net for SQL Clients"></lib>
+    <lib name="hid.dll" flag="1" desc="Hid User Library"></lib>
+    <lib name="wevtapi.dll" flag="1" desc="Eventing Consumption and Configuration API"></lib>
+    <lib name="olecli32.dll" flag="0" desc="Object Linking and Embedding Client Library"></lib>
+    <lib name="detoured.dll" flag="1" desc="Microsoft Research Detours Package"></lib>
+    <lib name="mfc42u.dll" flag="0" desc="MFCDLL Shared Library"></lib>
+    <lib name="mi.dll" flag="1" desc="Management Infrastructure Library"></lib>
+    <lib name="miutils.dll" flag="1" desc="Management Infrastructure Library"></lib>
+    <lib name="framedynos.dll" flag="0" desc="WMI SDK Provider Framework Library"></lib>
+    <lib name="api-ms-win-core-com-l1-1-0.dll" flag="0" desc="ApiSet Stub Library"></lib>
+    <lib name="ieframe.dll" flag="0" desc="Internet Browser Library"></lib>
+    <lib name="msiso.dll" flag="0" desc="Internet Explorer Isolation Library"></lib>
+    <lib name="iertutil.dll" flag="0" desc="Internet Explorer Run time Library"></lib>
+    <lib name="api-ms-win-security-base-l1-1-0.dll" flag="1" desc="ApiSet Stub Library"></lib>
+    <lib name="api-ms-win-security-sddl-l1-1-0.dll" flag="1" desc="ApiSet Stub Library"></lib>
+    <lib name="api-ms-win-security-provider-l1-1-0.dll" flag="1" desc="ApiSet Stub Library"></lib>
+    <lib name="api-ms-win-security-lsalookup-l2-1-0.dll" flag="1" desc="ApiSet Stub Library"></lib>
+    <lib name="api-ms-win-core-registry-l1-1-0.dll" flag="1" desc="ApiSet Stub Library"></lib>
+    <lib name="api-ms-win-core-memory-l1-1-0.dll" flag="0" desc="ApiSet Stub Library"></lib>
+    <lib name="api-ms-win-core-libraryloader-l1-2-0.dll" flag="1" desc="ApiSet Stub Library"></lib>
+    <lib name="api-ms-win-core-processthreads-l1-1-0.dll" flag="1" desc="ApiSet Stub Library"></lib>
+    <lib name="api-ms-win-core-sidebyside-l1-1-0.dll" flag="1" desc="ApiSet Stub Library"></lib>
+    <lib name="tdi.sys" flag="1" desc="Network Driver Wrapper Library"></lib>
+    <lib name="utildll.dll" flag="1" desc="WinStation utility support Library"></lib>
+    <lib name="msvcp80.dll" flag="0" desc="Microsoft C++ Runtime Library"></lib>
+    <lib name="msvcm80.dll" flag="0" desc="Microsoft C++ Runtime Library"></lib>
+    <lib name="mshtml.dll" flag="1" desc="Microsoft HTML Viewer Library"></lib>
+    <lib name="icm32.dll" flag="0" desc="Microsoft Color Management Library"></lib>
+    <lib name="mfcsubs.dll" flag="0" desc="COM+ Library"></lib>
+    <lib name="perfctrs.dll" flag="1" desc="Performance counters Library"></lib>
+    <lib name="dsuiext.dll" flag="1" desc="Directory Service Common UI Library"></lib>
+    <lib name="shdocvw.dll" flag="0" desc="Shell Doc Object and Control Library"></lib>
+    <lib name="gpedit.dll" flag="1" desc="Group Policiy Edit Library"></lib>
+    <lib name="dpnet.dll" flag="0" desc="DirectPlay Library"></lib>
+    <lib name="msvcp_win.dll" flag="0" desc="C Runtime Library"></lib>
+    <lib name="netsetupapi.dll" flag="0" desc="Network Configuration API Library"></lib>
+    <lib name="aeinv.dll" flag="0" desc="Application Inventory Component Library"></lib>
+    <lib name="amsi.dll" flag="1" desc="Microsoft Anti-Malware Scan Interface"></lib>
+    <lib name="dwrite.dll" flag="0" desc="Microsoft DirectX Typography Services"></lib>
+    <lib name="mfreadwrite.dll" flag="01" desc="Media Foundation ReadWrite Library"></lib>
+    <lib name="mfcore.dll" flag="0" desc="Media Foundation Core Library"></lib>
+    <lib name="dbgeng.dll" flag="1" desc="Windows Symbolic Debugger Engine"></lib>
+    <lib name="tdh.dll" flag="1" desc="Event Trace Helper Library"></lib>
+    <lib name="tdh.dll" flag="1" desc="Event Trace Helper Library"></lib>
+    <lib name="netsh.exe" flag="0" desc="Network Command Shell"></lib>
+    <lib name="samcli.dll" flag="1" desc="Security Accounts Manager Client"></lib>
+    <lib name="srvcli.dll" flag="1" desc="Server Service Client"></lib>
+    <lib name="mfc90u.dll" flag="0" desc="MFC shared Library"></lib>
+    <lib name="wldp.dll" flag="0" desc="Windows Lockdown Policy"></lib>
+    <lib name="mf.dll" flag="0" desc="Media Foundation Library"></lib>
+    <lib name="bthprops.cpl" flag="0" desc="Bluetooth Control Panel Applet"></lib>
+    <lib name="bluetoothapis.dll" flag="0" desc="Bluetooth Usermode Api"></lib>
+    <lib name="winusb.dll" flag="0" desc="Windows USB Driver User Library"></lib>
+    <lib name="spp.dll" flag="1" desc="Windows Shared Protection Point"></lib>
+    <lib name="vssapi.dll" flag="1" desc="Volume Shadow Copy Requestor/Writer Services"></lib>
+    <lib name="wer.dll" flag="1" desc="Windows Error Reporting DLL"></lib>
+    <lib name="bcd.dll" flag="1" desc="Windows Boot Configuration Data"></lib>
+    <lib name="ucrtbase.dll" flag="0" desc="Microsoft C Runtime Library"></lib>
+    <lib name="snmpapi.dll" flag="1" desc="SNMP Utility Library"></lib>
+    <lib name="shimeng.dll" flag="1" desc="Shim Engine Library"></lib>
+    <lib name="fusion.dll" flag="0" desc="Assembly manager"></lib>
+    <lib name="rtm.dll" flag="1" desc="Routing Table Manager"></lib>
+    <lib name="regapi.dll" flag="1" desc="Registry Configuration API"></lib>
+    <lib name="acledit.dll" flag="1" desc="Access Control List Editor"></lib>
+    <lib name="inseng.dll" flag="1" desc="Install engine"></lib>
+    <lib name="w32topl.dll" flag="1" desc="Windows NT Topology Maintenance"></lib>
+    <lib name="msls31.dll" flag="1" desc="Microsoft Line Services library"></lib>
+    <lib name="query.dll" flag="1" desc="Content Index Utility"></lib>
+    <lib name="dsauth.dll" flag="1"></lib>
+    <lib name="mtxoci.dll" flag="1"></lib>
+    <lib name="msoert2.dll" flag="1"></lib>
+    <lib name="iassam.dll" flag="1"></lib>
+    <lib name="wlanui.dll" flag="1"></lib>
+    <lib name="sqlunirl.dll" flag="1"></lib>
+    <lib name="adsldpc.dll" flag="1"></lib>
+    <lib name="mprddm.dll" flag="1"></lib>
+    <lib name="mprddm.dll" flag="1"></lib>
+    <lib name="wpcap.dll" flag="1"></lib>
+    <lib name="dciman32.dll" flag="1"></lib>
+    <lib name="msoeacct.dll" flag="1"></lib>
+    <lib name="guard32.dll" flag="1"></lib>
+    <lib name="rdpclip.exe" flag="1"></lib>
+    <lib name="msports.dll" flag="1"></lib>
+    <lib name="eappprxy.dll" flag="1"></lib>
+    <lib name="urlredir.dll" flag="1"></lib>
+    <lib name="apphelp.dll" flag="1"></lib>
+    <lib name="firewallapi.dll" flag="1"></lib>
+    <lib name="clfsw32.dll" flag="1"></lib>
+    <lib name="avrt.dll" flag="1"></lib>
+    <lib name="iisutil.dll" flag="1"></lib>
+    <lib name="dxva2.dll" flag="1"></lib>
+    <lib name="msdrm.dll" flag="1"></lib>
+    <lib name="srcore.dll" flag="1"></lib>
+    <lib name="ndfapi.dll" flag="1"></lib>
+    <lib name="rastls.dll" flag="1"></lib>
+    <lib name="nvcuda.dll" flag="1"></lib>
+    <lib name="msident.dll" flag="1"></lib>
+    <lib name="adsldp.dll" flag="1"></lib>
+    <lib name="sfc_os.dll" flag="1"></lib>
+    <lib name="rpchttp.dll" flag="1"></lib>
+    <lib name="rasman.dll" flag="0"></lib>
+    <lib name="msdtcprx.dll" flag="1"></lib>
+    <lib name="console.dll" flag="1"></lib>
+    <lib name="msrating.dll" flag="1"></lib>
+    <lib name="winsys32.sys" flag="1"></lib>
+    <lib name="osuninst.dll" flag="1"></lib>
+    <lib name="ncpa.cpl" flag="1"></lib>
+    <lib name="mso.dll" flag="1"></lib>
+    <lib name="upnphost.dll" flag="1"></lib>
+    <lib name="scrrun.dll" flag="1"></lib>
+    <lib name="cryptdlg.dll" flag="1"></lib>
+    <lib name="cygcrypto-1.0.0.dll" flag="1"></lib>
+    <lib name="wdigest.dll" flag="1"></lib>
+    
+
+    <lib name="msxfs.dll" flag="1" desc="Extension for Financial Services (XFS)">
+      <fcts>
+        <fct>WFSRegister</fct>
+        <fct>WFSAsyncExecute</fct>
+        <fct>WFSExecute</fct>
+      </fcts>
+    </lib>
+    <lib name="schannel.dll" flag="1" desc="TLS/SSL Security provider">
+      <fcts>
+        <fct>SslFreeCertificate</fct>
+        <fct>SslGenerateRandomBits</fct>
+        <fct>SslGetServerIdentity</fct>
+      </fcts>
+    </lib>
+    <lib name="fltmgr.sys" flag="1" desc="Windows Filesystem Filter Manager">
+      <fcts>
+        <fct>FltEnumerateInstances</fct>
+        <fct>FltEnumerateFilters</fct>
+        <fct>FltGetVolumeFromInstance</fct>
+      </fcts>
+    </lib>
+    <lib name="lz32.dll" flag="1" desc="LZ Expand/Compress Library">
+      <fcts>
+        <fct>LZRead</fct>
+        <fct>LZCopy</fct>
+        <fct>LZInit</fct>
+        <fct>LZSeek</fct>
+        <fct>LZStart</fct>
+        <fct>LZClose</fct>
+      </fcts>
+    </lib>
+    <lib name="certcli.dll" flag="1" desc="Microsoft Active Directory Certificate Services Client">
+      <fcts>
+      </fcts>
+    </lib>
+    
+
+    
+
+    <lib name="bcrypt.dll" flag="1" desc="Windows Cryptographic Primitives Library">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="rdpcfgex.dll" flag="1"
+      desc="Remote Desktop Session Host Server Connection Configuration Extension for the RDP protocol">
+    </lib>
+    <lib name="rdpwsx.dll" flag="1" desc="RDP Extension Library">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="activeds.dll" flag="1" desc="Active Directory Router Layer">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="samlib.dll" flag="1" desc="Security Account Monitor Library">
+      <fcts>
+        <fct>SamEnumerateDomainsInSamServer</fct>
+        <fct>SamQueryInformationUser</fct>
+        <fct>SamCloseHandle</fct>
+        <fct>SamEnumerateUsersInDomain</fct>
+        <fct>SamOpenUser</fct>
+        <fct>SamLookupNamesInDomain</fct>
+        <fct>SamLookupIdsInDomain</fct>
+        <fct>SamOpenDomain</fct>
+        <fct>SamConnect</fct>
+        <fct>SamFreeMemory</fct>
+        <fct>SamGetGroupsForUser</fct>
+        <fct>SamRidToSid</fct>
+        <fct>SamLookupDomainInSamServer</fct>
+        <fct>SamGetAliasMembership</fct>
+      </fcts>
+    </lib>
+    <lib name="avifil32.dll" flag="0" desc="Microsoft AVI File support library">
+      <fcts>
+        <fct>AVIFileWriteData</fct>
+      </fcts>
+    </lib>
+    <lib name="wlanapi.dll" flag="1" desc="WLAN AutoConfig Client Side Library">
+      <fcts>
+        <fct>WinDbgExtensionDllInit</fct>
+        <fct>ExtensionApiVersion</fct>
+        <fct>CheckVersion</fct>
+      </fcts>
+    </lib>
+    <lib name="wab32.dll" flag="1" desc="Microsoft Contacts Library">
+      <fcts>
+        <fct>WABOpen</fct>
+        <fct>WABCreateIProp</fct>
+        <fct>WABOpenEx</fct>
+      </fcts>
+    </lib>
+    <lib name="atl80.dll" flag="0">
+      <fcts>
+        <fct>AtlComModuleRegisterServer</fct>
+        <fct>AtlComModuleUnregisterServer</fct>
+        <fct>AtlUpdateRegistryFromResourceD</fct>
+        <fct>AtlCreateRegistrar</fct>
+      </fcts>
+    </lib>
+    <lib name="drprov.dll" flag="1"
+      desc="Microsoft Remote Desktop Session Host Server Network Provider">
+      <fcts>
+      </fcts>
+    </lib>
+    
+
+    
+
+    <lib name="packet.dll" flag="1">
+      <fcts>
+        <fct>PacketAllocatePacket</fct>
+        <fct>PacketCloseAdapter</fct>
+        <fct>PacketFreePacket</fct>
+        <fct>PacketGetAdapterNames</fct>
+        <fct>PacketGetAirPcapHandle</fct>
+        <fct>PacketGetDriverVersion</fct>
+        <fct>PacketGetNetInfoEx</fct>
+        <fct>PacketGetNetType</fct>
+        <fct>PacketGetReadEvent</fct>
+        <fct>PacketGetStats</fct>
+        <fct>PacketGetStatsEx</fct>
+        <fct>PacketGetVersion</fct>
+        <fct>PacketInitPacket</fct>
+        <fct>PacketIsDumpEnded</fct>
+        <fct>PacketLibraryVersion</fct>
+        <fct>PacketOpenAdapter</fct>
+        <fct>PacketReceivePacket</fct>
+        <fct>PacketRequest</fct>
+        <fct>PacketSendPacket</fct>
+        <fct>PacketSendPackets</fct>
+        <fct>PacketSetBpf</fct>
+        <fct>PacketSetBuff</fct>
+        <fct>PacketSetDumpLimits</fct>
+        <fct>PacketSetDumpName</fct>
+        <fct>PacketSetHwFilter</fct>
+        <fct>PacketSetLoopbackBehavior</fct>
+        <fct>PacketSetMinToCopy</fct>
+        <fct>PacketSetMode</fct>
+        <fct>PacketSetNumWrites</fct>
+        <fct>PacketSetReadTimeout</fct>
+        <fct>PacketSetSnapLen</fct>
+        <fct>PacketStopDriver</fct>
+      </fcts>
+    </lib>
+    
+
+    <lib name="winshfhc.dll" flag="1">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="netplwiz.dll" flag="1" desc="Map Network Drives/Network Places Wizard">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="shimgvw.dll" flag="1" desc="Photo Gallery Viewer">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="wldap32.dll" flag="1" desc="Win32 LDAP Library">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="scarddlg.dll" flag="1" desc="SCardDlg - Smart Card Common Dialog">
+      <fcts>
+        <fct>GetOpenCardName</fct>
+        <fct>GetOpenCardName</fct>
+        <fct>SCardDlgExtendedError</fct>
+        <fct>SCardUIDlgSelectCard</fct>
+        <fct>SCardUIDlgSelectCard</fct>
+        <fct>SCardListInterfaces</fct>
+        <fct>SCardSetCardTypeProviderName</fct>
+      </fcts>
+    </lib>
+    <lib name="mswsock.dll" flag="1" desc="Microsoft Windows Sockets 2.0 Service Provider">
+      <fcts>
+        <fct>NPLoadNameSpaces</fct>
+        <fct>NPGetResourceParent</fct>
+        <fct>NPAddConnection</fct>
+        <fct>NPEnumResource</fct>
+        <fct>NPGetResourceInformation</fct>
+        <fct>EnumProtocols</fct>
+        <fct>gethostbyname</fct>
+      </fcts>
+    </lib>
+    <lib name="wintrust.dll" flag="1" desc="Microsoft Trust Verification APIs">
+      <fcts>
+        <fct>WinVerifyTrust</fct>
+        <fct>CryptCATGetAttrInfo</fct>
+        <fct>CryptCATCDFClose</fct>
+        <fct>CryptCATCatalogInfoFromContext</fct>
+        <fct>CryptCATAdminEnumCatalogFromHash</fct>
+        <fct>CryptCATAdminCalcHashFromFileHandle</fct>
+        <fct>CryptCATAdminReleaseCatalogContext</fct>
+        <fct>CryptCATAdminReleaseContext</fct>
+        <fct>CryptCATAdminAcquireContext</fct>
+      </fcts>
+    </lib>
+    <lib name="lsasrv.dll" flag="1" desc="LSA Server Library">
+      <fcts>
+        <fct>LsaGetLogonSessionData</fct>
+        <fct>LsaIRegisterNotification</fct>
+        <fct>LsaICancelNotification</fct>
+        <fct>LsaLookupSids</fct>
+        <fct>LsaLookupNames</fct>
+        <fct>LsaLookupPrivilegeName</fct>
+        <fct>PasswordChangeNotify</fct>
+        <fct>InitializeChangeNotify</fct>
+        <fct>LsaICryptUnprotectData</fct>
+        <fct>LsaQuerySecret</fct>
+      </fcts>
+    </lib>
+    <lib name="gdi32.dll" flag="0" desc="GDI Client Library">
+      <fcts>
+        <fct>EngLoadModule</fct>
+      </fcts>
+    </lib>
+    <lib name="security.dll" flag="1" desc="Security Support Provider Interface">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="pdh.dll" flag="1" desc="Windows Performance Data Helper Library">
+      <fcts>
+        <fct>PdhAddCounter</fct>
+        <fct>PdhAdd009Counter</fct>
+        <fct>PdhAdd009Counter</fct>
+        <fct>PdhCreateSQLTables</fct>
+        <fct>PdhCreateSQLTables</fct>
+        <fct>PdhBindInputDataSource</fct>
+      </fcts>
+    </lib>
+    <lib name="msvbvm60.dll" flag="0" desc="Microsoft Virtual Basic Virtual Machine">
+      <fcts>
+        <fct>ProcCallEngine</fct>
+        <fct>rtcKillFiles</fct>
+        <fct>rtcChangeDir</fct>
+        <fct>rtcMakeDir</fct>
+        <fct>rtcRemoveDir</fct>
+        <fct>rtcChangeDrive</fct>
+        <fct>rtcRandomNext</fct>
+        <fct>rtcRandomize</fct>
+        <fct>rtcSendKeys</fct>
+        <fct>rtcShell</fct>
+        <fct>rtcSqr</fct>
+        <fct>__vbaWriteFile</fct>
+        <fct>rtcCreateObject</fct>
+        <fct>rtcAppleScript</fct>
+        <fct>rtcDeleteSetting</fct>
+      </fcts>
+    </lib>
+    <lib name="odbccp32.dll" flag="1" desc="ODBC Installer">
+      <fcts>
+        <fct>SQLConfigDriver</fct>
+        <fct>SQLConfigDriver</fct>
+        <fct>SQLCreateDataSource</fct>
+        <fct>SQLCreateDataSourceEx</fct>
+        <fct>SQLCreateDataSource</fct>
+        <fct>SQLGetAvailableDrivers</fct>
+        <fct>SQLGetConfigMode</fct>
+        <fct>SQLGetInstalledDrivers</fct>
+        <fct>SQLGetPrivateProfileString</fct>
+        <fct>SQLGetTranslator</fct>
+        <fct>SQLInstallDriver</fct>
+        <fct>SQLInstallDriverEx</fct>
+        <fct>SQLInstallDriverManager</fct>
+        <fct>SQLInstallODBC</fct>
+        <fct>SQLInstallTranslator</fct>
+        <fct>SQLInstallTranslatorEx</fct>
+        <fct>SQLInstallerError</fct>
+        <fct>SQLLoadDataSourcesListBox</fct>
+        <fct>SQLLoadDriverListBox</fct>
+        <fct>SQLManageDataSources</fct>
+        <fct>SQLPostInstallerError</fct>
+        <fct>SQLReadFileDSN</fct>
+        <fct>SQLRemoveDSNFromIni</fct>
+        <fct>SQLRemoveDefaultDataSource</fct>
+        <fct>SQLRemoveDriver</fct>
+        <fct>SQLRemoveDriverManager</fct>
+        <fct>SQLRemoveTranslator</fct>
+        <fct>SQLSetConfigMode</fct>
+        <fct>SQLValidDSN</fct>
+        <fct>SQLWriteDSNToIni</fct>
+        <fct>SQLWriteFileDSN</fct>
+        <fct>SQLWritePrivateProfileString</fct>
+        <fct>SelectTransDlg</fct>
+        <fct>CloseODBCPerfData</fct>
+        <fct>CollectODBCPerfData</fct>
+        <fct>GetODBCSharedData</fct>
+        <fct>ODBCInternalConnectW</fct>
+        <fct>ODBCQualifyFileDSNW</fct>
+        <fct>OpenODBCPerfData</fct>
+        <fct>SQLConnect</fct>
+        <fct>SQLCopyDesc</fct>
+        <fct>SQLDrivers</fct>
+        <fct>SQLEndTran</fct>
+        <fct>SQLExecDirect</fct>
+        <fct>SQLExecute</fct>
+        <fct>SQLGetConnectAttr</fct>
+        <fct>SQLGetConnectOption</fct>
+        <fct>SQLGetData</fct>
+        <fct>SQLGetFunctions</fct>
+        <fct>SQLNativeSql</fct>
+        <fct>SQLProcedures</fct>
+        <fct>SQLSetConnectAttr</fct>
+        <fct>SQLTables</fct>
+        <fct>SQLTransact</fct>
+      </fcts>
+    </lib>
+    <lib name="kernel32.dll" flag="0" desc="Windows NT BASE API Client">
+      <fcts>
+        <fct>CreateSocketHandle</fct>
+        <fct>GetProcessIdOfThread</fct>
+        <fct>SetThreadPriorityBoost</fct>
+        <fct>GetNamedPipeClientProcessId</fct>
+        <fct>MapUserPhysicalPages</fct>
+        <fct>CreateSymbolicLink</fct>
+        <fct>GetConsoleProcessList</fct>
+        <fct>SetConsoleCursorPosition</fct>
+        <fct>SetConsoleTitle</fct>
+        <fct>BaseFlushAppcompatCache</fct>
+        <fct>BaseCheckAppcompatCache</fct>
+        <fct>ReOpenFile</fct>
+        <fct>ExpungeConsoleCommandHistory</fct>
+        <fct>GetThreadSelectorEntry</fct>
+        <fct>GetThreadPriorityBoost</fct>
+        <fct>DeleteTimerQueue</fct>
+        <fct>DeleteTimerQueueTimer</fct>
+        <fct>GetNumberOfConsoleInputEvents</fct>
+        <fct>GlobalCompact</fct>
+        <fct>SearchPath</fct>
+        <fct>SetTimeZoneInformation</fct>
+        <fct>FlushConsoleInputBuffer</fct>
+        <fct>ReadConsoleOutputCharacter</fct>
+        <fct>ReadConsoleOutput</fct>
+        <fct>SetFileApisToOEM</fct>
+        <fct>GetPrivateProfileSectionNames</fct>
+        <fct>GetProfileInt</fct>
+        <fct>WriteProfileSection</fct>
+        <fct>WriteProfileString</fct>
+        <fct>SetSystemTimeAdjustment</fct>
+        <fct>IsSystemResumeAutomatic</fct>
+        <fct>SetSystemPowerState</fct>
+        <fct>SetProcessShutdownParameters</fct>
+        <fct>AllocateUserPhysicalPages</fct>
+        <fct>FatalExit</fct>
+        <fct>IsNativeVhdBoot</fct>
+        <fct>DnsHostnameToComputerName</fct>
+        <fct>CreateSymbolicLink</fct>
+        <fct>CreateSymbolicLinkTransacted</fct>
+        <fct>CreateHardLink</fct>
+        <fct>CreateHardLinkTransacted</fct>
+        <fct>DelayLoadFailureHook</fct>
+        <fct>DeleteFiber</fct>
+        <fct>EnumSystemFirmwareTables</fct>
+        <fct>GetPhysicallyInstalledSystemMemory</fct>
+        <fct>GetSystemFirmwareTable</fct>
+        <fct>GetConsoleScreenBufferInfo</fct>
+        <fct>FillConsoleOutputAttribute</fct>
+        <fct>GetCurrentProcessorNumber</fct>
+        <fct>GetCurrentProcessorNumberEx</fct>
+        <fct>FindFirstVolumeMountPoint</fct>
+        <fct>FindNextVolumeMountPoint</fct>
+        <fct>FreeUserPhysicalPages</fct>
+        <fct>GetLargestConsoleWindowSize</fct>
+        <fct>GetLogicalDriveStrings</fct>
+        <fct>GetModuleHandleEx</fct>
+        <fct>GetThreadTimes</fct>
+        <fct>GetNativeSystemInfo</fct>
+        <fct>GetProcessWindowStation</fct>
+        <fct>GetUserObjectInformation</fct>
+        <fct>GetUserObjectSecurity</fct>
+        <fct>GetDesktopWindow</fct>
+        <fct>CreateDesktop</fct>
+        <fct>GetThreadDesktop</fct>
+        <fct>GetConsoleAlias</fct>
+        <fct>GetConsoleAliasExes</fct>
+        <fct>GetConsoleAliasExesLength</fct>
+        <fct>GetConsoleAliases</fct>
+        <fct>GetConsoleCommandHistory</fct>
+        <fct>GetConsoleCommandHistoryLength</fct>
+        <fct>GetConsoleDisplayMode</fct>
+        <fct>GetConsoleFontInfo</fct>
+        <fct>GetConsoleFontSize</fct>
+        <fct>GetConsoleHardwareState</fct>
+        <fct>GetConsoleInputWaitHandle</fct>
+        <fct>GetCurrentConsoleFont</fct>
+        <fct>GetNumberOfConsoleFonts</fct>
+        <fct>CreateThreadpool</fct>
+        <fct>CreateThreadpoolCleanupGroup</fct>
+        <fct>CreateThreadpoolIo</fct>
+        <fct>CreateThreadpoolTimer</fct>
+        <fct>CreateThreadpoolWait</fct>
+        <fct>CreateThreadpoolWork</fct>
+        <fct>CloseThreadpoolTimer</fct>
+        <fct>WTSGetActiveConsoleSessionId</fct>
+        <fct>WTHelperGetProvCertFromChain</fct>
+        <fct>VerSetConditionMask</fct>
+        <fct>OpenThread</fct>
+        <fct>HeapSummary</fct>
+        <fct>ConsoleMenuControl</fct>
+        <fct>NlsGetCacheUpdateCount</fct>
+        <fct>QueryWorkingSet</fct>
+        <fct>QueryFullProcessImageName</fct>
+        <fct>AddVectoredExceptionHandler</fct>
+        <fct>AddVectoredContinueHandler</fct>
+        <fct>EnumCalendarInfo</fct>
+        <fct>EnumResourceLanguages</fct>
+        <fct>SetThreadLocale</fct>
+        <fct>NetScheduleJobAdd</fct>
+        <fct>EnumDeviceDrivers</fct>
+        <fct>HeapWalk</fct>
+        <fct>CloseWindowStation</fct>
+        <fct>ReadDirectoryChanges</fct>
+        <fct>RegisterConsoleVDM</fct>
+        <fct>VDMOperationStarted</fct>
+        <fct>CreateWindowStation</fct>
+        <fct>OpenWindowStation</fct>
+        <fct>CreateDesktopEx</fct>
+        <fct>EnumWindowStations</fct>
+        <fct>EnumDesktops</fct>
+        <fct>EnumDesktopWindows</fct>
+        <fct>OpenDesktop</fct>
+        <fct>SwitchDesktop</fct>
+        <fct>OpenInputDesktop</fct>
+        <fct>AttachConsole</fct>
+        <fct>AddConsoleAlias</fct>
+        <fct>WriteConsoleOutput</fct>
+        <fct>ReadConsoleInput</fct>
+        <fct>GenerateConsoleCtrlEvent</fct>
+        <fct>GetConsoleTitle</fct>
+        <fct>FillConsoleOutputCharacter</fct>
+        <fct>ConsoleSubst</fct>
+        <fct>ExpungeConsoleCommandHistory</fct>
+        <fct>InvalidateConsoleDIBits</fct>
+        <fct>OpenConsole</fct>
+        <fct>VerifyConsoleIoHandle</fct>
+        <fct>DuplicateConsoleHandle</fct>
+        <fct>GetConsoleInputExeName</fct>
+        <fct>GetConsoleKeyboardLayoutName</fct>
+        <fct>AddClipboardFormatListener</fct>
+        <fct>ChangeClipboardChain</fct>
+        <fct>CloseClipboard</fct>
+        <fct>CountClipboardFormats</fct>
+        <fct>EmptyClipboard</fct>
+        <fct>EnumClipboardFormats</fct>
+        <fct>GetClipboardData</fct>
+        <fct>GetClipboardFormatName</fct>
+        <fct>GetClipboardOwner</fct>
+        <fct>GetClipboardSequenceNumber</fct>
+        <fct>GetClipboardViewer</fct>
+        <fct>GetOpenClipboardWindow</fct>
+        <fct>GetPriorityClipboardFormat</fct>
+        <fct>GetUpdatedClipboardFormats</fct>
+        <fct>IsClipboardFormatAvailable</fct>
+        <fct>OpenClipboard</fct>
+        <fct>RegisterClipboardFormat</fct>
+        <fct>RemoveClipboardFormatListener</fct>
+        <fct>RegisterClipboardFormat</fct>
+        <fct>ResolveDelayLoadedAPI</fct>
+        <fct>ResolveDelayLoadsFromDll</fct>
+        <fct>LockWorkStation</fct>
+        <fct>LockSetForegroundWindow</fct>
+        <fct>WinHelp</fct>
+        <fct>UnregisterHotKey</fct>
+        <fct>SendInput</fct>
+        <fct>EnumThreadWindows</fct>
+        <fct>GetInputState</fct>
+        <fct>PeekConsoleInput</fct>
+        <fct>PostThreadMessage</fct>
+        <fct>SendAsyncProc</fct>
+        <fct>GetKeyboardState</fct>
+        <fct>GetKeyboardType</fct>
+        <fct>GetKeyNameText</fct>
+        <fct>GetGUIThreadInfo</fct>
+        <fct>BlockInput</fct>
+        <fct>ChangeWindowMessageFilter</fct>
+        <fct>ChangeWindowMessageFilterEx</fct>
+        <fct>LockWorkStation</fct>
+        <fct>BackupWrite</fct>
+        <fct>CreateTapePartition</fct>
+        <fct>WriteTapemark</fct>
+        <fct>RtlIpv4StringToAddress</fct>
+        <fct>RtlCaptureStackBackTrace</fct>
+        <fct>RegisterEventSource</fct>
+        <fct>RegisterHotKey</fct>
+        <fct>GetProcessMitigationPolicy</fct>
+        <fct>GetProcessDEPPolicy</fct>
+        <fct>QueryPerformanceFrequency</fct>
+        <fct>HeapQueryInformation</fct>
+        <fct>GetLogicalProcessorInformationEx</fct>
+        <fct>SetThreadStackGuarantee</fct>
+        <fct>SetEnvironmentVariable</fct>
+        <fct>SetProcessAffinityMask</fct>
+        <fct>SetThreadAffinityMask</fct>
+        <fct>SetMessageExtraInfo</fct>
+        <fct>SetKeyboardState</fct>
+        <fct>UnloadKeyboardLayout</fct>
+        <fct>SetClipboardData</fct>
+        <fct>SetClipboardViewer</fct>
+        <fct>SetConsoleInputExeName</fct>
+        <fct>SetConsoleCursor</fct>
+        <fct>SetConsoleCtrlHandler</fct>
+        <fct>SetConsoleMode</fct>
+        <fct>SetThreadDesktop</fct>
+        <fct>SetUserObjectInformation</fct>
+        <fct>SetUserObjectSecurity</fct>
+        <fct>SetProcessWindowStation</fct>
+        <fct>SetCurrentDirectory</fct>
+        <fct>SetComputerName</fct>
+        <fct>SetComputerNameEx</fct>
+        <fct>SetDefaultDllDirectories</fct>
+        <fct>RemoveDllDirectory</fct>
+        <fct>SetFirmwareEnvironmentVariable</fct>
+        <fct>SetFirmwareEnvironmentVariableEx</fct>
+        <fct>SetConsoleDisplayMode</fct>
+        <fct>SetConsoleFont</fct>
+        <fct>SetConsoleHardwareState</fct>
+        <fct>SetConsoleKeyShortcuts</fct>
+        <fct>SetConsoleMaximumWindowSize</fct>
+        <fct>SetConsoleMenuClose</fct>
+        <fct>SetDllDirectory</fct>
+        <fct>SetProcessDEPPolicy</fct>
+        <fct>SetVDMCurrentDirectories</fct>
+        <fct>ZwCreateThreadEx</fct>
+        <fct>ZwCreateThread</fct>
+        <fct>ZwUnmapViewOfSec</fct>
+        <fct>ZwProtectVirtualMemory</fct>
+        <fct>ZwQueueApcThread</fct>
+        <fct>ZwDelayExecution</fct>
+        <fct>SetCPGlobal</fct>
+        <fct>BaseInitAppcompatCacheSupport</fct>
+        <fct>SetStdHandleEx</fct>
+        <fct>CheckElevationEnabled</fct>
+        <fct>CheckAllowDecryptedRemoteDestinationPolicy</fct>
+        <fct>CheckElevation</fct>
+        <fct>CheckForReadOnlyResource</fct>
+        <fct>CheckForReadOnlyResourceFilter</fct>
+        <fct>Basep8BitStringToDynamicUnicodeString</fct>
+        <fct>BaseGetNamedObjectDirectory</fct>
+        <fct>BaseFormatTimeOut</fct>
+        <fct>RtlAcquirePrivilege</fct>
+        <fct>RtlAcquireResourceExclusive</fct>
+        <fct>RtlQueueApcWow64Thread</fct>
+        <fct>RtlAcquireResourceShared</fct>
+        <fct>RtlDeleteResource</fct>
+        <fct>RtlDumpResource</fct>
+        <fct>RtlInitializeResource</fct>
+        <fct>RtlLockCurrentThread</fct>
+        <fct>RtlReleaseResource</fct>
+        <fct>RtlTraceDatabaseAdd</fct>
+        <fct>RtlTraceDatabaseCreate</fct>
+        <fct>RtlTraceDatabaseDestroy</fct>
+        <fct>RtlTraceDatabaseEnumerate</fct>
+        <fct>RtlTraceDatabaseFind</fct>
+        <fct>RtlTraceDatabaseLock</fct>
+        <fct>RtlTraceDatabaseUnlock</fct>
+        <fct>RtlTraceDatabaseValidate</fct>
+        <fct>RtlUnlockCurrentThread</fct>
+        <fct>AddCommasExport</fct>
+        <fct>AppCompat_RunDLL</fct>
+        <fct>CheckStagingArea</fct>
+        <fct>CreateAutoListParser</fct>
+        <fct>CreateInfoTipFromItem</fct>
+        <fct>CreateInfoTipFromItem2</fct>
+        <fct>DisconnectWindowsDialog</fct>
+        <fct>GetAppPathFromLink</fct>
+        <fct>GetSqmableFileName</fct>
+        <fct>Int64ToString</fct>
+        <fct>IsElevationRequired</fct>
+        <fct>IsSearchEnabled</fct>
+        <fct>LargeIntegerToString</fct>
+        <fct>LinkWindow_RegisterClass</fct>
+        <fct>PathGetPathDisplayName</fct>
+        <fct>PathIsTemporary</fct>
+        <fct>RefreshBrowserLayout</fct>
+        <fct>RunAsNewUser_RunDLL</fct>
+        <fct>DesktopHasWatermarkText</fct>
+        <fct>FrostCrashedWindow</fct>
+        <fct>GetSendMessageReceiver</fct>
+        <fct>GetWindowCompositionAttribute</fct>
+        <fct>GhostWindowFromHungWindow</fct>
+        <fct>HungWindowFromGhostWindow</fct>
+        <fct>IsServerSideWindow</fct>
+        <fct>IsSETEnabled</fct>
+        <fct>IsThreadDesktopComposited</fct>
+        <fct>IsWindowInDestroy</fct>
+        <fct>NtUserSetChildWindowNoActivate</fct>
+        <fct>SetWindowCompositionAttribute</fct>
+        <fct>DupWideToAnsi</fct>
+        <fct>IStream_WriteStrLong</fct>
+        <fct>MapWin32ErrorToSTG</fct>
+        <fct>ModeToCreateFileFlags</fct>
+        <fct>PathUnExpandEnvStringsForUserW</fct>
+        <fct>PathUnExpandSystemEnvStringsW</fct>
+        <fct>QuerySourceCreateFromKey</fct>
+        <fct>QuerySourceCreateFromKeyEx</fct>
+        <fct>SetLocalPrimaryComputerName</fct>
+        <fct>BaseQueryModuleData</fct>
+        <fct>ExitVDM</fct>
+        <fct>RemoveVectoredExceptionHandler</fct>
+        <fct>RemoveVectoredContinueHandler</fct>
+        <fct>RealShellExecute</fct>
+        <fct>RealShellExecuteEx</fct>
+        <fct>K32EnumProcessModules</fct>
+        <fct>K32EnumProcesses</fct>
+        <fct>K32GetModuleBaseName</fct>
+        <fct>K32GetModuleFileNameEx</fct>
+        <fct>K32GetProcessImageFileName</fct>
+        <fct>K32GetProcessMemoryInfo</fct>
+        <fct>SetThreadExecutionState</fct>
+        <fct>SwitchToFiber</fct>
+        <fct>GetSystemDEPPolicy</fct>
+        <fct>RaiseException</fct>
+        <fct>RestoreLastError</fct>
+        <fct>GetEnvironmentVariable</fct>
+        <fct>GetOverlappedResult</fct>
+        <fct>GetSystemWow64Directory</fct>
+        <fct>DebugActiveProcessStop</fct>
+        <fct>WaitForDebugEvent</fct>
+        <fct>RegisterWaitForSingleObject</fct>
+        <fct>UnregisterWait</fct>
+        <fct>UnregisterWaitEx</fct>
+        <fct>DebugActiveProcess</fct>
+        <fct>DebugBreak</fct>
+        <fct>DefineDosDevice</fct>
+        <fct>FreeLibraryAndExitThread</fct>
+        <fct>AddAtom</fct>
+        <fct>DeleteAtom</fct>
+        <fct>FindAtom</fct>
+        <fct>GetAtomName</fct>
+        <fct>GlobalAddAtom</fct>
+        <fct>GlobalDeleteAtom</fct>
+        <fct>GlobalFindAtom</fct>
+        <fct>GlobalGetAtomName</fct>
+        <fct>InitAtomTable</fct>
+        <fct>WritePrivateProfileSection</fct>
+        <fct>SleepEx</fct>
+        <fct>GetFirmwareEnvironmentVariable</fct>
+        <fct>SetMailslotInfo</fct>
+        <fct>SetVolumeLabel</fct>
+        <fct>CheckRemoteDebuggerPresent</fct>
+        <fct>GetThreadContext</fct>
+        <fct>Wow64GetThreadContext</fct>
+        <fct>Wow64SetThreadContext</fct>
+        <fct>SuspendThread</fct>
+        <fct>GetThreadPriority</fct>
+        <fct>SetPriorityClass</fct>
+        <fct>GetPriorityClass</fct>
+        <fct>QuerySecurityAccessMask</fct>
+        <fct>QueryServiceObjectSecurity</fct>
+        <fct>SetThreadContext</fct>
+        <fct>QueueUserAPC</fct>
+        <fct>RtlAddGrowableFunctionTable</fct>
+        <fct>RtlDeleteGrowableFunctionTable</fct>
+        <fct>RtlGrowFunctionTable</fct>
+        <fct>RtlAddFunctionTable</fct>
+        <fct>RtlDeleteFunctionTable</fct>
+        <fct>RtlInstallFunctionTableCallback</fct>
+        <fct>RtlRestoreContext</fct>
+        <fct>RtlLookupFunctionEntry</fct>
+        <fct>QueryDosDevice</fct>
+        <fct>GetBinaryType</fct>
+        <fct>FindExecutable</fct>
+        <fct>FindFirstChangeNotification</fct>
+        <fct>FindNextChangeNotification</fct>
+        <fct>FindCloseChangeNotification</fct>
+        <fct>LocalFlags</fct>
+        <fct>GlobalMemoryStatus</fct>
+        <fct>GlobalMemoryStatusEx</fct>
+        <fct>DeleteVolumeMountPoint</fct>
+        <fct>SetVolumeMountPoint</fct>
+        <fct>FindFirstVolume</fct>
+        <fct>FindNextVolume</fct>
+        <fct>FindVolumeClose</fct>
+        <fct>GetVolumeNameForVolumeMountPoint</fct>
+        <fct>GetVolumePathName</fct>
+        <fct>GetVolumePathNamesForVolumeName</fct>
+        <fct>CancelDeviceWakeupRequest</fct>
+        <fct>GetShellWindow</fct>
+        <fct>DnsQueryEx</fct>
+        <fct>DnsQuery_</fct>
+        <fct>InternetFindNextFile</fct>
+        <fct>InternetGetCookieEx</fct>
+        <fct>InternetGetLastResponseInfo</fct>
+        <fct>commands</fct>
+        <fct>httpshots</fct>
+        <fct>formgrabber</fct>
+        <fct>redirects</fct>
+        <fct>httpinjects</fct>
+        <fct>GetQueueStatus</fct>
+        <fct>DownloadRunModId</fct>
+        <fct>DownloadUpdateMain</fct>
+        <fct>Inject32End</fct>
+        <fct>Inject32Normal</fct>
+        <fct>Inject32Start</fct>
+        <fct>InjectApcRoutine</fct>
+        <fct>InjectNormRoutine</fct>
+        <fct>SelfDelete</fct>
+        <fct>SendLogs</fct>
+        <fct>WriteConfigString</fct>
+        <fct>DownloadRunExeId</fct>
+        <fct>DownloadRunExeUrl</fct>
+        <fct>TestingServ</fct>
+        <fct>AttachThreadInput</fct>
+        <fct>ObjectDeleteAuditAlarm</fct>
+        <fct>AuditComputeEffectivePolicyBySid</fct>
+        <fct>AuditComputeEffectivePolicyByToken</fct>
+        <fct>AuditEnumerateCategories</fct>
+        <fct>AuditEnumeratePerUserPolicy</fct>
+        <fct>AuditEnumerateSubCategories</fct>
+        <fct>AuditFree</fct>
+        <fct>AuditLookupCategoryGuidFromCategoryId</fct>
+        <fct>AuditLookupCategoryIdFromCategoryGuid</fct>
+        <fct>AuditLookupCategoryName</fct>
+        <fct>AuditLookupSubCategoryName</fct>
+        <fct>AuditQueryGlobalSacl</fct>
+        <fct>AuditQueryPerUserPolicy</fct>
+        <fct>AuditQuerySecurity</fct>
+        <fct>AuditQuerySystemPolicy</fct>
+        <fct>AuditSetGlobalSacl</fct>
+        <fct>AuditSetPerUserPolicy</fct>
+        <fct>AuditSetSecurity</fct>
+        <fct>AuditSetSystemPolicy</fct>
+        <fct>AuthzAccessCheck</fct>
+        <fct>AuthzAccessCheckCallback</fct>
+        <fct>AuthzAddSidsToContext</fct>
+        <fct>AuthzCachedAccessCheck</fct>
+        <fct>AuthzComputeGroupsCallback</fct>
+        <fct>AuthzEnumerateSecurityEventSources</fct>
+        <fct>AuthzFreeAuditEvent</fct>
+        <fct>AuthzFreeCentralAccessPolicyCache</fct>
+        <fct>AuthzFreeCentralAccessPolicyCallback</fct>
+        <fct>AuthzFreeContext</fct>
+        <fct>AuthzFreeGroupsCallback</fct>
+        <fct>AuthzFreeHandle</fct>
+        <fct>AuthzFreeResourceManager</fct>
+        <fct>AuthzGetCentralAccessPolicyCallback</fct>
+        <fct>AuthzGetInformationFromContext</fct>
+        <fct>AuthzInitializeCompoundContext</fct>
+        <fct>AuthzInitializeContextFromAuthzContext</fct>
+        <fct>AuthzInitializeContextFromSid</fct>
+        <fct>AuthzInitializeContextFromToken</fct>
+        <fct>AuthzInitializeObjectAccessAuditEvent</fct>
+        <fct>AuthzInitializeObjectAccessAuditEvent2</fct>
+        <fct>AuthzInitializeRemoteResourceManager</fct>
+        <fct>AuthzInitializeResourceManager</fct>
+        <fct>AuthzInitializeResourceManagerEx</fct>
+        <fct>AuthzInstallSecurityEventSource</fct>
+        <fct>AuthzModifyClaims</fct>
+        <fct>AuthzModifySecurityAttributes</fct>
+        <fct>AuthzModifySids</fct>
+        <fct>AuthzOpenObjectAudit</fct>
+        <fct>AuthzRegisterCapChangeNotification</fct>
+        <fct>AuthzRegisterSecurityEventSource</fct>
+        <fct>AuthzReportSecurityEvent</fct>
+        <fct>AuthzReportSecurityEventFromParams</fct>
+        <fct>AuthzSetAppContainerInformation</fct>
+        <fct>AuthzUninstallSecurityEventSource</fct>
+        <fct>AuthzUnregisterCapChangeNotification</fct>
+        <fct>AuthzUnregisterSecurityEventSource</fct>
+        <fct>bind</fct>
+        <fct>BuildExplicitAccessWithName</fct>
+        <fct>BuildImpersonateExplicitAccessWithName</fct>
+        <fct>BuildImpersonateTrustee</fct>
+        <fct>BuildSecurityDescriptor</fct>
+        <fct>BuildTrusteeWithName</fct>
+        <fct>BuildTrusteeWithObjectsAndName</fct>
+        <fct>BuildTrusteeWithObjectsAndSid</fct>
+        <fct>BuildTrusteeWithSid</fct>
+        <fct>CheckTokenCapability</fct>
+        <fct>CheckTokenMembership</fct>
+        <fct>CheckTokenMembershipEx</fct>
+        <fct>connect</fct>
+        <fct>ConvertSecurityDescriptorToStringSecurityDescriptor</fct>
+        <fct>ConvertStringSecurityDescriptorToSecurityDescriptor</fct>
+        <fct>ConvertStringSidToSid</fct>
+        <fct>ConvertToAutoInheritPrivateObjectSecurity</fct>
+        <fct>CopySid</fct>
+        <fct>CreateEnvironmentBlock</fct>
+        <fct>RegDeleteTree</fct>
+        <fct>RegUnLoadKey</fct>
+        <fct>RegReplaceKey</fct>
+        <fct>RegFlushKey</fct>
+        <fct>RegCopyTree</fct>
+        <fct>RegLoadKey</fct>
+        <fct>RegEnumKey</fct>
+        <fct>RegConnectRegistry</fct>
+        <fct>RegDeleteKey</fct>
+        <fct>RegDeleteKeyValue</fct>
+        <fct>RegDeleteValue</fct>
+        <fct>RegGetKeySecurity</fct>
+        <fct>RegSetKeySecurity</fct>
+        <fct>RegSetKeyValue</fct>
+        <fct>RegSetValue</fct>
+        <fct>RegSetValueEx</fct>
+        <fct>RegNotifyChangeKeyValue</fct>
+        <fct>RegRestoreKey</fct>
+        <fct>RegOverridePredefKey</fct>
+        <fct>RegSetValue</fct>
+        <fct>RegCreateKeyEx</fct>
+        <fct>RegCreateKey</fct>
+        <fct>RegSaveKey</fct>
+        <fct>RegDisablePredefinedCache</fct>
+        <fct>RegDisablePredefinedCacheEx</fct>
+        <fct>RegDisableReflectionKey</fct>
+        <fct>RegEnableReflectionKey</fct>
+        <fct>RegQueryMultipleValues</fct>
+        <fct>RegDisablePredefinedCacheE</fct>
+        <fct>RegOpenCurrentUser</fct>
+        <fct>RegOpenUserClassesRoot</fct>
+        <fct>RegSaveKeyEx</fct>
+        <fct>SHDeleteKey</fct>
+        <fct>SHDeleteValue</fct>
+        <fct>SHDeleteEmptyKey</fct>
+        <fct>SHOpenRegStream2</fct>
+        <fct>SHReplaceFromPropSheetExtArray</fct>
+        <fct>CreateProcessWithToken</fct>
+        <fct>CreateProcess</fct>
+        <fct>CreateProcessInternal</fct>
+        <fct>CreateProcessAsUser</fct>
+        <fct>CreateProcessWithLogon</fct>
+        <fct>CreateRemoteThread</fct>
+        <fct>CreateRestrictedToken</fct>
+        <fct>NtCreateToken</fct>
+        <fct>TerminateProcess</fct>
+        <fct>ShellExecute</fct>
+        <fct>ShellExecuteEx</fct>
+        <fct>WinExec</fct>
+        <fct>OpenProcessToken</fct>
+        <fct>OpenThreadToken</fct>
+        <fct>OpenProcess</fct>
+        <fct>WriteProcessMemory</fct>
+        <fct>GetCurrentProcessId</fct>
+        <fct>GetProcessMemoryInfo</fct>
+        <fct>GetWindowThreadProcessId</fct>
+        <fct>Toolhelp32ReadProcessMemory</fct>
+        <fct>CreateToolhelp32Snapshot</fct>
+        <fct>CloseToolhelp32Snapshot</fct>
+        <fct>SwitchToThread</fct>
+        <fct>Wow64SuspendThread</fct>
+        <fct>GetExitCodeProcess</fct>
+        <fct>Process32First</fct>
+        <fct>Process32Next</fct>
+        <fct>Thread32First</fct>
+        <fct>Thread32Next</fct>
+        <fct>Module32First</fct>
+        <fct>Module32Next</fct>
+        <fct>CertConfigureTrust</fct>
+        <fct>CertOpenSystemStore</fct>
+        <fct>CertTrustCertPolicy</fct>
+        <fct>CertTrustInit</fct>
+        <fct>CryptSignAndEncodeCertificate</fct>
+        <fct>CryptEncodeObject</fct>
+        <fct>CryptEncodeObjectEx</fct>
+        <fct>CryptExportPublicKeyInfoEx</fct>
+        <fct>CryptCreateHash</fct>
+        <fct>CryptHashData</fct>
+        <fct>CryptImportPublicKeyInfo</fct>
+        <fct>CryptProtectData</fct>
+        <fct>BCryptDestroyHash</fct>
+        <fct>BCryptHashData</fct>
+        <fct>BCryptDeriveKeyPBKDF2</fct>
+        <fct>BCryptEncrypt</fct>
+        <fct>BCryptFinishHash</fct>
+        <fct>BCryptVerifySignature</fct>
+        <fct>BCryptImportKeyPair</fct>
+        <fct>BCryptImportKey</fct>
+        <fct>BCryptCreateHash</fct>
+        <fct>CryptGetHashParam</fct>
+        <fct>CryptDestroyHash</fct>
+        <fct>CryptReleaseContext</fct>
+        <fct>CryptDecrypt</fct>
+        <fct>CryptEncrypt</fct>
+        <fct>CryptAcquireContext</fct>
+        <fct>CryptGenRandom</fct>
+        <fct>CryptDestroyKey</fct>
+        <fct>CryptGetKeyParam</fct>
+        <fct>CryptVerifySignature</fct>
+        <fct>CryptImportKey</fct>
+        <fct>CryptEnumProviders</fct>
+        <fct>CryptEnumProviderTypes</fct>
+        <fct>CryptDeriveKey</fct>
+        <fct>CryptSetProvider</fct>
+        <fct>CryptSetProviderEx</fct>
+        <fct>CryptGetDefaultProvider</fct>
+        <fct>CryptDuplicateHash</fct>
+        <fct>CryptExportKey</fct>
+        <fct>CryptGenKey</fct>
+        <fct>CryptGetUserKey</fct>
+        <fct>CryptDuplicateKey</fct>
+        <fct>CryptSetKeyParam</fct>
+        <fct>CryptSetProvParam</fct>
+        <fct>CryptSetHashParam</fct>
+        <fct>EncryptFile</fct>
+        <fct>DecryptFile</fct>
+        <fct>EncryptDirectory</fct>
+        <fct>AES_Encrypt</fct>
+        <fct>AES_Decrypt</fct>
+        <fct>Encrypt_AES</fct>
+        <fct>Decrypt_AES</fct>
+        <fct>EncryptedFileKeyInfo</fct>
+        <fct>EncryptionDisable</fct>
+        <fct>CloseEncryptedFileRaw</fct>
+        <fct>OpenEncryptedFileRaw</fct>
+        <fct>ReadEncryptedFileRaw</fct>
+        <fct>WriteEncryptedFileRaw</fct>
+        <fct>DuplicateEncryptionInfoFile</fct>
+        <fct>SetUserFileEncryptionKey</fct>
+        <fct>VirtualProtect</fct>
+        <fct>VirtualProtectEx</fct>
+        <fct>ReadProcessMemory</fct>
+        <fct>FindNextFile</fct>
+        <fct>FindFirstFile</fct>
+        <fct>FindFirstFileEx</fct>
+        <fct>FindFirstFileTransacted</fct>
+        <fct>FindFirstFileNameTransacted</fct>
+        <fct>FindFirstFileName</fct>
+        <fct>FindNextFileName</fct>
+        <fct>FindNextStream</fct>
+        <fct>FindFirstStream</fct>
+        <fct>RemoveDirectory</fct>
+        <fct>DeleteFile</fct>
+        <fct>WriteFile</fct>
+        <fct>GetCPFileNameFromRegistry</fct>
+        <fct>CopyLZFile</fct>
+        <fct>GetTempFileName</fct>
+        <fct>LZCloseFile</fct>
+        <fct>LZCreateFile</fct>
+        <fct>LZOpenFile</fct>
+        <fct>LockFile</fct>
+        <fct>LockFileEx</fct>
+        <fct>UnlockFile</fct>
+        <fct>MapViewOfFile</fct>
+        <fct>MapViewOfFileEx</fct>
+        <fct>ReadFileScatter</fct>
+        <fct>MoveFile</fct>
+        <fct>MoveFileEx</fct>
+        <fct>MoveFileWithProgress</fct>
+        <fct>MoveFileTransacted</fct>
+        <fct>DeleteFileTransacted</fct>
+        <fct>CopyFileTransacted</fct>
+        <fct>SetFileAttributesTransacted</fct>
+        <fct>OpenDataFile</fct>
+        <fct>OpenFileMapping</fct>
+        <fct>OpenProfileUserMapping</fct>
+        <fct>PrivCopyFileEx</fct>
+        <fct>PrivMoveFileIdentity</fct>
+        <fct>ReplaceFile</fct>
+        <fct>SetFileAttributes</fct>
+        <fct>SetFileShortName</fct>
+        <fct>SetFileSecurity</fct>
+        <fct>UnlockFileEx</fct>
+        <fct>UnmapViewOfFile</fct>
+        <fct>GetFileSecurity</fct>
+        <fct>GetFileInformationByHandleEx</fct>
+        <fct>StartServiceCtrlDispatcher</fct>
+        <fct>GetServiceDisplayName</fct>
+        <fct>ControlService</fct>
+        <fct>LsaRemoveAccountRights</fct>
+        <fct>LsaEnumerateLogonSessions</fct>
+        <fct>LsaCallAuthenticationPackage</fct>
+        <fct>LsaUnregisterPolicyChangeNotification</fct>
+        <fct>BeginUpdateResource</fct>
+        <fct>EndUpdateResource</fct>
+        <fct>EnumResourceNames</fct>
+        <fct>UpdateResource</fct>
+        <fct>EnumThreadWindows</fct>
+        <fct>AccessCheck</fct>
+        <fct>AccessCheckAndAuditAlarm</fct>
+        <fct>AccessCheckByType</fct>
+        <fct>AccessCheckByTypeAndAuditAlarm</fct>
+        <fct>AccessCheckByTypeResultList</fct>
+        <fct>AccessCheckByTypeResultListAndAuditAlarm</fct>
+        <fct>AccessCheckByTypeResultListAndAuditAlarmByHandle</fct>
+        <fct>AddAccessAllowedAce</fct>
+        <fct>AddAccessAllowedAceEx</fct>
+        <fct>AddAccessAllowedObjectAce</fct>
+        <fct>AddAccessDeniedAce</fct>
+        <fct>AddAccessDeniedAceEx</fct>
+        <fct>AddUsersToEncryptedFile</fct>
+        <fct>AddAccessDeniedObjectAce</fct>
+        <fct>AddAce</fct>
+        <fct>AddAuditAccessAce</fct>
+        <fct>AddAuditAccessAceEx</fct>
+        <fct>AddAuditAccessObjectAce</fct>
+        <fct>AddConditionalAce</fct>
+        <fct>AddMandatoryAce</fct>
+        <fct>AddResourceAttributeAce</fct>
+        <fct>AddScopedPolicyIDAce</fct>
+        <fct>AdjustTokenGroups</fct>
+        <fct>AdjustTokenPrivileges</fct>
+        <fct>AllocateAndInitializeSid</fct>
+        <fct>AllocateLocallyUniqueId</fct>
+        <fct>AreAllAccessesGranted</fct>
+        <fct>AreAnyAccessesGranted</fct>
+        <fct>LookupAccountName</fct>
+        <fct>LookupAccountSid</fct>
+        <fct>LookupPrivilegeDisplayName</fct>
+        <fct>LookupPrivilegeName</fct>
+        <fct>LookupPrivilegeValue</fct>
+        <fct>LookupSecurityDescriptorParts</fct>
+        <fct>CreatePrivateObjectSecurity</fct>
+        <fct>CreatePrivateObjectSecurityEx</fct>
+        <fct>CreatePrivateObjectSecurityWithMultipleInheritance</fct>
+        <fct>CreateSecurityPage</fct>
+        <fct>CreateWellKnownSid</fct>
+        <fct>DeleteAce</fct>
+        <fct>DestroyEnvironmentBlock</fct>
+        <fct>DestroyPrivateObjectSecurity</fct>
+        <fct>DeviceIoControl</fct>
+        <fct>DllInstall</fct>
+        <fct>DllRegisterServer</fct>
+        <fct>DllRegisterServerEx</fct>
+        <fct>DllUnregisterServer</fct>
+        <fct>DllUnregisterServerEx</fct>
+        <fct>DSCreateISecurityInfoObject</fct>
+        <fct>DSCreateISecurityInfoObjectEx</fct>
+        <fct>DSCreateSecurityPage</fct>
+        <fct>DSEditSecurity</fct>
+        <fct>DuplicateToken</fct>
+        <fct>DuplicateTokenEx</fct>
+        <fct>EditSecurity</fct>
+        <fct>EditSecurityAdvanced</fct>
+        <fct>EnableExecuteProtectionSupport</fct>
+        <fct>EqualDomainSid</fct>
+        <fct>EqualPrefixSid</fct>
+        <fct>EqualSid</fct>
+        <fct>FindFirstFreeAce</fct>
+        <fct>FreeInheritedFromArray</fct>
+        <fct>FreeSid</fct>
+        <fct>GetAccessSecurityDescriptor</fct>
+        <fct>GetAce</fct>
+        <fct>GetAclInformation</fct>
+        <fct>GetAdaptersInfo</fct>
+        <fct>getaddrinfo</fct>
+        <fct>GetAppContainerNamedObjectPath</fct>
+        <fct>GetAsyncKeyState</fct>
+        <fct>GetAuditedPermissionsFromAcl</fct>
+        <fct>GetConfigurationSecurityDescriptor</fct>
+        <fct>GetCurrentThread</fct>
+        <fct>GetCurrentThreadId</fct>
+        <fct>GetEffectiveRightsFromAcl</fct>
+        <fct>GetEnvironmentStrings</fct>
+        <fct>GetExplicitEntriesFromAcl</fct>
+        <fct>GetForegroundWindow</fct>
+        <fct>GetInheritanceSource</fct>
+        <fct>GetKernelObjectSecurity</fct>
+        <fct>GetKeyState</fct>
+        <fct>GetMouseMovePointsEx</fct>
+        <fct>GetLengthSid</fct>
+        <fct>GetModuleBaseName</fct>
+        <fct>GetModuleInformation</fct>
+        <fct>GetMonitorInfo</fct>
+        <fct>GetMultipleTrustee</fct>
+        <fct>GetMultipleTrusteeOperation</fct>
+        <fct>GetNamedSecurityInfo</fct>
+        <fct>GetPrivateObjectSecurity</fct>
+        <fct>GetSecurityDescriptorControl</fct>
+        <fct>GetSecurityDescriptorDacl</fct>
+        <fct>GetSecurityDescriptorGroup</fct>
+        <fct>GetSecurityDescriptorLength</fct>
+        <fct>GetSecurityDescriptorOwner</fct>
+        <fct>GetSecurityDescriptorRMControl</fct>
+        <fct>GetSecurityDescriptorSacl</fct>
+        <fct>ZwSetSecurityObject</fct>
+        <fct>ZwCreateKey</fct>
+        <fct>ZwNotifyChangeKey</fct>
+        <fct>ZwUnloadKey</fct>
+        <fct>ZwEnumerateValueKey</fct>
+        <fct>SeCaptureSecurityDescriptor</fct>
+        <fct>GetSecurityInfo</fct>
+        <fct>GetSidIdentifierAuthority</fct>
+        <fct>GetSidLengthRequired</fct>
+        <fct>GetSidSubAuthority</fct>
+        <fct>GetSidSubAuthorityCount</fct>
+        <fct>GetWindowsAccountDomainSid</fct>
+        <fct>ImpersonateAnonymousToken</fct>
+        <fct>ImpersonateLoggedOnUser</fct>
+        <fct>InternetConnect</fct>
+        <fct>InternetOpen</fct>
+        <fct>InternetOpen</fct>
+        <fct>InternetOpenUrl</fct>
+        <fct>InternetQueryDataAvailable</fct>
+        <fct>InternetQueryOption</fct>
+        <fct>InternetReadFile</fct>
+        <fct>UnlockUrlCacheEntryFileW</fct>
+        <fct>InternetReadFileEx</fct>
+        <fct>InternetSetCookie</fct>
+        <fct>InternetSetOption</fct>
+        <fct>InternetWriteFile</fct>
+        <fct>IsNTAdmin</fct>
+        <fct>IsTokenRestricted</fct>
+        <fct>IsValidAcl</fct>
+        <fct>IsValidSecurityDescriptor</fct>
+        <fct>IsValidSid</fct>
+        <fct>IsWellKnownSid</fct>
+        <fct>JournalPlaybackProc</fct>
+        <fct>AddDllDirectory</fct>
+        <fct>LoadUserProfile</fct>
+        <fct>MakeSelfRelativeSD</fct>
+        <fct>MapGenericMask</fct>
+        <fct>MapVirtualKey</fct>
+        <fct>MmGetSystemRoutineAddress</fct>
+        <fct>MmCreateMdl</fct>
+        <fct>MmGetSystemAddressForMdl</fct>
+        <fct>MmIsThisAnNtAsSystem</fct>
+        <fct>MmMapLockedPages</fct>
+        <fct>MonitorEnumProc</fct>
+        <fct>ObjectCloseAuditAlarm</fct>
+        <fct>ObjectDeleteAuditAlarm</fct>
+        <fct>ObjectOpenAuditAlarm</fct>
+        <fct>ObjectPrivilegeAuditAlarm</fct>
+        <fct>OutputDebugString</fct>
+        <fct>PrivilegeCheck</fct>
+        <fct>NtPrivilegeCheck</fct>
+        <fct>NtQueryValueKey</fct>
+        <fct>PrivilegedServiceAuditAlarm</fct>
+        <fct>RtlConvertSidToUnicodeString</fct>
+        <fct>RtlCreateRegistryKey</fct>
+        <fct>RtlWriteRegistryValue</fct>
+        <fct>RtlDeleteRegistryValue</fct>
+        <fct>RtlPcToFileHeader</fct>
+        <fct>recv</fct>
+        <fct>send</fct>
+        <fct>setjmp</fct>
+        <fct>SetAccessSecurityDescriptor</fct>
+        <fct>SetAclInformation</fct>
+        <fct>SetConfigurationSecurityDescriptor</fct>
+        <fct>SetEntriesInAcl</fct>
+        <fct>SetKernelObjectSecurity</fct>
+        <fct>SetLaunchSecurityDescriptor</fct>
+        <fct>SetNamedSecurityInfo</fct>
+        <fct>SetPrivateObjectSecurity</fct>
+        <fct>SetPrivateObjectSecurityEx</fct>
+        <fct>SetSecurityAccessMask</fct>
+        <fct>SetSecurityDescriptorControl</fct>
+        <fct>SeSetSecurityDescriptorInfo</fct>
+        <fct>SetSecurityDescriptorDacl</fct>
+        <fct>SetSecurityDescriptorGroup</fct>
+        <fct>SetSecurityDescriptorOwner</fct>
+        <fct>SetSecurityDescriptorRMControl</fct>
+        <fct>SetSecurityDescriptorSacl</fct>
+        <fct>SetSecurityInfo</fct>
+        <fct>SetServiceObjectSecurity</fct>
+        <fct>SetThreadToken</fct>
+        <fct>SetTokenInformation</fct>
+        <fct>SfcTerminateWatcherThread</fct>
+        <fct>StgCreateDocfile</fct>
+        <fct>StgCreateStorageEx</fct>
+        <fct>StgOpenStorage</fct>
+        <fct>TreeResetNamedSecurityInfo</fct>
+        <fct>TreeSetNamedSecurityInfo</fct>
+        <fct>UnloadUserProfile</fct>
+        <fct>LocalCompact</fct>
+        <fct>URLDownloadToFile</fct>
+        <fct>Wow64DisableWow64FsRedirection</fct>
+        <fct>WritePrivateProfileString</fct>
+        <fct>PssCaptureSnapshot</fct>
+      </fcts>
+    </lib>
+    <lib name="devmgr.dll" flag="1" desc="Device Manager MMC Snapin">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="shlwapi.dll" flag="0" desc="Shell Light-weight Utility Library">
+      <fcts>
+        <fct>SHUnlockShared</fct>
+        <fct>AssocCreate</fct>
+        <fct>UrlHash</fct>
+        <fct
+          flag="1">UrlIsNoHistory</fct>
+        <fct>StopWatchFlush</fct>
+        <fct>StopWatchMode</fct>
+       
+       
+       
+       
+       
+        <fct
+          flag="1">OutputDebugStringWrap</fct>
+       
+       
+       
+       
+       
+        <fct>PathRemoveFileSpec</fct>
+       
+       
+       
+       
+       
+        <fct>
+        PathFindExtension</fct>
+        <fct>PathGetDriveNumber</fct>
+        <fct>PathFindFileName</fct>
+        <fct
+          flag="1">PathRenameExtension</fct>
+        <fct>PathIsDirectory</fct>
+        <fct>
+        PathIsDirectoryEmpty</fct>
+        <fct>kernel32.FindFirstFileW</fct>
+        <fct>
+        kernel32.FindResourceW</fct>
+        <fct>kernel32.EnumResourceNames</fct>
+        <fct>
+        user32.FindWindow</fct>
+       
+       
+       
+        <fct>IStream_Write</fct>
+        <fct>IStream_Reset</fct>
+       
+       
+        <fct
+          flag="1">AssocQueryString</fct>
+        <fct>PathIsURL</fct>
+        <fct>UrlEscape</fct>
+        <fct
+          flag="1">SHCopyKey</fct>
+        <fct>SHRegQueryInfoUSKey</fct>
+        <fct>
+        UrlCreateFromPath</fct> - <fct>IStream_WritePidl</fct>
+        <fct>IStream_Copy</fct>
+       
+        <fct
+          flag="1">IStream_WriteStr</fct>
+      </fcts>
+    </lib>
+    <lib name="mssign32.dll" flag="1">
+      <fcts>
+        <fct>FreeCryptProvFromCert</fct>
+        <fct>FreeCryptProvFromCertEx</fct>
+        <fct>GetCryptProvFromCert</fct>
+        <fct>GetCryptProvFromCertEx</fct>
+        <fct>PvkFreeCryptProv</fct>
+        <fct>PvkGetCryptProv</fct>
+        <fct>PvkPrivateKeyAcquireContext</fct>
+        <fct>PvkPrivateKeyAcquireContextFromMemory</fct>
+        <fct>PvkPrivateKeyLoad</fct>
+        <fct>PvkPrivateKeyLoadFromMemory</fct>
+        <fct>PvkPrivateKeyReleaseContext</fct>
+        <fct>PvkPrivateKeySave</fct>
+        <fct>PvkPrivateKeySaveToMemory</fct>
+        <fct>SignError</fct>
+        <fct>SignerAddTimeStampResponse</fct>
+        <fct>SignerAddTimeStampResponseEx</fct>
+        <fct>SignerCreateTimeStampRequest</fct>
+        <fct>SignerFreeSignerContext</fct>
+        <fct>SignerSign</fct>
+        <fct>SignerSignEx</fct>
+        <fct>SignerTimeStamp</fct>
+        <fct>SignerTimeStampEx</fct>
+        <fct>SignerTimeStampEx2</fct>
+        <fct>SpcGetCertFromKey</fct>
+        <fct>SpLsaModeInitialize</fct>
+        <fct>SpUserModeInitialize</fct>
+      </fcts>
+    </lib>
+    <lib name="cscapi.dll" flag="1">
+      <fcts>
+        <fct>CscSearchApiGetInterface</fct>
+      </fcts>
+    </lib>
+    <lib name="urlmon.dll" flag="1" desc="OLE32 Extensions for Win32">
+      <fcts>
+        <fct>URLOpenBlockingStream</fct>
+        <fct>URLOpenPullStream</fct>
+        <fct>URLOpenStream</fct>
+        <fct>URLDownload</fct>
+        <fct>URLDownloadToCacheFileA</fct>
+        <fct>URLDownloadToCacheFileW</fct>
+        <fct>URLDownloadToFileA</fct>
+        <fct>URLDownloadToFileW</fct>
+        <fct>URLDownloadW</fct>
+        <fct>URLOpenBlockingStreamA</fct>
+        <fct>URLOpenBlockingStreamW</fct>
+        <fct>URLOpenPullStreamA</fct>
+        <fct>URLOpenPullStreamW</fct>
+        <fct>URLOpenStreamA</fct>
+        <fct>URLOpenStreamW</fct>
+        <fct>ZonesReInit</fct>
+        <fct>URLDownloadToCacheFile</fct>
+        <fct>URLOpenBlockingStream</fct>
+        <fct>WriteHitLogging</fct>
+        <fct>IsLoggingEnabled</fct>
+        <fct>UrlMkSetSessionOption</fct>
+        <fct>ObtainUserAgentString</fct>
+        <fct>IsValidURL</fct>
+        <fct>CoInternetCreateZoneManager</fct>
+        <fct>WriteHitLogging</fct>
+        <fct>CreateURLMoniker</fct>
+        <fct>CreateURLMonikerEx</fct>
+        <fct>CoInternetCreateSecurityManager</fct>
+        <fct>RegisterBindStatusCallback</fct>
+      </fcts>
+    </lib>
+    <lib name="Userenv.dll" flag="0">
+      <fcts>
+        <fct>CreateUserProfileEx</fct>
+        <fct>GetUserProfileDirectory</fct>
+        <fct>GetAppliedGPOList</fct>
+        <fct>GetAllUsersProfileDirectory</fct>
+        <fct>GetProfilesDirectory</fct>
+        <fct>CreateProfile</fct>
+        <fct>DeleteProfile</fct>
+        <fct>ExpandEnvironmentStringsForUser</fct>
+        <fct>ForceSyncFgPolicy</fct>
+        <fct>FreeGPOList</fct>
+        <fct>RsopResetPolicySettingStatus</fct>
+        <fct>RsopSetPolicySettingStatus</fct>
+        <fct>RefreshPolicy</fct>
+        <fct>UnregisterGPNotification</fct>
+      </fcts>
+    </lib>
+    <lib name="sensapi.dll" flag="1" desc="SENS Connectivity Library">
+      <fcts>
+        <fct>IsNetworkAlive</fct>
+      </fcts>
+    </lib>
+    <lib name="scecli.dll" flag="1">
+      <fcts>
+        <fct>DeltaNotify</fct>
+        <fct>InitializeChangeNotify</fct>
+        <fct>SceConfigureConvertedFileSecurity</fct>
+        <fct>SceGenerateGroupPolicy</fct>
+        <fct>SceNotifyPolicyDelta</fct>
+        <fct>SceOpenPolicy</fct>
+        <fct>SceProcessSecurityPolicyGPO</fct>
+        <fct>SceProcessSecurityPolicyGPOEx</fct>
+        <fct>SceSysPrep</fct>
+        <fct>SceAddToNameList</fct>
+        <fct>SceAddToNameStatusList</fct>
+        <fct>SceAddToObjectList</fct>
+        <fct>SceAnalyzeSystem</fct>
+        <fct>SceAppendSecurityProfileInfo</fct>
+        <fct>SceBrowseDatabaseTable</fct>
+        <fct>SceCloseProfile</fct>
+        <fct>SceCommitTransaction</fct>
+        <fct>SceCompareNameList</fct>
+        <fct>SceCompareSecurityDescriptors</fct>
+        <fct>SceConfigureSystem</fct>
+        <fct>SceCopyBaseProfile</fct>
+        <fct>SceCreateDirectory</fct>
+        <fct>SceDcPromoCreateGPOsInSysvol</fct>
+        <fct>SceDcPromoCreateGPOsInSysvolEx</fct>
+        <fct>SceDcPromoteSecurity</fct>
+        <fct>SceDcPromoteSecurityEx</fct>
+        <fct>SceEnforceSecurityPolicyPropagation</fct>
+        <fct>SceEnumerateServices</fct>
+        <fct>SceFreeMemory</fct>
+        <fct>SceFreeProfileMemory</fct>
+        <fct>SceGenerateRollback</fct>
+        <fct>SceGetAnalysisAreaSummary</fct>
+        <fct>SceGetAreas</fct>
+        <fct>SceGetDatabaseSetting</fct>
+        <fct>SceGetDbTime</fct>
+        <fct>SceGetObjectChildren</fct>
+        <fct>SceGetObjectSecurity</fct>
+        <fct>SceGetScpProfileDescription</fct>
+        <fct>SceGetSecurityProfileInfo</fct>
+        <fct>SceGetServerProductType</fct>
+        <fct>SceGetTimeStamp</fct>
+        <fct>SceIsSystemDatabase</fct>
+        <fct>SceLookupPrivRightName</fct>
+        <fct>SceOpenProfile</fct>
+        <fct>SceRegisterRegValues</fct>
+        <fct>SceRollbackTransaction</fct>
+        <fct>SceSetDatabaseSetting</fct>
+        <fct>SceSetupBackupSecurity</fct>
+        <fct>SceSetupConfigureServices</fct>
+        <fct>SceSetupGenerateTemplate</fct>
+        <fct>SceSetupMoveSecurityFile</fct>
+        <fct>SceSetupRootSecurity</fct>
+        <fct>SceSetupSystemByInfName</fct>
+        <fct>SceSetupUnwindSecurityFile</fct>
+        <fct>SceSetupUpdateSecurityFile</fct>
+        <fct>SceSetupUpdateSecurityKey</fct>
+        <fct>SceSetupUpdateSecurityService</fct>
+        <fct>SceStartTransaction</fct>
+        <fct>SceSvcConvertSDToText</fct>
+        <fct>SceSvcConvertTextToSD</fct>
+        <fct>SceSvcFree</fct>
+        <fct>SceSvcGetInformationTemplate</fct>
+        <fct>SceSvcQueryInfo</fct>
+        <fct>SceSvcSetInfo</fct>
+        <fct>SceSvcSetInformationTemplate</fct>
+        <fct>SceSvcUpdateInfo</fct>
+        <fct>SceUpdateObjectInfo</fct>
+        <fct>SceUpdateSecurityProfile</fct>
+        <fct>SceWriteSecurityProfileInfo</fct>
+      </fcts>
+    </lib>
+    <lib name="ole32.dll" flag="0" desc="Microsoft OLE for Windows">
+      <fcts>
+        <fct>OleLoad</fct>
+        <fct>GetRunningObjectTable</fct>
+        <fct>CoInitializeSecurity</fct>
+        <fct>CoLoadLibrary</fct>
+        <fct>OleRun</fct>
+        <fct>OleFlushClipboard</fct>
+        <fct>OleSetClipboard</fct>
+        <fct>OleGetClipboard</fct>
+      </fcts>
+    </lib>
+    <lib name="cygwin1.dll" flag="0" desc="Cygwin POSIX Emulation DLL">
+      <fcts>
+        <fct>connect</fct>
+        <fct>recv</fct>
+        <fct>send</fct>
+        <fct>socket</fct>
+      </fcts>
+    </lib>
+    <lib name="ws2_32.dll" flag="1" desc="Windows Socket Library">
+      <fcts>
+        <fct>inet_ntop</fct>
+        <fct>accept</fct>
+        <fct>bind</fct>
+        <fct>closesocket</fct>
+        <fct>connect</fct>
+        <fct>getpeervalue</fct>
+        <fct>getsockvalue</fct>
+        <fct>getsockopt</fct>
+        <fct>htonl</fct>
+        <fct>htons</fct>
+        <fct>ioctlsocket</fct>
+        <fct>inet_addr</fct>
+        <fct>inet_ntoa</fct>
+        <fct>listen</fct>
+        <fct>ntohl</fct>
+        <fct>ntohs</fct>
+        <fct>recv</fct>
+        <fct>recvfrom</fct>
+        <fct>send</fct>
+        <fct>sendto</fct>
+        <fct>setsockopt</fct>
+        <fct>shutdown</fct>
+        <fct>socket</fct>
+        <fct>WSApSetPostRoutine</fct>
+        <fct>FreeAddrInfoEx</fct>
+        <fct>FreeAddrInfoExW</fct>
+        <fct>GetAddrInfoExA</fct>
+        <fct>GetAddrInfoExCancel</fct>
+        <fct>GetAddrInfoExOverlappedResult</fct>
+        <fct>GetAddrInfoExW</fct>
+        <fct>GetAddrInfoW</fct>
+        <fct>GetHostNameW</fct>
+        <fct>GetNameInfoW</fct>
+        <fct>InetNtopW</fct>
+        <fct>InetPtonW</fct>
+        <fct>SetAddrInfoExA</fct>
+        <fct>SetAddrInfoExW</fct>
+        <fct>WPUCompleteOverlappedRequest</fct>
+        <fct>WPUGetProviderPathEx</fct>
+        <fct>WSAAccept</fct>
+        <fct>WSAAddressToStringA</fct>
+        <fct>WSAAddressToStringW</fct>
+        <fct>WSAAdvertiseProvider</fct>
+        <fct>WSACloseEvent</fct>
+        <fct>WSAGetOverlappedResult</fct>
+        <fct>WSAConnect</fct>
+        <fct>WSAConnectByList</fct>
+        <fct>WSAConnectByNameA</fct>
+        <fct>WSAConnectByNameW</fct>
+        <fct>WSACreateEvent</fct>
+        <fct>gethostbyaddr</fct>
+        <fct>gethostbyvalue</fct>
+        <fct>getprotobyvalue</fct>
+        <fct>getprotobynumber</fct>
+        <fct>getservbyvalue</fct>
+        <fct>getservbyport</fct>
+        <fct>gethostvalue</fct>
+        <fct>WSAInstallServiceClass</fct>
+        <fct>WSALookupServiceBegin</fct>
+        <fct>WSALookupServiceEnd</fct>
+        <fct>WSALookupServiceNext</fct>
+        <fct>WSANSPIoctl</fct>
+        <fct>WSANtohl</fct>
+        <fct>WSANtohs</fct>
+        <fct>WSAProviderConfigChange</fct>
+        <fct>WSARecv</fct>
+        <fct>WSARecvDisconnect</fct>
+        <fct>WSARecvFrom</fct>
+        <fct>WSARemoveServiceClass</fct>
+        <fct>WSAResetEvent</fct>
+        <fct>WSASend</fct>
+        <fct>WSASendDisconnect</fct>
+        <fct>WSASendTo</fct>
+        <fct>WSASetEvent</fct>
+        <fct>WSASetService</fct>
+        <fct>WSAStringToAddress</fct>
+        <fct>WSAWaitForMultipleEvents</fct>
+        <fct>WSAEnumNetworkEvents</fct>
+        <fct>WSCDeinstallProvider</fct>
+        <fct>WSCEnableNSProvider</fct>
+        <fct>WSCEnumProtocols</fct>
+        <fct>WSCGetProviderPath</fct>
+        <fct>WSCInstallvalueSpace</fct>
+        <fct>WSCInstallProvider</fct>
+        <fct>WSCUnInstallvalueSpace</fct>
+        <fct>WSCUpdateProvider</fct>
+        <fct>WSCWritevalueSpaceOrder</fct>
+        <fct>WSCWriteProviderOrder</fct>
+        <fct>WSAAsyncSelect</fct>
+        <fct>WSAAsyncGetHostByAddr</fct>
+        <fct>WSAAsyncGetHostByvalue</fct>
+        <fct>WSAAsyncGetProtoByNumber</fct>
+        <fct>WSAAsyncGetProtoByvalue</fct>
+        <fct>WSAAsyncGetServByPort</fct>
+        <fct>WSAAsyncGetServByvalue</fct>
+        <fct>WSACancelAsyncRequest</fct>
+        <fct>WSASetBlockingHook</fct>
+        <fct>WSAUnhookBlockingHook</fct>
+        <fct>WSAGetLastError</fct>
+        <fct>WSASetLastError</fct>
+        <fct>WSACancelBlockingCall</fct>
+        <fct>WSAIsBlocking</fct>
+      </fcts>
+    </lib>
+    <lib name="wsock32.dll" flag="1" desc="Windows Socket 32-Bit Library">
+      <fcts>
+        <fct>accept</fct>
+        <fct>bind</fct>
+        <fct>closesocket</fct>
+        <fct>connect</fct>
+        <fct>getpeername</fct>
+        <fct>getsockname</fct>
+        <fct>getsockopt</fct>
+        <fct>htonl</fct>
+        <fct>htons</fct>
+        <fct>inet_addr</fct>
+        <fct>inet_ntoa</fct>
+        <fct>ioctlsocket</fct>
+        <fct>listen</fct>
+        <fct>ntohl</fct>
+        <fct>ntohs</fct>
+        <fct>recv</fct>
+        <fct>recvfrom</fct>
+        <fct>select</fct>
+        <fct>send</fct>
+        <fct>sendto</fct>
+        <fct>setsockopt</fct>
+        <fct>shutdown</fct>
+        <fct>socket</fct>
+        <fct>gethostbyaddr</fct>
+        <fct>gethostbyname</fct>
+        <fct>getprotobyname</fct>
+        <fct>getprotobynumber</fct>
+        <fct>getservbyname</fct>
+        <fct>getservbyport</fct>
+        <fct>gethostname</fct>
+        <fct>WSAAsyncSelect</fct>
+        <fct>WSAAsyncGetHostByAddr</fct>
+        <fct>WSAAsyncGetHostByName</fct>
+        <fct>WSAAsyncGetProtoByNumber</fct>
+        <fct>WSAAsyncGetProtoByName</fct>
+        <fct>WSAAsyncGetServByPort</fct>
+        <fct>WSAAsyncGetServByName</fct>
+        <fct>WSACancelAsyncRequest</fct>
+        <fct>WSASetBlockingHook</fct>
+        <fct>WSAUnhookBlockingHook</fct>
+        <fct>WSAGetLastError</fct>
+        <fct>WSASetLastError</fct>
+        <fct>WSACancelBlockingCall</fct>
+        <fct>WSAIsBlocking</fct>
+        <fct>WSACleanup</fct>
+        <fct>__WSAFDIsSet</fct>
+      </fcts>
+    </lib>
+    <lib name="wship6.dll" flag="1">
+      <fcts>
+        <fct>WSHAddressToString</fct>
+        <fct>WSHEnumProtocols</fct>
+        <fct>WSHGetProviderGuid</fct>
+        <fct>WSHGetSockaddrType</fct>
+        <fct>WSHGetSocketInformation</fct>
+        <fct>WSHGetWSAProtocolInfo</fct>
+        <fct>WSHGetWildcardSockaddr</fct>
+        <fct>WSHGetWinsockMapping</fct>
+        <fct>WSHIoctl</fct>
+        <fct>WSHJoinLeaf</fct>
+        <fct>WSHNotify</fct>
+        <fct>WSHOpenSocket2</fct>
+        <fct>WSHOpenSocket</fct>
+        <fct>WSHSetSocketInformation</fct>
+        <fct>WSHStringToAddress</fct>
+      </fcts>
+    </lib>
+    <lib name="Loadperf.dll.dll" flag="1">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="clbcatq.dll" flag="1">
+      <fcts>
+        <fct>CheckMemoryGates</fct>
+      </fcts>
+    </lib>
+    <lib name="icmp.dll" flag="1" desc="ICMP Library">
+      <fcts>
+        <fct>IcmpCreateFile</fct>
+        <fct>IcmpParseReplies</fct>
+        <fct>IcmpCloseHandle</fct>
+        <fct>IcmpSendEcho</fct>
+        <fct>IcmpSendEcho2</fct>
+        <fct>do_echo_req</fct>
+        <fct>register_icmp</fct>
+      </fcts>
+    </lib>
+    <lib name="wtsapi32.dll" flag="1" desc="Windows Remote Desktop Session Host Server SDK APIs">
+      <fcts>
+        <fct>WTSDisconnectSession</fct>
+        <fct>WTSQuerySessionInformation</fct>
+        <fct>WTSEnumerateServers</fct>
+        <fct>WTSUnRegisterSessionNotification</fct>
+        <fct>WTHelperGetProvSignerFromChain</fct>
+        <fct>WTHelperProvDataFromStateData</fct>
+        <fct>WaitForThreadpoolTimerCallbacks</fct>
+        <fct>WTSFreeMemory</fct>
+        <fct>WTSQueryUserToken</fct>
+        <fct>WTSSendMessage</fct>
+        <fct>WTSOpenServer</fct>
+        <fct>WTSLogoffSession</fct>
+        <fct>WTSSetSessionInformation</fct>
+        <fct>WTSEnumerateSessions</fct>
+        <fct>WTSEnumerateProcesses</fct>
+        <fct>WTSEnumerateProcessesEx</fct>
+        <fct>WTSVirtualChannelOpen</fct>
+        <fct>WTSCloseServer</fct>
+        <fct>WTSConnectSession</fct>
+        <fct>WTSCreateListener</fct>
+        <fct>WTSRegisterSessionNotification</fct>
+        <fct>WTSRegisterSessionNotificationEx</fct>
+        <fct>WTSStartRemoteControlSession</fct>
+        <fct>WTSVirtualChannelPurgeInput</fct>
+      </fcts>
+    </lib>
+    <lib name="winscard.dll" flag="1" group="32" desc="Microsoft Smart Card API">
+      <fcts>
+        <fct group="32" flag="1">SCardControl</fct>
+        <fct group="32" flag="1">SCardDisconnect</fct>
+        <fct group="32" flag="1">SCardBeginTransaction</fct>
+        <fct group="32" flag="1">SCardEndTransaction</fct>
+        <fct group="32" flag="1">SCardEstablishContext</fct>
+        <fct group="32" flag="1">SCardReconnect</fct>
+        <fct group="32" flag="1">SCardStatus</fct>
+        <fct group="32" flag="1">SCardTransmit</fct>
+        <fct group="32" flag="1">SCardReleaseStartedEvent</fct>
+        <fct group="32" flag="1">SCardAccessStartedEvent</fct>
+        <fct group="32" flag="1">SCardReleaseContext</fct>
+        <fct group="32" flag="1">SCardListReaders</fct>
+      </fcts>
+    </lib>
+    <lib name="ntdll.dll" flag="0" desc="NT Layer">
+      <fcts>
+        <fct>NtQueryEaFile</fct>
+        <fct>NtSetEaFile</fct>
+        <fct>CsrClientCallServer</fct>
+        <fct>NtSaveKey</fct>
+        <fct>NtSaveKeyEx</fct>
+        <fct>NtSuspendThread</fct>
+        <fct>NtRenameKey</fct>
+        <fct>NtQueryMultipleValueKey</fct>
+        <fct>NtReplaceKey</fct>
+        <fct>CsrGetProcessId</fct>
+        <fct>NtSetInformationKey</fct>
+        <fct>NtSetValueKey</fct>
+        <fct>NtCreateKey</fct>
+        <fct>NtFreeVirtualMemory</fct>
+        <fct>DbgUiConnectToDbg</fct>
+        <fct>DbgUiDebugActiveProcess</fct>
+        <fct>NtAdjustGroupsToken</fct>
+        <fct>NtDeleteKey</fct>
+        <fct>ZwSetEaFile</fct>
+        <fct>ZwQueryEaFile</fct>
+        <fct>ZwGetContextThread</fct>
+        <fct>ZwSetContextThread</fct>
+        <fct>ZwOpenProcessTokenEx</fct>
+        <fct>ZwWow64QueryInformationProcess64</fct>
+        <fct>ZwDeleteKey</fct>
+        <fct>ZwDeleteValueKey</fct>
+        <fct>ZwSetValueKey</fct>
+        <fct>ZwQueryValueKey</fct>
+        <fct>ZwSaveKey</fct>
+        <fct>ZwSaveKeyEx</fct>
+        <fct>NtAcceptConnectPort</fct>
+        <fct>NtCompleteConnectPort</fct>
+        <fct>NtReplyPort</fct>
+        <fct>NtCreateWaitablePort</fct>
+        <fct>NtDeleteValueKey</fct>
+        <fct>NtReplyWaitReceivePort</fct>
+        <fct>NtSuspendProcess</fct>
+        <fct>NtGetNextProcess</fct>
+        <fct>NtResumeProcess</fct>
+        <fct>NtResumeThread</fct>
+        <fct>NtSetContextThread</fct>
+        <fct>NtSetInformationToken</fct>
+        <fct>NtQueryInformationProcess</fct>
+        <fct>NtSetInformationProcess</fct>
+        <fct>NtSetInformationThread</fct>
+        <fct>NtCreateUserProcess</fct>
+        <fct>NtTerminateProcess</fct>
+        <fct>NtWow64CsrGetProcessId</fct>
+        <fct>NtWow64GetCurrentProcessorNumberEx</fct>
+        <fct>NtWow64QueryInformationProcess64</fct>
+        <fct>NtOpenThreadTokenEx</fct>
+        <fct>NtOpenProcess</fct>
+        <fct>NtCreateProcess</fct>
+        <fct>NtCreateProcessEx</fct>
+        <fct>NtDelayExecution</fct>
+        <fct>NtOpenProcessToken</fct>
+        <fct>NtOpenProcessTokenEx</fct>
+        <fct>NtQueryInformationThread</fct>
+        <fct>RtlUserThreadStart</fct>
+        <fct>RtlDllShutdownInProgress</fct>
+        <fct>RtlCreateUserProcess</fct>
+        <fct>ZwQueryInformationProcess</fct>
+        <fct>ZwTerminateProcess</fct>
+        <fct>ZwSetInformationProcess</fct>
+        <fct>ZwTerminateThread</fct>
+        <fct>NtProtectVirtualMemory</fct>
+        <fct>NtFlushInstructionCache</fct>
+        <fct>NtQueryVirtualMemory</fct>
+        <fct>NtWow64QueryVirtualMemory64</fct>
+        <fct>NtWow64ReadVirtualMemory64</fct>
+        <fct>NtWow64WriteVirtualMemory64</fct>
+        <fct>NtWriteVirtualMemory</fct>
+        <fct>NtAllocateVirtualMemory</fct>
+        <fct>NtReadVirtualMemory</fct>
+        <fct>ZwAllocateVirtualMemory</fct>
+        <fct>ZwQueryVirtualMemory</fct>
+        <fct>ZwReadVirtualMemory</fct>
+        <fct>ZwWriteVirtualMemory</fct>
+        <fct>ZwWow64ReadVirtualMemory64</fct>
+        <fct>ZwOpenThread</fct>
+        <fct>NtCreateFile</fct>
+        <fct>NtQueryDirectoryFile</fct>
+        <fct>NtDeleteFile</fct>
+        <fct>NtSetInformationFile</fct>
+        <fct>NtWriteFile</fct>
+        <fct>NtCancelIoFileEx</fct>
+        <fct>NtCancelIoFileEx</fct>
+        <fct>NtQueryInformationFile</fct>
+        <fct>NtOpenFile</fct>
+        <fct>ZwQueryInformationFile</fct>
+        <fct>DbgPrintEx</fct>
+        <fct>EtwEventWrite</fct>
+        <fct>EtwEventRegister</fct>
+        <fct>EtwEventUnregister</fct>
+        <fct>EtwUnregisterTraceGuids</fct>
+        <fct>EtwRegisterTraceGuids</fct>
+        <fct>EtwGetTraceLoggerHandle</fct>
+        <fct>EtwGetTraceEnableLevel</fct>
+        <fct>EtwGetTraceEnableFlags</fct>
+        <fct>EtwTraceMessage</fct>
+        <fct>LdrGetKnownDllSectionHandle</fct>
+        <fct>LdrAccessResource</fct>
+        <fct>LdrAddLoadAsDataTable</fct>
+        <fct>LdrAddRefDll</fct>
+        <fct>LdrDisableThreadCalloutsForDll</fct>
+        <fct>LdrEnumResources</fct>
+        <fct>LdrEnumerateLoadedModules</fct>
+        <fct>LdrFindEntryForAddress</fct>
+        <fct>LdrFindResourceDirectory_U</fct>
+        <fct>LdrFindResourceEx_U</fct>
+        <fct>LdrFindResource_U</fct>
+        <fct>LdrFlushAlternateResourceModules</fct>
+        <fct>LdrGetDllHandle</fct>
+        <fct>LdrGetDllHandleByMapping</fct>
+        <fct>LdrGetDllHandleByName</fct>
+        <fct>LdrGetDllHandleEx</fct>
+        <fct>LdrGetFailureData</fct>
+        <fct>LdrGetFileNameFromLoadAsDataTable</fct>
+        <fct>LdrGetProcedureAddress</fct>
+        <fct>LdrGetProcedureAddressEx</fct>
+        <fct>LdrHotPatchRoutine</fct>
+        <fct>LdrInitShimEngineDynamic</fct>
+        <fct>LdrInitializeThunk</fct>
+        <fct>LdrLoadAlternateResourceModule</fct>
+        <fct>LdrLoadAlternateResourceModuleEx</fct>
+        <fct>LdrLoadDll</fct>
+        <fct>LdrLockLoaderLock</fct>
+        <fct>LdrOpenImageFileOptionsKey</fct>
+        <fct>LdrProcessRelocationBlock</fct>
+        <fct>LdrQueryImageFileExecutionOptions</fct>
+        <fct>LdrQueryImageFileExecutionOptionsEx</fct>
+        <fct>LdrQueryImageFileKeyOption</fct>
+        <fct>LdrQueryModuleServiceTags</fct>
+        <fct>LdrQueryProcessModuleInformation</fct>
+        <fct>LdrRegisterDllNotification</fct>
+        <fct>LdrRemoveLoadAsDataTable</fct>
+        <fct>LdrResFindResource</fct>
+        <fct>LdrResFindResourceDirectory</fct>
+        <fct>LdrResGetRCConfig</fct>
+        <fct>LdrResRelease</fct>
+        <fct>LdrResSearchResource</fct>
+        <fct>LdrRscIsTypeExist</fct>
+        <fct>LdrSetAppCompatDllRedirectionCallback</fct>
+        <fct>LdrSetDllManifestProber</fct>
+        <fct>LdrSetMUICacheType</fct>
+        <fct>LdrShutdownProcess</fct>
+        <fct>LdrShutdownThread</fct>
+        <fct>LdrSystemDllInitBlock</fct>
+        <fct>LdrUnloadAlternateResourceModule</fct>
+        <fct>LdrUnloadAlternateResourceModuleEx</fct>
+        <fct>LdrUnloadDll</fct>
+        <fct>LdrUnlockLoaderLock</fct>
+        <fct>LdrUnregisterDllNotification</fct>
+        <fct>LdrVerifyImageMatchesChecksum</fct>
+        <fct>LdrVerifyImageMatchesChecksumEx</fct>
+        <fct>LdrWx86FormatVirtualImage</fct>
+        <fct>LdrpResGetMappingSize</fct>
+        <fct>LdrpResGetResourceDirectory</fct>
+        <fct>NtLoadDriver</fct>
+        <fct>NtUnloadDriver</fct>
+        <fct>NtShutdownSystem</fct>
+        <fct>NtUnmapViewOfSection</fct>
+        <fct>NtSetEvent</fct>
+        <fct>NtOpenSection</fct>
+        <fct>NtOpenEvent</fct>
+        <fct>NtMapViewOfSection</fct>
+        <fct>NtAddAtom</fct>
+        <fct>NtFindAtom</fct>
+        <fct>NtDeleteAtom</fct>
+        <fct>NtQuerySystemInformation</fct>
+        <fct>NtQueryInformationAtom</fct>
+        <fct>ZwFindAtom</fct>
+        <fct>NtAccessCheckByTypeResultListAndAuditAlarm</fct>
+        <fct>NtCompareTokens</fct>
+        <fct>NtQueryObject</fct>
+        <fct>NtQuerySecurityObject</fct>
+        <fct>NtContinue</fct>
+        <fct>NtCreateThread</fct>
+        <fct>NtCreateThreadEx</fct>
+        <fct>NtImpersonateAnonymousToken</fct>
+        <fct>NtOpenThreadToken</fct>
+        <fct>NtOpenThread</fct>
+        <fct>NtOpenSymbolicLinkObject</fct>
+        <fct>NtSetSecurityObject</fct>
+        <fct>NtVdmControl</fct>
+        <fct>NtWow64CallFunction64</fct>
+        <fct>NtWow64CsrAllocateCaptureBuffer</fct>
+        <fct>NtWow64CsrAllocateMessagePointer</fct>
+        <fct>NtWow64CsrCaptureMessageBuffer</fct>
+        <fct>NtWow64CsrCaptureMessageString</fct>
+        <fct>NtWow64CsrClientCallServer</fct>
+        <fct>NtWow64CsrClientConnectToServer</fct>
+        <fct>NtWow64CsrFreeCaptureBuffer</fct>
+        <fct>NtWow64CsrIdentifyAlertableThread</fct>
+        <fct>NtWow64CsrVerifyRegion</fct>
+        <fct>NtWow64DebuggerCall</fct>
+        <fct>NtWow64GetNativeSystemInformation</fct>
+        <fct>NtWow64InterlockedPopEntrySList</fct>
+        <fct>NtQuerySymbolicLinkObject</fct>
+        <fct>NtAdjustPrivilegesToken</fct>
+        <fct>NtCreateSection</fct>
+        <fct>RtlAdjustPrivilege</fct>
+        <fct>RtlAbsoluteToSelfRelativeSD</fct>
+        <fct>RtlAbsoluteToSelfRelativeSD</fct>
+        <fct>RtlAddAccessAllowedAce</fct>
+        <fct>RtlAddAccessAllowedAce</fct>
+        <fct>RtlGetDaclSecurityDescriptor</fct>
+        <fct>RtlGetGroupSecurityDescriptor</fct>
+        <fct>RtlGetOwnerSecurityDescriptor</fct>
+        <fct>RtlGetSaclSecurityDescriptor</fct>
+        <fct>RtlSetSaclSecurityDescriptor</fct>
+        <fct>RtlLengthSecurityDescriptor</fct>
+        <fct>RtlSetDaclSecurityDescriptor</fct>
+        <fct>RtlSetOwnerSecurityDescriptor</fct>
+        <fct>RtlCreateSecurityDescriptor</fct>
+        <fct>RtlSetControlSecurityDescriptor</fct>
+        <fct>RtlAllocateAndInitializeSid</fct>
+        <fct>RtlEqualSid</fct>
+        <fct>RtlValidSid</fct>
+        <fct>RtlCreateAcl</fct>
+        <fct>RtlSubAuthorityCountSid</fct>
+        <fct>RtlMakeSelfRelativeSD</fct>
+        <fct>RtlFormatCurrentUserKeyPath</fct>
+        <fct>RtlSetProcessIsCritical</fct>
+        <fct>RtlQueryElevationFlags</fct>
+        <fct>RtlGetCurrentPeb</fct>
+        <fct>RtlDelete</fct>
+        <fct>RtlRandom</fct>
+        <fct>RtlRandomEx</fct>
+        <fct>RtlCompressBuffer</fct>
+        <fct>RtlComputeCrc32</fct>
+        <fct>RtlDecompressBuffer</fct>
+        <fct>RtlDecompressBufferEx</fct>
+        <fct>RtlDecompressFragment</fct>
+        <fct>RtlGetCompressionWorkSpaceSize</fct>
+        <fct>RtlTimeToSecondsSince1970</fct>
+        <fct>RtlExitUserThread</fct>
+        <fct>SeTokenIsAdmin</fct>
+        <fct>WinSqmAddToAverageDWORD</fct>
+        <fct>WinSqmAddToStream</fct>
+        <fct>WinSqmAddToStreamEx</fct>
+        <fct>WinSqmCheckEscalationAddToStreamEx</fct>
+        <fct>WinSqmCheckEscalationSetDWORD64</fct>
+        <fct>WinSqmCheckEscalationSetDWORD</fct>
+        <fct>WinSqmCheckEscalationSetString</fct>
+        <fct>WinSqmCommonDatapointDelete</fct>
+        <fct>WinSqmCommonDatapointSetDWORD64</fct>
+        <fct>WinSqmCommonDatapointSetDWORD</fct>
+        <fct>WinSqmCommonDatapointSetStreamEx</fct>
+        <fct>WinSqmCommonDatapointSetString</fct>
+        <fct>WinSqmEndSession</fct>
+        <fct>WinSqmEventEnabled</fct>
+        <fct>WinSqmEventWrite</fct>
+        <fct>WinSqmGetEscalationRuleStatus</fct>
+        <fct>WinSqmGetInstrumentationProperty</fct>
+        <fct>WinSqmIncrementDWORD</fct>
+        <fct>WinSqmIsOptedIn</fct>
+        <fct>WinSqmIsOptedInEx</fct>
+        <fct>WinSqmSetDWORD64</fct>
+        <fct>WinSqmSetDWORD</fct>
+        <fct>WinSqmSetEscalationInfo</fct>
+        <fct>WinSqmSetIfMaxDWORD</fct>
+        <fct>WinSqmSetIfMinDWORD</fct>
+        <fct>WinSqmSetString</fct>
+        <fct>WinSqmStartSession</fct>
+        <fct>ZwShutdownSystem</fct>
+        <fct>ZwDisplayString</fct>
+        <fct>ZwRequestPort</fct>
+        <fct>ZwMapViewOfSection</fct>
+        <fct>ZwUnmapViewOfSection</fct>
+        <fct>ZwResumeThread</fct>
+        <fct>ZwQuerySystemInformation</fct>
+        <fct>ZwSetLdtEntries</fct>
+        <fct>ZwDuplicateToken</fct>
+        <fct>ZwCallbackReturn</fct>
+        <fct>ZwQueryInformationThread</fct>
+        <fct>KiUserExceptionDispatcher</fct>
+        <fct>KiUserCallbackDispatcher</fct>
+        <fct>KiUserApcDispatcher</fct>
+        <fct>KiRaiseUserExceptionDispatcher</fct>
+        <fct>KiIntSystemCall</fct>
+        <fct>KiFastSystemCallRet</fct>
+        <fct>KiFastSystemCall</fct>
+      </fcts>
+    </lib>
+    <lib name="netapi32.dll" flag="1" desc="Network Win32 Library">
+      <fcts>
+        <fct>NetJoinDomain</fct>
+        <fct>NetUseAdd</fct>
+        <fct>NetUseDel</fct>
+        <fct>Netbios</fct>
+        <fct>NetFileClose</fct>
+        <fct>NetShareCheck</fct>
+        <fct>NetShareDelSticky</fct>
+        <fct>NetShareEnumSticky</fct>
+        <fct>NetShareSetInfo</fct>
+        <fct>NetGetJoinableOUs</fct>
+        <fct>NetAuditRead</fct>
+        <fct>NetConfigSet</fct>
+        <fct>NetErrorLogWrite</fct>
+        <fct>NetErrorLogClear</fct>
+        <fct>NetAuditClear</fct>
+        <fct>NetErrorLogRead</fct>
+        <fct>NetConfigGet</fct>
+        <fct>NetAuditWrite</fct>
+        <fct>NetFileEnum</fct>
+        <fct>NetWkstaUserGetInfo</fct>
+        <fct>NetWkstaGetInfo</fct>
+        <fct>NetpwNameValidate</fct>
+        <fct>NetFileGetInfo</fct>
+        <fct>NetSessionEnum</fct>
+        <fct>NetShareGetInfo</fct>
+        <fct>NetShareEnum</fct>
+        <fct>NetShareAdd</fct>
+        <fct>NetShareDel</fct>
+        <fct>NetWkstaUserEnum</fct>
+        <fct>NetServerGetInfo</fct>
+        <fct>NetAccessEnum</fct>
+        <fct>NetBrowserStatisticsGet</fct>
+        <fct>NetConnectionEnum</fct>
+        <fct>NetWkstaTransportEnum</fct>
+        <fct>NetGetJoinInformation</fct>
+        <fct>NetUserAdd</fct>
+        <fct>NetUserEnum</fct>
+        <fct>NetUserGetInfo</fct>
+        <fct>NetUserSetInfo</fct>
+        <fct>NetUserDel</fct>
+        <fct>NetUserGetGroups</fct>
+        <fct>NetUserSetGroups</fct>
+        <fct>NetUserGetLocalGroups</fct>
+        <fct>NetUserModalsGet</fct>
+        <fct>NetUserModalsSet</fct>
+        <fct>NetUserChangePassword</fct>
+        <fct>NetGroupAdd</fct>
+        <fct>NetGroupAddUser</fct>
+        <fct>NetGroupEnum</fct>
+        <fct>NetGroupGetInfo</fct>
+        <fct>NetGroupSetInfo</fct>
+        <fct>NetGroupDel</fct>
+        <fct>NetGroupDelUser</fct>
+        <fct>NetGroupGetUsers</fct>
+        <fct>NetGroupSetUsers</fct>
+        <fct>NetStatisticsGet</fct>
+        <fct>NetLocalGroupAdd</fct>
+        <fct>NetLocalGroupAddMember</fct>
+        <fct>NetLocalGroupEnum</fct>
+        <fct>NetLocalGroupGetInfo</fct>
+        <fct>NetLocalGroupSetInfo</fct>
+        <fct>NetLocalGroupDel</fct>
+        <fct>NetLocalGroupDelMember</fct>
+        <fct>NetLocalGroupGetMembers</fct>
+        <fct>NetLocalGroupSetMembers</fct>
+        <fct>NetLocalGroupAddMembers</fct>
+        <fct>NetLocalGroupDelMembers</fct>
+        <fct>NetQueryDisplayInformation</fct>
+        <fct>NetGetDisplayInformationIndex</fct>
+        <fct>NetAccessAdd</fct>
+        <fct>NetAccessGetInfo</fct>
+        <fct>NetAccessSetInfo</fct>
+        <fct>NetAccessDel</fct>
+        <fct>NetAccessGetUserPerms</fct>
+        <fct>NetValidatePasswordPolicy</fct>
+        <fct>NetValidatePasswordPolicyFree</fct>
+        <fct>NetGetDCName</fct>
+        <fct>NetGetAnyDCName</fct>
+        <fct>I_NetLogonControl</fct>
+        <fct>I_NetLogonControl2</fct>
+        <fct>NetEnumerateTrustedDomains</fct>
+        <fct>NetRemoteTOD</fct>
+        <fct>NetServerEnum</fct>
+        <fct>NetServiceEnum</fct>
+        <fct>DsEnumerateDomainTrusts</fct>
+        <fct>DsRoleGetPrimaryDomainInformation</fct>
+        <fct>DsGetDcName</fct>
+      </fcts>
+    </lib>
+    
+
+    <lib name="comctl32.dll" flag="0" desc="Common Controls Library">
+      <fcts>
+        <fct>TrackMouseEvent</fct>
+        <fct>Str_SetPtrW</fct>
+        <fct>DPA_Destroy</fct>
+        <fct>DPA_InsertPtr</fct>
+        <fct>DPA_DeleteAllPtrs</fct>
+        <fct>DPA_Sort</fct>
+        <fct>DPA_CreateEx</fct>
+      </fcts>
+    </lib>
+    <lib name="cryptbase.dll" flag="1">
+      <fcts>
+        <fct map="RtlEncryptDES1block1key">SystemFunction001</fct>
+        <fct map="RtlDecryptDES1block1key">SystemFunction002</fct>
+        <fct map="RtlEncryptDESMagicBlock1key">SystemFunction003</fct>
+        <fct map="RtlEncryptDESblocksECB">SystemFunction004</fct>
+        <fct map="RtlDecryptDESblocksECB">SystemFunction005</fct>
+        <fct map="RtlDigestLM">SystemFunction006</fct>
+        <fct map="RtlDigestNTLM">SystemFunction007</fct>
+        <fct map="RtlLMResponseToChallenge">SystemFunction008</fct>
+        <fct map="RtlLMResponseToChallenge">SystemFunction009</fct>
+        <fct map="RtlDigestMD4only16Bytes">SystemFunction010</fct>
+        <fct map="RtlDigestMD4only16Bytes">SystemFunction011</fct>
+        <fct map="RtlEncryptDES2blocks2keys">SystemFunction012</fct>
+        <fct map="RtlDecryptDES2blocks2keys">SystemFunction013</fct>
+        <fct map="RtlEncryptDES2blocks2keys">SystemFunction014</fct>
+        <fct map="RtlDecryptDES2blocks2keys">SystemFunction015</fct>
+        <fct map="RtlEncryptDES2blocks1key">SystemFunction016</fct>
+        <fct map="RtlDecryptDES2blocks1key">SystemFunction017</fct>
+        <fct map="RtlEncryptDES2blocks1key">SystemFunction018</fct>
+        <fct map="RtlDecryptDES2blocks1key">SystemFunction019</fct>
+        <fct map="RtlEncryptDES2blocks2keys">SystemFunction020</fct>
+        <fct map="RtlDecryptDES2blocks2keys">SystemFunction021</fct>
+        <fct map="RtlEncryptDES2blocks2keys">SystemFunction022</fct>
+        <fct map="RtlDecryptDES2blocks2keys">SystemFunction023</fct>
+        <fct map="RtlEncryptDES2blocks1DWORD">SystemFunction024</fct>
+        <fct map="RtlDecryptDES2blocks1DWORD">SystemFunction025</fct>
+        <fct map="RtlEncryptDES2blocks1DWORD">SystemFunction026</fct>
+        <fct map="RtlDecryptDES2blocks1DWORD">SystemFunction027</fct>
+        <fct map="">SystemFunction028</fct>
+        <fct map="">SystemFunction029</fct>
+        <fct map="RtlEqualMemory16Bytes">SystemFunction030</fct>
+        <fct map="RtlEqualMemory16Bytes">SystemFunction031</fct>
+        <fct map="RtlEncryptDecryptRC4">SystemFunction032</fct>
+        <fct map="RtlEncryptDecryptRC4">SystemFunction033</fct>
+        <fct map="">SystemFunction034</fct>
+        <fct map="RtlCheckSignatureInFile">SystemFunction035</fct>
+        <fct map="RtlGenRandom">SystemFunction036</fct>
+        <fct map="">SystemFunction037</fct>
+        <fct map="">SystemFunction038</fct>
+        <fct map="">SystemFunction039</fct>
+        <fct map="RtlEncryptMemory">SystemFunction040</fct>
+        <fct map="RtlDecryptMemory">SystemFunction041</fct>
+      </fcts>
+    </lib>
+    <lib name="winsta.dll" flag="1" group="08" desc="Winstation Library">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="mprapi.dll" flag="1" desc="Windows NT MP Router Administration Library">
+      <fcts>
+        <fct>DeletePort</fct>
+        <fct>MprAdminUserWrite</fct>
+        <fct>MprAdminUserGetInfo</fct>
+        <fct>MprAdminUserUserOpen</fct>
+        <fct>MprAdminUserUserClose</fct>
+        <fct>MprAdminUserRead</fct>
+        <fct>MprAdminUserOpen</fct>
+        <fct>MprAdminUserClose</fct>
+      </fcts>
+    </lib>
+    <lib name="sfc.dll" flag="1">
+      <fcts>
+        <fct>SfcIsFileProtected</fct>
+        <fct>SfcIsKeyProtected</fct>
+        <fct>SfcGetNextProtectedFile</fct>
+        <fct>SfcGetFiles</fct>
+        <fct>SFCDisable</fct>
+        <fct>SFCScan</fct>
+        <fct>SRSetRestorePoint</fct>
+        <fct>SfpVerifyFile</fct>
+      </fcts>
+    </lib>
+    <lib name="atl90.dll" flag="0">
+      <fcts>
+        <fct>AtlComModuleRegisterClassObjects</fct>
+        <fct>AtlComModuleRevokeClassObjects</fct>
+        <fct>AtlUpdateRegistryFromResourceD</fct>
+        <fct>AtlRegisterClassCategoriesHelper</fct>
+        <fct>AtlLoadTypeLib</fct>
+        <fct>AtlCreateRegistrar</fct>
+        <fct>AtlCallTermFunc</fct>
+        <fct>AtlSetPerUserRegistration</fct>
+        <fct>AtlGetPerUserRegistration</fct>
+      </fcts>
+    </lib>
+    <lib name="winspool.drv" flag="0" desc="Windows Spooler Driver">
+      <fcts>
+        <fct>EnumMonitors</fct>
+        <fct>AddPrintProcessor</fct>
+        <fct>DeletePort</fct>
+        <fct>DeletePrinter</fct>
+        <fct>DeletePrinterConnection</fct>
+        <fct>DeletePrintProcessor</fct>
+        <fct>EnumPorts</fct>
+        <fct>GetPrinterDriverDirectory</fct>
+        <fct>GetPrintProcessorDirectory</fct>
+      </fcts>
+    </lib>
+    <lib name="mscorlib.dll" flag="0">
+      <fcts>
+        <fct>ConfusedByAttribute</fct>
+      </fcts>
+    </lib>
+    
+
+    <lib name="advapi32.dll" flag="0" desc="Advanced Windows 32 Base API">
+      <fcts>
+        <fct>SaferComputeTokenFromLevel</fct>
+        <fct>SaferCreateLevel</fct>
+        <fct>SaferGetLevelInformation</fct>
+        <fct>SaferGetPolicyInformation</fct>
+        <fct>SaferIdentifyLevel</fct>
+        <fct>SaferIsExecutableFileType</fct>
+        <fct>SaferRecordEventLogEntry</fct>
+        <fct>SaferSetLevelInformation</fct>
+        <fct>SaferSetPolicyInformation</fct>
+        <fct>SaferiChangeRegistryScope</fct>
+        <fct>SaferiCompareTokenLevels</fct>
+        <fct>SaferiIsExecutableFileType</fct>
+        <fct>ControlTrace</fct>
+        <fct>EnableTrace</fct>
+        <fct>EnableTraceEx</fct>
+        <fct>EnableTraceEx2</fct>
+        <fct>EnumerateTraceGuids</fct>
+        <fct>EnumerateTraceGuidsEx</fct>
+        <fct>FlushTrace</fct>
+        <fct>StartTrace</fct>
+        <fct>CloseTrace</fct>
+        <fct>ProcessTrace</fct>
+        <fct>OpenTrace</fct>
+        <fct>QueryAllTraces</fct>
+        <fct>QueryTrace</fct>
+        <fct>StopTrace</fct>
+        <fct>TraceQueryInformation</fct>
+        <fct>TraceSetInformation</fct>
+        <fct>UpdateTrace</fct>
+        <fct>EnableCallback</fct>
+        <fct>EventActivityIdControl</fct>
+        <fct>EventEnabled</fct>
+        <fct>EventProviderEnabled</fct>
+        <fct>EventWriteString</fct>
+        <fct>QueryRecoveryAgentsOnEncryptedFile</fct>
+        <fct>RemoveUsersFromEncryptedFile</fct>
+        <fct>FreeEncryptionCertificateHashList</fct>
+        <fct>QueryUsersOnEncryptedFile</fct>
+        <fct>ChangeServiceConfig2</fct>
+        <fct>ChangeServiceConfig</fct>
+        <fct>DeleteService</fct>
+        <fct>CreateService</fct>
+        <fct>LsaIQueryInformationPolicyTrusted</fct>
+        <fct>LsaStorePrivateData</fct>
+        <fct>LsaSetDomainInformationPolicy</fct>
+        <fct>LsaCreateTrustedDomainEx</fct>
+        <fct>LsaCreateAccount</fct>
+        <fct>LsaCreateSecret</fct>
+        <fct>LsaCreateTrustedDomain</fct>
+        <fct>LsaEnumerateAccounts</fct>
+        <fct>LsaEnumerateAccountsWithUserRight</fct>
+        <fct>LsaRetrievePrivateData</fct>
+        <fct>LsaSetInformationPolicy</fct>
+        <fct>LsaSetInformationTrustedDomain</fct>
+        <fct>LsaSetQuotasForAccount</fct>
+        <fct>LsaOpenSecret</fct>
+        <fct>LsaSetSecurityObject</fct>
+        <fct>LsaQueryTrustedDomainInfo</fct>
+        <fct>LsaQueryInformationPolicy</fct>
+        <fct>LsaEnumerateTrustedDomains</fct>
+        <fct>LsaQueryDomainInformationPolicy</fct>
+        <fct>LsaAddAccountRights</fct>
+        <fct>LsaSetSecret</fct>
+        <fct>LsaEnumeratePrivilegesOfAccount</fct>
+        <fct>LsaOpenPolicy</fct>
+        <fct>LsaOpenPolicySce</fct>
+        <fct>LsaClearAuditLog</fct>
+        <fct>LsaEnumerateAccountRights</fct>
+        <fct>LsaFreeMemory</fct>
+        <fct>LsaDeleteTrustedDomain</fct>
+        <fct>LsaGetRemoteUserName</fct>
+        <fct>LsaICLookupNamesWithCreds</fct>
+        <fct>LsaOpenTrustedDomain</fct>
+        <fct>LsaSetSystemAccessAccount</fct>
+        <fct>LsaSetTrustedDomainInformation</fct>
+        <fct>CryptSignHash</fct>
+        <fct>InstallApplication</fct>
+        <fct>ConvertSecurityDescriptorToAccessNamed</fct>
+        <fct>ConvertStringSDToSDRootDomain</fct>
+        <fct>SetEntriesInAccessList</fct>
+        <fct>SetNamedSecurityInfoEx</fct>
+        <fct>MakeAbsoluteSD</fct>
+        <fct>MakeAbsoluteSD2</fct>
+        <fct>GetOverlappedAccessResults</fct>
+        <fct>TrusteeAccessToObject</fct>
+        <fct>ConvertAccessToSecurityDescriptor</fct>
+        <fct>SetEntriesInAuditList</fct>
+        <fct>SetSecurityInfoEx</fct>
+        <fct>SetEntriesInAuditList</fct>
+        <fct>ConvertSecurityDescriptorToAccess</fct>
+        <fct>ElfRegisterEventSource</fct>
+        <fct>ElfBackupEventLogFile</fct>
+        <fct>ElfChangeNotify</fct>
+        <fct>ElfClearEventLogFile</fct>
+        <fct>ElfCloseEventLog</fct>
+        <fct>ElfDeregisterEventSource</fct>
+        <fct>ElfFlushEventLog</fct>
+        <fct>ElfNumberOfRecords</fct>
+        <fct>ElfOldestRecord</fct>
+        <fct>ElfOpenBackupEventLog</fct>
+        <fct>ElfOpenEventLog</fct>
+        <fct>ElfReadEventLog</fct>
+        <fct>ElfReportEvent</fct>
+        <fct>ElfReportEventAndSource</fct>
+        <fct>WmiCloseBlock</fct>
+        <fct>WmiFileHandleToInstanceName</fct>
+        <fct>WmiCloseBlock</fct>
+        <fct>WmiExecuteMethod</fct>
+        <fct>WmiQueryAllData</fct>
+        <fct>WmiQuerySingleInstance</fct>
+        <fct>BackupEventLog</fct>
+        <fct>ClearEventLog</fct>
+        <fct>CloseEventLog</fct>
+        <fct>DeregisterEventSource</fct>
+        <fct>GetEventLogInformation</fct>
+        <fct>GetNumberOfEventLogRecords</fct>
+        <fct>GetOldestEventLogRecord</fct>
+        <fct>NotifyChangeEventLog</fct>
+        <fct>OpenBackupEventLog</fct>
+        <fct>OpenEventLog</fct>
+        <fct>ReadEventLog</fct>
+        <fct>RegisterEventSource</fct>
+        <fct>ReportEvent</fct>
+        <fct>SaferRecordEventLogEntry</fct>
+        <fct>GetCurrentHwProfile</fct>
+        <fct>CredEnumerate</fct>
+        <fct>CredFree</fct>
+        <fct>CredDelete</fct>
+        <fct>CredFindBestCredential</fct>
+        <fct>CredGetSessionTypes</fct>
+        <fct>CredGetTargetInfo</fct>
+        <fct>CredIsMarshaledCredential</fct>
+        <fct>CredIsProtected</fct>
+        <fct>CredMarshalCredential</fct>
+        <fct>CredPackAuthenticationBuffer</fct>
+        <fct>CredProtect</fct>
+        <fct>CredRead</fct>
+        <fct>CredReadDomainCredentials</fct>
+        <fct>CredRename</fct>
+        <fct>CredUnmarshalCredential</fct>
+        <fct>CredUnPackAuthenticationBuffer</fct>
+        <fct>CredUnprotect</fct>
+        <fct>CredWrite</fct>
+        <fct>CredWriteDomainCredentials</fct>
+        <fct>GetAuditedPermissionsFromAcl</fct>
+        <fct>GetAuditedPermissionsFromAcl</fct>
+        <fct>ConvertSecurityDescriptorToStringSecurityDescriptor</fct>
+        <fct>SetEntriesInAcl</fct>
+        <fct>LockServiceDatabase</fct>
+        <fct>GetNumberOfEventLogRecords</fct>
+        <fct>GetOldestEventLogRecord</fct>
+        <fct>BackupEventLog</fct>
+        <fct>NotifyChangeEventLog</fct>
+        <fct>ConvertStringSecurityDescriptorToSecurityDescriptor</fct>
+        <fct>DeregisterEventSource</fct>
+        <fct>ReportEvent</fct>
+        <fct>GetTraceEnableLevel</fct>
+        <fct>AbortSystemShutdown</fct>
+        <fct>LookupPrivilegeValue</fct>
+        <fct>NotifyBootConfigStatus</fct>
+        <fct>SetNamedSecurityInfo</fct>
+        <fct>LogonUser</fct>
+        <fct>LogonUserEx</fct>
+        <fct>LogonUserExEx</fct>
+        <fct>InitiateSystemShutdown</fct>
+        <fct>InitiateSystemShutdownEx</fct>
+        <fct map="RtlEncryptDES1block1key">SystemFunction001</fct>
+        <fct map="RtlDecryptDES1block1key">SystemFunction002</fct>
+        <fct map="RtlEncryptDESMagicBlock1key">SystemFunction003</fct>
+        <fct map="RtlEncryptDESblocksECB">SystemFunction004</fct>
+        <fct map="RtlDecryptDESblocksECB">SystemFunction005</fct>
+        <fct map="RtlDigestLM">SystemFunction006</fct>
+        <fct map="RtlDigestNTLM">SystemFunction007</fct>
+        <fct map="RtlLMResponseToChallenge">SystemFunction008</fct>
+        <fct map="RtlLMResponseToChallenge">SystemFunction009</fct>
+        <fct map="RtlDigestMD4only16Bytes">SystemFunction010</fct>
+        <fct map="RtlDigestMD4only16Bytes">SystemFunction011</fct>
+        <fct map="RtlEncryptDES2blocks2keys">SystemFunction012</fct>
+        <fct map="RtlDecryptDES2blocks2keys">SystemFunction013</fct>
+        <fct map="RtlEncryptDES2blocks2keys">SystemFunction014</fct>
+        <fct map="RtlDecryptDES2blocks2keys">SystemFunction015</fct>
+        <fct map="RtlEncryptDES2blocks1key">SystemFunction016</fct>
+        <fct map="RtlDecryptDES2blocks1key">SystemFunction017</fct>
+        <fct map="RtlEncryptDES2blocks1key">SystemFunction018</fct>
+        <fct map="RtlDecryptDES2blocks1key">SystemFunction019</fct>
+        <fct map="RtlEncryptDES2blocks2keys">SystemFunction020</fct>
+        <fct map="RtlDecryptDES2blocks2keys">SystemFunction021</fct>
+        <fct map="RtlEncryptDES2blocks2keys">SystemFunction022</fct>
+        <fct map="RtlDecryptDES2blocks2keys">SystemFunction023</fct>
+        <fct map="RtlEncryptDES2blocks1DWORD">SystemFunction024</fct>
+        <fct map="RtlDecryptDES2blocks1DWORD">SystemFunction025</fct>
+        <fct map="RtlEncryptDES2blocks1DWORD">SystemFunction026</fct>
+        <fct map="RtlDecryptDES2blocks1DWORD">SystemFunction027</fct>
+        <fct map="">SystemFunction028</fct>
+        <fct map="">SystemFunction029</fct>
+        <fct map="RtlEqualMemory16Bytes">SystemFunction030</fct>
+        <fct map="RtlEqualMemory16Bytes">SystemFunction031</fct>
+        <fct map="RtlEncryptDecryptRC4">SystemFunction032</fct>
+        <fct map="RtlEncryptDecryptRC4">SystemFunction033</fct>
+        <fct map="">SystemFunction034</fct>
+        <fct map="RtlCheckSignatureInFile">SystemFunction035</fct>
+        <fct map="RtlGenRandom">SystemFunction036</fct>
+        <fct map="">SystemFunction037</fct>
+        <fct map="">SystemFunction038</fct>
+        <fct map="">SystemFunction039</fct>
+        <fct map="RtlEncryptMemory">SystemFunction040</fct>
+        <fct map="RtlDecryptMemory">SystemFunction041</fct>
+      </fcts>
+    </lib>
+    <lib name="secur32.dll" flag="1" desc="Security Support Provider Interface">
+      <fcts>
+        <fct>EncryptMessage</fct>
+        <fct>DecryptMessage</fct>
+        <fct>QuerySecurityPackageInfo</fct>
+        <fct>LsaManageSidNameMapping</fct>
+        <fct>AddSecurityPackage</fct>
+        <fct>LsaLogonUser</fct>
+        <fct>LsaLookupAuthenticationPackage</fct>
+        <fct>LsaDeregisterLogonProcess</fct>
+        <fct>LsaConnectUntrusted</fct>
+        <fct>LsaFreeReturnBuffer</fct>
+        <fct>LsaRegisterLogonProcess</fct>
+        <fct>GetUserNameEx</fct>
+        <fct>DeleteSecurityContext</fct>
+        <fct>DdeSetQualityOfService</fct>
+        <fct>ApplyControlToken</fct>
+        <fct>AcquireCredentialsHandle</fct>
+        <fct>QueryCredentialsAttributes</fct>
+        <fct>FreeCredentialsHandle</fct>
+        <fct>SealMessage</fct>
+        <fct>MakeSignature</fct>
+        <fct>VerifySignature</fct>
+        <fct>ImpersonateSecurityContext</fct>
+        <fct>AcceptSecurityContext</fct>
+        <fct>EnumerateSecurityPackages</fct>
+        <fct>InitializeSecurityContext</fct>
+        <fct>InitSecurityInterface</fct>
+        <fct>ImportSecurityContext</fct>
+        <fct>RevertSecurityContext</fct>
+        <fct>QueryContextAttributes</fct>
+      </fcts>
+    </lib>
+    <lib name="mpr.dll" flag="1" desc="Multiple Provider Router Library">
+      <fcts>
+        <fct>MultinetGetConnectionPerformance</fct>
+        <fct>WNetAddConnection</fct>
+        <fct>WNetAddConnection2</fct>
+        <fct>WNetAddConnection3</fct>
+        <fct>WNetCloseEnum</fct>
+        <fct>WNetEnumResource</fct>
+        <fct>WNetGetConnection</fct>
+        <fct>WNetGetNetworkInformation</fct>
+        <fct>WNetGetProviderName</fct>
+        <fct>WNetGetResourceParent</fct>
+        <fct>WNetGetResourceInformation</fct>
+        <fct>WNetGetUniversalName</fct>
+        <fct>WNetGetUser</fct>
+        <fct>WNetOpenEnum</fct>
+        <fct>WNetRestoreConnection</fct>
+        <fct>WNetUseConnection</fct>
+        <fct>WNetCancelConnection</fct>
+        <fct>WNetAddConnection2</fct>
+        <fct>WNetCancelConnection2</fct>
+        <fct>WNetGetConnection</fct>
+        <fct>WNetUseConnection</fct>
+        <fct>WNetDirectoryNotify</fct>
+      </fcts>
+    </lib>
+    <lib name="winhttp.dll" flag="1" desc="Windows HTTP Services">
+      <fcts>
+        <fct>WinHttpCrackUrl</fct>
+        <fct>WinHttpSetTimeouts</fct>
+        <fct>WinHttpSetCredentials</fct>
+        <fct>WinHttpQueryAuthSchemes</fct>
+        <fct>WinHttpQueryHeaders</fct>
+        <fct>WinHttpCheckPlatform</fct>
+        <fct>WinHttpConnect</fct>
+        <fct>WinHttpGetIEProxyConfigForCurrentUser</fct>
+        <fct>WinHttpGetProxyForUrl</fct>
+        <fct>WinHttpReceiveResponse</fct>
+        <fct>WinHttpSendRequest</fct>
+        <fct>WinHttpSetOption</fct>
+        <fct>WinHttpWriteData</fct>
+        <fct>WinHttpAddRequestHeaders</fct>
+        <fct>WinHttpSetStatusCallback</fct>
+      </fcts>
+    </lib>
+    
+
+    <lib name="ntdsapi.dll" flag="1" desc="Active Directory Domain Services Library">
+      <fcts>
+        <fct>DsListSites</fct>
+        <fct>DsFreePasswordCredentials</fct>
+        <fct>DsFreeNameResult</fct>
+        <fct>DsUnBind</fct>
+        <fct>DsBind</fct>
+        <fct>DsMapSchemaGuids</fct>
+        <fct>DsCrackSpn</fct>
+        <fct>DsFreeDomainControllerInfo</fct>
+        <fct>DsMakeSpn</fct>
+        <fct>DsGetDomainControllerInfo</fct>
+        <fct>DsQuoteRdnValue</fct>
+        <fct>DsFreeSchemaGuidMap</fct>
+        <fct>DsReplicaSync</fct>
+      </fcts>
+    </lib>
+    <lib name="shfolder.dll" flag="1" desc="Shell Folder Library">
+      <fcts>
+        <fct></fct>
+      </fcts>
+    </lib>
+    
+
+    <lib name="nddeapi.dll" flag="1" desc="Network DDE Share Management APIs">
+      <fcts>
+        <fct>NDdeShareAdd</fct>
+        <fct>NDdeShareDel</fct>
+        <fct>NDdeShareEnum</fct>
+        <fct>NDdeShareGetInfo</fct>
+        <fct>NDdeShareSetInfo</fct>
+        <fct>NDdeGetErrorString</fct>
+        <fct>NDdeIsValidShareName</fct>
+        <fct>NDdeIsValidAppTopicList</fct>
+        <fct>NDdeSpecialCommand</fct>
+        <fct>NDdeGetShareSecurity</fct>
+        <fct>NDdeSetShareSecurity</fct>
+        <fct>NDdeGetTrustedShare</fct>
+        <fct>NDdeSetTrustedShare</fct>
+        <fct>NDdeTrustedShareEnum</fct>
+        <fct>NDdeShareAdd</fct>
+        <fct>NDdeShareDel</fct>
+        <fct>NDdeShareEnum</fct>
+        <fct>NDdeShareGetInfo</fct>
+        <fct>NDdeShareSetInfo</fct>
+        <fct>NDdeGetErrorString</fct>
+        <fct>NDdeIsValidShareName</fct>
+        <fct>NDdeIsValidAppTopicList</fct>
+        <fct>NDdeSpecialCommand</fct>
+        <fct>NDdeGetShareSecurity</fct>
+        <fct>NDdeSetShareSecurity</fct>
+        <fct>NDdeGetTrustedShare</fct>
+        <fct>NDdeSetTrustedShare</fct>
+        <fct>NDdeTrustedShareEnum</fct>
+      </fcts>
+    </lib>
+    <lib name="shell32.dll" flag="0" desc="Windows Shell Library">
+      <fcts>
+        <fct>SHGetKnownFolderPath</fct>
+        <fct>SHCreateProcessAsUserW</fct>
+        <fct>ShellExecCmdLine</fct>
+        <fct>SHGetSpecialFolderLocation</fct>
+        <fct>SHGetFileInfo</fct>
+        <fct>SHFileOperation</fct>
+        <fct>SHCreateDirectory</fct>
+        <fct>SHBrowseForFolder</fct>
+        <fct>SHGetPathFromIDList</fct>
+        <fct>SHQueryRecycleBin</fct>
+        <fct>SHFlushClipboard</fct>
+        <fct>SHChangeNotifySuspendResume</fct>
+        <fct>SHChangeNotifyRegister</fct>
+        <fct>SHChangeNotifyDeregister</fct>
+        <fct>OpenAs_RunDLL</fct>
+        <fct>SHGetInstanceExplorer</fct>
+        <fct>SHGetNewLinkInfo</fct>
+        <fct>ILCreateFromPath</fct>
+        <fct>ShellExec_RunDLL</fct>
+        <fct>SHFormatDrive</fct>
+        <fct>SHCreateDirectoryEx</fct>
+        <fct>RegenerateUserEnvironment</fct>
+        <fct>RealShellExecuteW</fct>
+        <fct>RealShellExecuteEx</fct>
+        <fct>RealShellExecute</fct>
+        <fct>Options_RunDLL</fct>
+        <fct>GetCurrentProcessExplicitAppUserModelID</fct>
+        <fct>FindExecutable</fct>
+        <fct>DoEnvironmentSubst</fct>
+        <fct>_DllRegisterServer</fct>
+        <fct>DllInstall</fct>
+        <fct>WOWShellExecute</fct>
+        <fct>WaitForExplorerRestartW</fct>
+        <fct>SHFlushSFCache</fct>
+        <fct>SHChangeNotification_Lock</fct>
+        <fct>SHChangeNotification_Unlock</fct>
+        <fct>WriteCabinetState</fct>
+        <fct>ReadCabinetState</fct>
+        <fct>IsUserAnAdmin</fct>
+        <fct>Control_RunDLL</fct>
+        <fct>Control_RunDLLAsUser</fct>
+        <fct>SHTestTokenMembership</fct>
+        <fct>AppCompat_RunDLLW</fct>
+        <fct>SHHelpShortcuts_RunDLL</fct>
+        <fct>SHChangeNotify</fct>
+        <fct>SHChangeNotifyDeregister</fct>
+        <fct>SHEmptyRecycleBin</fct>
+        <fct>SHLoadInProc</fct>
+        <fct>SHGetNoAssocIconIndex</fct>
+        <fct>SHGetUserDisplayName</fct>
+        <fct>SHGetUserPicturePath</fct>
+        <fct>SHGetUserPicturePathEx</fct>
+        <fct>SHHelpShortcut_RunDLL</fct>
+        <fct>SHHelpShortcuts_RunDLL</fct>
+        <fct>ShortSizeFormatExport</fct>
+        <fct>SHResolveUserNames</fct>
+        <fct>SHSettingsChanged</fct>
+        <fct>SHSetUserPicturePath</fct>
+        <fct>SHShouldShowWizards</fct>
+        <fct>SHTestTokenPrivilegeW</fct>
+        <fct>SHAnsiToUnicodeCPAlloc</fct>
+        <fct>SHAreIconsEqual</fct>
+        <fct>SHBoolSystemParametersInfo</fct>
+        <fct>SHCreatePropertyBagOnMemory</fct>
+        <fct>SHCreatePropertyStoreOnXML</fct>
+        <fct>SHCreateStreamOnDllResourceW</fct>
+        <fct>SHCreateStreamOnModuleResourceW</fct>
+        <fct>SHExpandEnvironmentStringsAlloc</fct>
+        <fct>SHForwardContextMenuMsg</fct>
+        <fct>SHGetSizeShared</fct>
+        <fct>SHInvokeCommandOnContextMenu</fct>
+        <fct>SHInvokeCommandOnContextMenuEx</fct>
+        <fct>SHInvokeCommandsOnContextMenuEx</fct>
+        <fct>SHInvokeCommandWithFlagsAndSite</fct>
+        <fct>SHRegSetValue</fct>
+        <fct>SHUnicodeToAnsiCPAlloc</fct>
+      </fcts>
+    </lib>
+    <lib name="psapi.dll" flag="1" desc="Process Status Library">
+      <fcts>
+        <fct>K32EnumPageFiles</fct>
+        <fct>EmptyWorkingSet</fct>
+        <fct>EnumDeviceDrivers</fct>
+        <fct>EnumPageFiles</fct>
+        <fct>EnumProcesses</fct>
+        <fct>EnumProcessModules</fct>
+        <fct>EnumProcessModulesEx</fct>
+        <fct>GetProcessImageFileName</fct>
+        <fct>InitializeProcessForWsWatch</fct>
+        <fct>GetModuleBaseName</fct>
+        <fct>GetModuleFileNameEx</fct>
+        <fct>GetMappedFileName</fct>
+        <fct>GetDeviceDriverFileName</fct>
+        <fct>GetMappedFileName</fct>
+        <fct>GetModuleInformation</fct>
+        <fct>GetPerformanceInfo</fct>
+        <fct>GetWsChanges</fct>
+        <fct>GetWsChangesEx</fct>
+        <fct>QueryWorkingSet</fct>
+        <fct>QueryWorkingSetEx</fct>
+      </fcts>
+    </lib>
+    
+
+    <lib name="fwpuclnt.dll" flag="1" desc="FWP/IPsec User-Mode Library">
+      <fcts>
+        <fct>WSASetSocketPeerTargetName</fct>
+        <fct>WSADeleteSocketPeerTargetName</fct>
+        <fct>WSAImpersonateSocketPeer</fct>
+        <fct>WSAQuerySocketSecurity</fct>
+        <fct>WSARevertImpersonation</fct>
+      </fcts>
+    </lib>
+    <lib name="mapi32.dll" flag="1" desc="Extended MAPI Library">
+      <fcts>
+        <fct>MAPILogonEx</fct>
+        <fct>MAPIAllocateBuffer</fct>
+        <fct>MAPIFreeBuffer</fct>
+        <fct>MAPIInitialize</fct>
+        <fct>MAPIUninitialize</fct>
+        <fct>MAPIOpenFormMgr</fct>
+        <fct>BuildDisplayTable</fct>
+        <fct>OpenStreamOnFile</fct>
+        <fct>BMAPISendMail</fct>
+        <fct>BMAPISaveMail</fct>
+        <fct>BMAPIReadMail</fct>
+        <fct>BMAPIGetReadMail</fct>
+        <fct>BMAPIFindNext</fct>
+        <fct>BMAPIAddress</fct>
+        <fct>BMAPIGetAddress</fct>
+        <fct>BMAPIDetails</fct>
+        <fct>BMAPIResolveName</fct>
+        <fct>WrapCompressedRTFStream</fct>
+        <fct>RTFSync</fct>
+        <fct>MAPIAdminProfiles</fct>
+      </fcts>
+    </lib>
+    <lib name="wininet.dll" flag="1" desc="Internet Extensions for Win32 Library">
+      <fcts>
+        <fct>InternetSecurityProtocolToString</fct>
+        <fct>InternetAttemptConnect</fct>
+        <fct>UrlZonesDetach</fct>
+        <fct>InternetAutodial</fct>
+        <fct>InternetAutodialHangup</fct>
+        <fct>DeleteUrlCacheEntry</fct>
+        <fct>RetrieveUrlCacheEntryFile</fct>
+        <fct>FindFirstUrlCacheEntry</fct>
+        <fct>FindFirstUrlCacheContainer</fct>
+        <fct>FindNextUrlCacheContainer</fct>
+        <fct>FindNextUrlCacheEntry</fct>
+        <fct>FindCloseUrlCache</fct>
+        <fct>GetUrlCacheEntryInfo</fct>
+        <fct>GetUrlCacheEntryInfoEx</fct>
+        <fct>HttpSendRequest</fct>
+        <fct>HttpSendRequestEx</fct>
+        <fct>HttpQueryInfo</fct>
+        <fct>HttpAddRequestHeaders</fct>
+        <fct>HttpEndRequest</fct>
+        <fct>HttpOpenRequest</fct>
+        <fct>InternetGetConnectedState</fct>
+        <fct>InternetGetConnectedStateEx</fct>
+        <fct>InternetWriteFile</fct>
+        <fct>InternetOpenUrl</fct>
+        <fct>InternetQueryDataAvailable</fct>
+        <fct>InternetGetCookie</fct>
+        <fct>InternetCheckConnection</fct>
+        <fct>InternetQueryOption</fct>
+        <fct>InternetSetStatusCallback</fct>
+        <fct>InternetSetOption</fct>
+        <fct>InternetErrorDlg</fct>
+        <fct>InternetOpen</fct>
+        <fct>InternetConnect</fct>
+        <fct>InternetCrackUrl</fct>
+        <fct>InternetCreateUrl</fct>
+        <fct>InternetCanonicalizeUrl</fct>
+        <fct>InternetCombineUrl</fct>
+        <fct>FtpDeleteFile</fct>
+        <fct>FtpCommand</fct>
+        <fct>FtpCreateDirectory</fct>
+        <fct>FtpFindFirstFile</fct>
+        <fct>FtpGetCurrentDirectory</fct>
+        <fct>FtpGetFile</fct>
+        <fct>FtpGetFileSize</fct>
+        <fct>FtpOpenFile</fct>
+        <fct>FtpPutFile</fct>
+        <fct>FtpRemoveDirectory</fct>
+        <fct>FtpRenameFile</fct>
+        <fct>FtpSetCurrentDirectory</fct>
+        <fct>ResumeSuspendedDownload</fct>
+        <fct>SetUrlCacheEntryInfo</fct>
+      </fcts>
+    </lib>
+    <lib name="rpcrt4.dll" flag="1" desc="Remote Procedure Call Runtime Library">
+      <fcts>
+        <fct>I_RpcMapWin32Status</fct>
+        <fct>UuidCreateSequential</fct>
+        <fct>UuidToString</fct>
+        <fct>RpcBindingSetAuthInfo</fct>
+        <fct>RpcMgmtSetServerStackSize</fct>
+        <fct>RpcServerUnregisterIf</fct>
+        <fct>RpcMgmtWaitServerListen</fct>
+        <fct>RpcMgmtStopServerListening</fct>
+        <fct>RpcServerUnregisterIfEx</fct>
+        <fct>RpcServerRegisterIf</fct>
+        <fct>RpcServerUseProtseqEp</fct>
+        <fct>RpcServerListen</fct>
+        <fct>RpcStringFree</fct>
+        <fct>RpcServerTestCancel</fct>
+        <fct>RpcStringBindingParse</fct>
+        <fct>RpcMgmtInqServerPrincName</fct>
+        <fct>RpcNetworkIsProtseqValid</fct>
+        <fct>UuidCreate</fct>
+        <fct>NdrAsyncClientCall</fct>
+        <fct>NdrClearOutParameters</fct>
+        <fct>NdrClientCall</fct>
+        <fct>NdrClientCall2</fct>
+        <fct>NdrConformantArrayUnmarshall</fct>
+        <fct>NdrConformantStringBufferSize</fct>
+        <fct>NdrConformantStringMarshall</fct>
+        <fct>NdrConformantStringUnmarshall</fct>
+        <fct>NdrContextHandleInitialize</fct>
+        <fct>NdrContextHandleSize</fct>
+        <fct>NdrContextHandleMemorySize</fct>
+        <fct>NdrConvert</fct>
+        <fct>NdrCStdStubBuffer_Release</fct>
+        <fct>NdrCStdStubBuffer2_Release</fct>
+        <fct>NdrDllCanUnloadNow</fct>
+        <fct>NdrDllGetClassObject</fct>
+        <fct>NdrDllRegisterProxy</fct>
+        <fct>NdrDllUnregisterProxy</fct>
+        <fct>NdrGetUserMarshalInfo</fct>
+        <fct>NdrInterfacePointerBufferSize</fct>
+        <fct>NdrInterfacePointerFree</fct>
+        <fct>NdrInterfacePointerMarshall</fct>
+        <fct>NdrInterfacePointerUnmarshall</fct>
+        <fct>NdrOleAllocate</fct>
+        <fct>NdrOleFree</fct>
+        <fct>NdrPointerBufferSize</fct>
+        <fct>NdrPointerFree</fct>
+        <fct>NdrPointerMarshall</fct>
+        <fct>NdrPointerUnmarshall</fct>
+        <fct>NdrProxyErrorHandler</fct>
+        <fct>NdrProxyFreeBuffer</fct>
+        <fct>NdrProxyGetBuffer</fct>
+        <fct>NdrProxyInitialize</fct>
+        <fct>NdrProxySendReceive</fct>
+        <fct>NdrSimpleTypeMarshall</fct>
+        <fct>NdrSimpleTypeUnmarshall</fct>
+        <fct>NdrStubCall2</fct>
+        <fct>NdrStubForwardingFunction</fct>
+        <fct>NdrStubGetBuffer</fct>
+        <fct>NdrStubInitialize</fct>
+        <fct>NdrUserMarshalBufferSize</fct>
+        <fct>NdrUserMarshalFree</fct>
+        <fct>NdrUserMarshalMarshall</fct>
+      </fcts>
+    </lib>
+    <lib name="setupapi.dll" flag="1" desc="Windows Setup Library">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="powrprof.dll" flag="1" desc="Power Profile Helper Library">
+      <fcts>
+        <fct>CallNtPowerInformation</fct>
+        <fct>CanUserWritePwrScheme</fct>
+        <fct>DeletePwrScheme</fct>
+        <fct>DevicePowerClose</fct>
+        <fct>DevicePowerEnumDevices</fct>
+        <fct>DevicePowerOpen</fct>
+        <fct>DevicePowerSetDeviceState</fct>
+        <fct>EnumPwrSchemes</fct>
+        <fct>GUIDFormatToGlobalPowerPolicy</fct>
+        <fct>GUIDFormatToPowerPolicy</fct>
+        <fct>GetActivePwrScheme</fct>
+        <fct>GetCurrentPowerPolicies</fct>
+        <fct>GetPwrCapabilities</fct>
+        <fct>GetPwrDiskSpindownRange</fct>
+        <fct>IsAdminOverrideActive</fct>
+        <fct>IsPwrHibernateAllowed</fct>
+        <fct>IsPwrShutdownAllowed</fct>
+        <fct>IsPwrSuspendAllowed</fct>
+        <fct>LoadCurrentPwrScheme</fct>
+        <fct>MergeLegacyPwrScheme</fct>
+        <fct>PowerApplyPowerRequestOverride</fct>
+        <fct>PowerCanRestoreIndividualDefaultPowerScheme</fct>
+        <fct>PowerCreatePossibleSetting</fct>
+        <fct>PowerCreateSetting</fct>
+        <fct>PowerCustomizePlatformPowerSettings</fct>
+        <fct>PowerDebugDifPowerPolicies</fct>
+        <fct>PowerDebugDifSystemPowerPolicies</fct>
+        <fct>PowerDebugDumpPowerPolicy</fct>
+        <fct>PowerDebugDumpPowerScheme</fct>
+        <fct>PowerDebugDumpSystemPowerCapabilities</fct>
+        <fct>PowerDebugDumpSystemPowerPolicy</fct>
+        <fct>PowerDeleteScheme</fct>
+        <fct>PowerDeterminePlatformRole</fct>
+        <fct>PowerDuplicateScheme</fct>
+        <fct>PowerEnumerate</fct>
+        <fct>PowerGetActiveScheme</fct>
+        <fct>PowerImportPowerScheme</fct>
+        <fct>PowerOpenSystemPowerKey</fct>
+        <fct>PowerOpenUserPowerKey</fct>
+        <fct>PowerPolicyToGUIDFormat</fct>
+        <fct>PowerReadACDefaultIndex</fct>
+        <fct>PowerReadACValue</fct>
+        <fct>PowerReadACValueIndex</fct>
+        <fct>PowerReadDCDefaultIndex</fct>
+        <fct>PowerReadDCValue</fct>
+        <fct>PowerReadDCValueIndex</fct>
+        <fct>PowerReadDescription</fct>
+        <fct>PowerReadFriendlyName</fct>
+        <fct>PowerReadIconResourceSpecifier</fct>
+        <fct>PowerReadPossibleDescription</fct>
+        <fct>PowerReadPossibleFriendlyName</fct>
+        <fct>PowerReadPossibleValue</fct>
+        <fct>PowerReadSecurityDescriptor</fct>
+        <fct>PowerReadSettingAttributes</fct>
+        <fct>PowerReadValueIncrement</fct>
+        <fct>PowerReadValueMax</fct>
+        <fct>PowerReadValueMin</fct>
+        <fct>PowerReadValueUnitsSpecifier</fct>
+        <fct>PowerRemovePowerSetting</fct>
+        <fct>PowerReplaceDefaultPowerSchemes</fct>
+        <fct>PowerRestoreDefaultPowerSchemes</fct>
+        <fct>PowerRestoreIndividualDefaultPowerScheme</fct>
+        <fct>PowerSetActiveScheme</fct>
+        <fct>PowerSetAlsBrightnessOffset</fct>
+        <fct>PowerSettingAccessCheck</fct>
+        <fct>PowerSettingRegisterNotification</fct>
+        <fct>PowerSettingUnregisterNotification</fct>
+        <fct>PowerWriteACDefaultIndex</fct>
+        <fct>PowerWriteACValueIndex</fct>
+        <fct>PowerWriteDCDefaultIndex</fct>
+        <fct>PowerWriteDCValueIndex</fct>
+        <fct>PowerWriteDescription</fct>
+        <fct>PowerWriteFriendlyName</fct>
+        <fct>PowerWriteIconResourceSpecifier</fct>
+        <fct>PowerWritePossibleDescription</fct>
+        <fct>PowerWritePossibleFriendlyName</fct>
+        <fct>PowerWritePossibleValue</fct>
+        <fct>PowerWriteSecurityDescriptor</fct>
+        <fct>PowerWriteSettingAttributes</fct>
+        <fct>PowerWriteValueIncrement</fct>
+        <fct>PowerWriteValueMax</fct>
+        <fct>PowerWriteValueMin</fct>
+        <fct>PowerWriteValueUnitsSpecifier</fct>
+        <fct>ReadGlobalPwrPolicy</fct>
+        <fct>ReadProcessorPwrScheme</fct>
+        <fct>ReadPwrScheme</fct>
+        <fct>SetActivePwrScheme</fct>
+        <fct>SetSuspendState</fct>
+        <fct>ValidatePowerPolicies</fct>
+        <fct>WriteGlobalPwrPolicy</fct>
+        <fct>WriteProcessorPwrScheme</fct>
+        <fct>WritePwrScheme</fct>
+      </fcts>
+    </lib>
+    <lib name="ntoskrnl.exe" flag="0" desc="NT Kernel and System">
+      <fcts>
+        <fct>SePrivilegeCheck</fct>
+        <fct>KeTickCount</fct>
+        <fct>KeStackAttachProcess</fct>
+        <fct>PsLookupProcessThreadByCid</fct>
+        <fct>PsRemoveLoadImageNotifyRoutine</fct>
+        <fct>PsGetCurrentProcessId</fct>
+        <fct>PsGetProcessId</fct>
+        <fct>PsGetProcessImageFileName</fct>
+        <fct>PsCreateSystemThread</fct>
+        <fct>PsSetLoadImageNotifyRoutine</fct>
+        <fct>PsSetCreateProcessNotifyRoutine</fct>
+        <fct>CreateProcessNotify</fct>
+        <fct>PsTerminateSystemThread</fct>
+        <fct>PsGetCurrentThreadId</fct>
+        <fct>PsGetProcessSectionBaseAddress</fct>
+        <fct>PsGetProcessSessionId</fct>
+        <fct>PsProcessType</fct>
+        <fct>PsLookupProcessByProcess</fct>
+        <fct>PsLookupProcessByProcessId</fct>
+        <fct>PsChargePoolQuota</fct>
+        <fct>PsDereferenceImpersonationToken</fct>
+        <fct>PsDereferencePrimaryToken</fct>
+        <fct>PsIsDiskCountersEnabled</fct>
+        <fct>PsGetProcessExitTime</fct>
+        <fct>PsImpersonateClient</fct>
+        <fct>PsIsThreadTerminating</fct>
+        <fct>PsLookupThreadByThreadId</fct>
+        <fct>PsReferenceImpersonationToken</fct>
+        <fct>PsReferencePrimaryToken</fct>
+        <fct>PsGetCurrentThreadStackBase</fct>
+        <fct>PsGetCurrentThreadStackLimit</fct>
+        <fct>PsGetCurrentThread</fct>
+        <fct>PsReturnPoolQuota</fct>
+        <fct>PsRevertToSelf</fct>
+        <fct>PsUpdateDiskCounters</fct>
+        <fct>PsInitialSystemProcess</fct>
+        <fct>KeServiceDescriptorTable</fct>
+        <fct>KeAddSystemServiceTable</fct>
+        <fct>KeBugCheckEx</fct>
+        <fct>IoCreateDriver</fct>
+        <fct>IoGetCurrentProcess</fct>
+        <fct>IoRegisterBootDriverReinitialization</fct>
+        <fct>IoAllocateAdapterChannel</fct>
+        <fct>IoAttachDeviceByPointer</fct>
+        <fct>RtlCompareMemory</fct>
+        <fct>RtlImageNtHeader</fct>
+        <fct>RtlImageRvaToVa</fct>
+        <fct>RtlImageDirectoryEntryToData</fct>
+        <fct>ZwQueryInformationToken</fct>
+        <fct>ZwEnumerateKey</fct>
+        <fct>ZwFlushKey</fct>
+        <fct>ZwOpenProcess</fct>
+        <fct>ZwOpenProcessToken</fct>
+        <fct>ZwWriteFile</fct>
+        <fct>ZwDeleteFile</fct>
+      </fcts>
+    </lib>
+    
+
+    <lib name="user32.dll" flag="0" desc="Multi-User Windows USER API Client Library">
+      <fcts>
+        <fct>RegisterMessagePumpHook</fct>
+        <fct>IsHungAppWindow</fct>
+        <fct>IsGUIThread</fct>
+        <fct>PrivateExtractIcons</fct>
+        <fct>AllowForegroundActivation</fct>
+        <fct>ChangeDisplaySettings</fct>
+        <fct>ChangeDisplaySettingsEx</fct>
+        <fct>GetWindowText</fct>
+        <fct>VkKeyScanEx</fct>
+        <fct>MapVirtualKeyEx</fct>
+        <fct>GetLastInputInfo</fct>
+        <fct>SystemParametersInfo</fct>
+        <fct>SetClipboardViewer</fct>
+        <fct>KillSystemTimer</fct>
+        <fct>SetWindowStationUser</fct>
+        <fct>GetReasonTitleFromReasonCode</fct>
+        <fct>ReasonCodeNeedsBugID</fct>
+        <fct>RecordShutdownReason</fct>
+        <fct>GetTaskmanWindow</fct>
+        <fct>RegisterTasklist</fct>
+        <fct>RegisterSystemThread</fct>
+        <fct>SetShellWindowEx</fct>
+        <fct>GetProgmanWindow</fct>
+        <fct>UnlockWindowStation</fct>
+        <fct>GetWinStationInfo</fct>
+        <fct>GetAppCompatFlags</fct>
+        <fct>GetAppCompatFlags2</fct>
+        <fct>ClientThreadSetup</fct>
+        <fct>AllowForegroundActivation</fct>
+        <fct>GetInternalWindowPos</fct>
+        <fct>LockWindowStation</fct>
+        <fct>QuerySendMessage</fct>
+        <fct>OemKeyScan</fct>
+        <fct>mouse_event</fct>
+        <fct>AllowSetForegroundWindow</fct>
+        <fct>GetAncestor</fct>
+        <fct>GetWindowModuleFileName</fct>
+        <fct>GetClassLong</fct>
+        <fct>GetGuiResources</fct>
+        <fct>GetRegisteredRawInputDevices</fct>
+        <fct>GetRawInputDeviceInfo</fct>
+        <fct>GetRawInputDeviceList</fct>
+        <fct>OpenWindowStation</fct>
+        <fct>DeregisterShellHookWindow</fct>
+        <fct>SetWinEventHook</fct>
+        <fct>SetWindowsHook</fct>
+        <fct>SetWindowsHookEx</fct>
+        <fct>SetWindowsHookW</fct>
+        <fct hint="20">LowLevelKeyboardProc</fct>
+        <fct>RegisterRawInputDevices</fct>
+        <fct>GetNumberOfConsoleMouseButtons</fct>
+        <fct>GetRawInputData</fct>
+        <fct>NotifyWinEvent</fct>
+        <fct>IsWinEventHookInstalled</fct>
+        <fct>CopyImage</fct>
+        <fct>CallMsgFilter</fct>
+        <fct>CallNextHookEx</fct>
+        <fct>DdeGetLastError</fct>
+        <fct>DdeFreeStringHandle</fct>
+        <fct>DdeQueryString</fct>
+        <fct>DdeCreateStringHandle</fct>
+        <fct>DdeCreateDataHandle</fct>
+        <fct>DdePostAdvise</fct>
+        <fct>DdeGetData</fct>
+        <fct>DdeFreeDataHandle</fct>
+        <fct>DdeClientTransaction</fct>
+        <fct>DdeDisconnect</fct>
+        <fct>DdeConnect</fct>
+        <fct>DdeNameService</fct>
+        <fct>DdeUninitialize</fct>
+        <fct>DdeInitialize</fct>
+        <fct>DdeQueryNextServer</fct>
+        <fct>EnumDisplayDevices</fct>
+        <fct>EnumDisplayMonitors</fct>
+        <fct>RegisterDeviceNotification</fct>
+        <fct>RegisterUserApiHook</fct>
+        <fct>RegisterShellHookWindow</fct>
+        <fct>SetDebugErrorLevel</fct>
+        <fct>UnhookWinEvent</fct>
+        <fct>UnhookWindowsHook</fct>
+        <fct>UnhookWindowsHookEx</fct>
+        <fct>UnregisterUserApiHook</fct>
+        <fct>UnregisterDeviceNotification</fct>
+        <fct>UnregisterPowerSettingNotification</fct>
+        <fct>UnregisterMessagePumpHook</fct>
+        <fct>VkKeyScan</fct>
+      </fcts>
+    </lib>
+    <lib name="linkinfo.dll" flag="1" desc="Windows Volume Tracking Library">
+      <fcts>
+        <fct>CreateLinkInfo</fct>
+        <fct>DestroyLinkInfo</fct>
+        <fct>DisconnectLinkInfo</fct>
+        <fct>GetCanonicalPathInfo</fct>
+        <fct>GetLinkInfoData</fct>
+        <fct>ResolveLinkInfo</fct>
+        <fct>CompareLinkInfoVolumes</fct>
+        <fct>CompareLinkInfoReferents</fct>
+        <fct>IsValidLinkInfo</fct>
+      </fcts>
+    </lib>
+    <lib name="credui.dll" flag="1" desc="Credential Manager User Interface Library">
+      <fcts>
+        <fct>CredUnPackAuthenticationBuffer</fct>
+        <fct>CredUIPromptForCredentials</fct>
+        <fct>CredUICmdLinePromptForCredentials</fct>
+      </fcts>
+    </lib>
+    <lib name="gina.dll" flag="1">
+      <fcts>
+        <fct>WlxActivateUserShell</fct>
+        <fct>WlxDisconnectNotify</fct>
+        <fct>WlxDisplayLockedNotice</fct>
+        <fct>WlxDisplaySASNotice</fct>
+        <fct>WlxDisplayStatusMessage</fct>
+        <fct>WlxGetConsoleSwitchCredentials</fct>
+        <fct>WlxGetStatusMessage</fct>
+        <fct>WlxInitialize</fct>
+        <fct>WlxIsLockOk</fct>
+        <fct>WlxIsLogoffOk</fct>
+        <fct>WlxLoggedOnSAS</fct>
+        <fct>WlxLoggedOutSAS</fct>
+        <fct>WlxLogoff</fct>
+        <fct>WlxNegotiate</fct>
+        <fct>WlxNetworkProviderLoad</fct>
+        <fct>WlxReconnectNotify</fct>
+        <fct>WlxRemoveStatusMessage</fct>
+        <fct>WlxScreenSaverNotify</fct>
+        <fct>WlxShutdown</fct>
+        <fct>WlxStartApplication</fct>
+        <fct>WlxWkstaLockedSAS</fct>
+      </fcts>
+    </lib>
+    <lib name="version.dll" flag="0" desc="Version Checking and File Installation Library">
+      <fcts>
+        <fct>VerInstallFile</fct>
+      </fcts>
+    </lib>
+    <lib name="mspdb80.dll" flag="1" desc="Microsoft Program Database Library">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="msvcrt.dll" flag="0" desc="Microsoft C Runtime Library">
+      <fcts>
+        <fct>getenv</fct>
+        <fct>_wgetenv</fct>
+        <fct>_wexecve</fct>
+        <fct>_execve</fct>
+        <fct>_execlpe</fct>
+        <fct>srand</fct>
+        <fct>rand</fct>
+      </fcts>
+    </lib>
+    <lib name="msasn1.dll" group="30" desc="ASN.1 Runtime APIs">
+      <fcts>
+        <fct group="30" flag="1">ASN1BERDecNull</fct>
+        <fct group="30" flag="1">ASN1BERDecEoid</fct>
+        <fct group="30" flag="1">ASN1BERDecBool</fct>
+        <fct group="30" flag="1">ASN1BERDecCheck</fct>
+        <fct group="30" flag="1">ASN1BERDecCharString</fct>
+      </fcts>
+    </lib>
+    <lib name="ntshrui.dll" flag="1" desc="Shell extensions for sharing">
+      <fcts>
+        <fct>GetNetResourceFromLocalPath</fct>
+        <fct>CanShareFolderW</fct>
+      </fcts>
+    </lib>
+    <lib name="dhcpcsvc.dll" flag="1" desc="DHCP Client Service">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="verifier.dll" flag="1" desc="Standard application verifier provider">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="imagehlp.dll" flag="1" desc="Windows Image Helper">
+      <fcts>
+        <fct>UpdateDebugInfoFileEx</fct>
+        <fct>CheckSumMappedFile</fct>
+        <fct>ImageNtHeader</fct>
+        <fct>ImageRvaToVa</fct>
+        <fct>StackWalk64</fct>
+        <fct>SymCleanup</fct>
+        <fct>SymFromAddr</fct>
+        <fct>SymFunctionTableAccess64</fct>
+        <fct>SymGetModuleInfo64</fct>
+        <fct>SymGetModuleBase64</fct>
+        <fct>SymGetModuleInfoW64</fct>
+        <fct>SymGetOptions</fct>
+        <fct>SymGetSymFromName</fct>
+        <fct>SymInitialize</fct>
+        <fct>SymLoadModule64</fct>
+        <fct>SymRegisterCallback64</fct>
+        <fct>SymSetOptions</fct>
+        <fct>SymUnloadModule64</fct>
+        <fct>SymAddSourceStream</fct>
+        <fct>SymEnumSourceFileTokens</fct>
+        <fct>SymEnumSourceFiles</fct>
+        <fct>SymGetSourceFileFromToken</fct>
+        <fct>SymGetSourceFileToken</fct>
+        <fct>SymGetSourceVarFromToken</fct>
+        <fct>SymMatchString</fct>
+        <fct>SymRegisterCallbackW64</fct>
+        <fct>SymSetHomeDirectory</fct>
+        <fct>SymSrvGetFileIndexes</fct>
+        <fct>RemoveRelocations</fct>
+        <fct>BindImage</fct>
+        <fct>BindImageEx</fct>
+        <fct>CheckSumMappedFile</fct>
+        <fct>EnumerateLoadedModules</fct>
+        <fct>EnumerateLoadedModules64</fct>
+        <fct>EnumerateLoadedModulesEx</fct>
+        <fct>FindDebugInfoFile</fct>
+        <fct>FindDebugInfoFileEx</fct>
+        <fct>FindExecutableImage</fct>
+        <fct>FindExecutableImageEx</fct>
+        <fct>FindFileInPath</fct>
+        <fct>FindFileInSearchPath</fct>
+        <fct>GetImageConfigInformation</fct>
+        <fct>GetImageUnusedHeaderBytes</fct>
+        <fct>GetTimestampForLoadedLibrary</fct>
+        <fct>ImageAddCertificate</fct>
+        <fct>ImageDirectoryEntryToData</fct>
+        <fct>ImageDirectoryEntryToDataEx</fct>
+        <fct>ImageEnumerateCertificates</fct>
+        <fct>ImageGetCertificateData</fct>
+        <fct>ImageGetCertificateHeader</fct>
+        <fct>ImageLoad</fct>
+        <fct>ImageRemoveCertificate</fct>
+        <fct>ImageRvaToSection</fct>
+        <fct>ImageUnload</fct>
+        <fct>ImagehlpApiVersion</fct>
+        <fct>ImagehlpApiVersionEx</fct>
+        <fct>MakeSureDirectoryPathExists</fct>
+        <fct>MapAndLoad</fct>
+        <fct>MapDebugInformation</fct>
+        <fct>MapFileAndCheckSum</fct>
+        <fct>ReBaseImage64</fct>
+        <fct>ReBaseImage</fct>
+        <fct>RemovePrivateCvSymbolic</fct>
+        <fct>RemovePrivateCvSymbolicEx</fct>
+        <fct>SearchTreeForFile</fct>
+        <fct>SetImageConfigInformation</fct>
+        <fct>SplitSymbols</fct>
+        <fct>StackWalk</fct>
+        <fct>SymEnumSym</fct>
+        <fct>TouchFileTimes</fct>
+        <fct>UnDecorateSymbolName</fct>
+        <fct>UnMapAndLoad</fct>
+        <fct>UnmapDebugInformation</fct>
+        <fct>UpdateDebugInfoFile</fct>
+      </fcts>
+    </lib>
+    <lib name="wsnmp32.dll" flag="1">
+      <fcts>
+        <fct>SnmpGetTranslateMode</fct>
+        <fct>SnmpSetTranslateMode</fct>
+        <fct>SnmpGetRetransmitMode</fct>
+        <fct>SnmpSetRetransmitMode</fct>
+        <fct>SnmpGetTimeout</fct>
+        <fct>SnmpSetTimeout</fct>
+        <fct>SnmpGetRetry</fct>
+        <fct>SnmpSetRetry</fct>
+        <fct>SnmpConveyAgentAddress</fct>
+        <fct>SnmpSetAgentAddress</fct>
+        <fct>SnmpGetVendorInfo</fct>
+        <fct>SnmpStartup</fct>
+        <fct>SnmpCleanup</fct>
+        <fct>SnmpOpen</fct>
+        <fct>SnmpClose</fct>
+        <fct>SnmpSendMsg</fct>
+        <fct>SnmpRecvMsg</fct>
+        <fct>SnmpRegister</fct>
+      </fcts>
+    </lib>
+    <lib name="crypt32.dll" flag="1" desc="Windows Crypto Library">
+      <fcts>
+        <fct>PFXImportCertStore</fct>
+        <fct>PFXExportCertStoreEx</fct>
+        <fct>PFXIsPFXBlob</fct>
+        <fct>CryptProtectMemory</fct>
+        <fct>PFXVerifyPassword</fct>
+        <fct>CryptDecodeObject</fct>
+        <fct>CryptDecodeObjectEx</fct>
+        <fct>CryptBinaryToString</fct>
+        <fct>CryptStringToBinary</fct>
+        <fct>CryptAcquireCertificatePrivateKey</fct>
+        <fct>CryptImportPublicKeyInfoEx</fct>
+        <fct>CryptUnprotectData</fct>
+        <fct>CryptEnumOIDInfo</fct>
+        <fct>CryptMsgGetParam</fct>
+        <fct>CryptUnprotectMemory</fct>
+        <fct>CertVerifyTimeValidity</fct>
+        <fct>CertVerifySubjectCertificateContext</fct>
+        <fct>CertVerifyRevocation</fct>
+        <fct>CertVerifyCertificateChainPolicy</fct>
+        <fct>CertVerifyCTLUsage</fct>
+        <fct>CertVerifyCRLTimeValidity</fct>
+        <fct>CertVerifyCRLRevocation</fct>
+        <fct>CertUnregisterSystemStore</fct>
+        <fct>CertUnregisterPhysicalStore</fct>
+        <fct>CertStrToName</fct>
+        <fct>CertSetStoreProperty</fct>
+        <fct>CertSetEnhancedKeyUsage</fct>
+        <fct>CertSetCertificateContextProperty</fct>
+        <fct>CertSetCertificateContextPropertiesFromCTLEntry</fct>
+        <fct>CertSetCTLContextProperty</fct>
+        <fct>CertSetCRLContextProperty</fct>
+        <fct>CertSerializeCertificateStoreElement</fct>
+        <fct>CertSerializeCTLStoreElement</fct>
+        <fct>CertSerializeCRLStoreElement</fct>
+        <fct>CertSelectCertificateChains</fct>
+        <fct>CertSaveStore</fct>
+        <fct>CertRetrieveLogoOrBiometricInfo</fct>
+        <fct>CertResyncCertificateChainEngine</fct>
+        <fct>CertRemoveStoreFromCollection</fct>
+        <fct>CertRemoveEnhancedKeyUsageIdentifier</fct>
+        <fct>CertRegisterSystemStore</fct>
+        <fct>CertRegisterPhysicalStore</fct>
+        <fct>CertRDNValueToStr</fct>
+        <fct>CertOpenSystemStore</fct>
+        <fct>CertOpenStore</fct>
+        <fct>CertOpenServerOcspResponse</fct>
+        <fct>CertOIDToAlgId</fct>
+        <fct>CertNameToStr</fct>
+        <fct>CertIsValidCRLForCertificate</fct>
+        <fct>CertIsRDNAttrsInCertificateName</fct>
+        <fct>CertGetValidUsages</fct>
+        <fct>CertGetSubjectCertificateFromStore</fct>
+        <fct>CertGetStoreProperty</fct>
+        <fct>CertGetServerOcspResponseContext</fct>
+        <fct>CertGetPublicKeyLength</fct>
+        <fct>CertGetNameString</fct>
+        <fct>CryptQueryObject</fct>
+        <fct>CertGetIssuerCertificateFromStore</fct>
+        <fct>CertGetIntendedKeyUsage</fct>
+        <fct>CertGetEnhancedKeyUsage</fct>
+        <fct>CertGetCertificateContextProperty</fct>
+        <fct>CertGetCertificateChain</fct>
+        <fct>CertGetCTLContextProperty</fct>
+        <fct>CertGetCRLFromStore</fct>
+        <fct>CertGetCRLContextProperty</fct>
+        <fct>CertFreeServerOcspResponseContext</fct>
+        <fct>CertFreeCertificateContext</fct>
+        <fct>CertFreeCertificateChainList</fct>
+        <fct>CertFreeCertificateChainEngine</fct>
+        <fct>CertFreeCertificateChain</fct>
+        <fct>CertFreeCTLContext</fct>
+        <fct>CertFreeCRLContext</fct>
+        <fct>CertFindSubjectInSortedCTL</fct>
+        <fct>CertFindSubjectInCTL</fct>
+        <fct>CertFindRDNAttr</fct>
+        <fct>CertFindExtension</fct>
+        <fct>CertFindChainInStore</fct>
+        <fct>CertFindCertificateInStore</fct>
+        <fct>CertFindCertificateInCRL</fct>
+        <fct>CertFindCTLInStore</fct>
+        <fct>CertFindCRLInStore</fct>
+        <fct>CertFindAttribute</fct>
+        <fct>CertEnumSystemStore</fct>
+        <fct>CertEnumSystemStoreLocation</fct>
+        <fct>CertEnumSubjectInSortedCTL</fct>
+        <fct>CertEnumPhysicalStore</fct>
+        <fct>CertEnumCertificatesInStore</fct>
+        <fct>CertEnumCertificateContextProperties</fct>
+        <fct>CertEnumCTLsInStore</fct>
+        <fct>CertEnumCTLContextProperties</fct>
+        <fct>CertEnumCRLsInStore</fct>
+        <fct>CertEnumCRLContextProperties</fct>
+        <fct>CertDuplicateStore</fct>
+        <fct>CertDuplicateCertificateContext</fct>
+        <fct>CertDuplicateCertificateChain</fct>
+        <fct>CertDuplicateCTLContext</fct>
+        <fct>CertDuplicateCRLContext</fct>
+        <fct>CertDeleteCertificateFromStore</fct>
+        <fct>CertDeleteCTLFromStore</fct>
+        <fct>CertDeleteCRLFromStore</fct>
+        <fct>CertCreateSelfSignCertificate</fct>
+        <fct>CertCreateContext</fct>
+        <fct>CertCreateCertificateContext</fct>
+        <fct>CertCreateCertificateChainEngine</fct>
+        <fct>CertCreateCTLEntryFromCertificateContextProperties</fct>
+        <fct>CertCreateCTLContext</fct>
+        <fct>CertCreateCRLContext</fct>
+        <fct>CertControlStore</fct>
+        <fct>CertComparePublicKeyInfo</fct>
+        <fct>CertCompareIntegerBlob</fct>
+        <fct>CertCompareCertificateName</fct>
+        <fct>CertCompareCertificate</fct>
+        <fct>CertCloseStore</fct>
+        <fct>CertCloseServerOcspResponse</fct>
+        <fct>CertAlgIdToOID</fct>
+        <fct>CertAddStoreToCollection</fct>
+        <fct>CertAddSerializedElementToStore</fct>
+        <fct>CertAddRefServerOcspResponseContext</fct>
+        <fct>CertAddRefServerOcspResponse</fct>
+        <fct>CertAddEnhancedKeyUsageIdentifier</fct>
+        <fct>CertAddEncodedCertificateToSystemStore</fct>
+        <fct>CertAddEncodedCertificateToStore</fct>
+        <fct>CertAddEncodedCTLToStore</fct>
+        <fct>CertAddEncodedCRLToStore</fct>
+        <fct>CertAddCertificateLinkToStore</fct>
+        <fct>CertAddCertificateContextToStore</fct>
+        <fct>CertAddCTLLinkToStore</fct>
+        <fct>CertAddCTLContextToStore</fct>
+        <fct>CertAddCRLLinkToStore</fct>
+        <fct>CertAddCRLContextToStore</fct>
+      </fcts>
+    </lib>
+    <lib name="cryptdll.dll" flag="1" desc="Cryptography Manager">
+      <fcts>
+        <fct>MD5Init</fct>
+        <fct>MD5Update</fct>
+        <fct>MD5Final</fct>
+      </fcts>
+    </lib>
+    <lib name="msvfw32.dll" flag="1" desc="Microsoft Video for Windows">
+      <fcts>
+      </fcts>
+    </lib>
+    
+
+    <lib name="usp10.dll" flag="1" desc="Uniscribe Unicode script processor">
+      <fcts>
+        <fct>ScriptBreak</fct>
+        <fct>ScriptStringOut</fct>
+        <fct>ScriptStringAnalyse</fct>
+        <fct>ScriptLayout</fct>
+        <fct>ScriptItemize</fct>
+        <fct>ScriptShape</fct>
+        <fct>ScriptFreeCache</fct>
+        <fct>ScriptPlace</fct>
+      </fcts>
+    </lib>
+    <lib name="mscoree.dll" flag="0" desc="Microsoft .NET Runtime Execution Engine">
+      <fcts>
+        <fct>CLRCreateInstance</fct>
+        <fct>CorBindToRuntime</fct>
+        <fct>CorBindToRuntimeEx</fct>
+        <fct>UseShellExecute</fct>
+        <fct>set_UseShellExecute</fct>
+        <fct flag="-">Get_Random</fct>
+        <fct flag="-">Get_PSDrive</fct>
+        <fct flag="-">CreateEncryptor</fct>
+        <fct>DownloadFile</fct>
+        <fct>DownloadData</fct>
+        <fct>DelegateResumeThread</fct>
+        <fct>DelegateWow64SetThreadContext</fct>
+        <fct>DelegateSetThreadContext</fct>
+        <fct>DelegateWow64GetThreadContext</fct>
+        <fct>DelegateGetThreadContext</fct>
+        <fct>DelegateVirtualAllocEx</fct>
+        <fct>DelegateWriteProcessMemory</fct>
+        <fct>DelegateReadProcessMemory</fct>
+        <fct>DelegateZwUnmapViewOfSection</fct>
+        <fct>DelegateCreateProcess</fct>
+        <fct>CreateProc</fct>
+        <fct>LoadApi</fct>
+        <fct>CreateApi</fct>
+        <fct>ProcessHandle</fct>
+        <fct>ProcessId</fct>
+        <fct>payload</fct>
+        <fct>bytesWritten</fct>
+      </fcts>
+    </lib>
+    <lib name="iphlpapi" flag="1" desc="IP Helper API"></lib>
+    <lib name="iphlpapi.dll" flag="1" desc="IP Helper API">
+      <fcts>
+        <fct>Icmp6CreateFile</fct>
+        <fct>Icmp6ParseReplies</fct>
+        <fct>Icmp6SendEcho2</fct>
+        <fct>IcmpCloseHandle</fct>
+        <fct>IcmpCreateFile</fct>
+        <fct>IcmpSendEcho</fct>
+        <fct>IcmpSendEcho2</fct>
+        <fct>IcmpSendEcho2Ex</fct>
+        <fct>IcmpParseReplies</fct>
+        <fct>CreateIpNetEntry</fct>
+        <fct>DeleteIpAddress</fct>
+        <fct>DeleteIpNetEntry</fct>
+        <fct>DeleteIpNetEntry2</fct>
+        <fct>DeleteIpForwardEntry</fct>
+        <fct>DeleteIpForwardEntry2</fct>
+        <fct>GetNetworkParams</fct>
+        <fct>GetAdaptersAddresses</fct>
+        <fct>GetTcpTable</fct>
+        <fct>GetBestRoute</fct>
+        <fct>GetIfTable</fct>
+        <fct>GetTcpStatistics</fct>
+        <fct>GetTcpStatisticsEx</fct>
+        <fct>GetIpAddrTable</fct>
+        <fct>GetAdapterIndex</fct>
+        <fct>GetIpStatistics</fct>
+        <fct>GetIfEntry</fct>
+        <fct>GetIcmpStatistics</fct>
+        <fct>GetUdpTable</fct>
+        <fct>SetIpNetEntry</fct>
+        <fct>SetIpTTL</fct>
+        <fct>SendARP</fct>
+        <fct>InternalSetIpStats</fct>
+        <fct>SetIpForwardEntry</fct>
+        <fct>InternalSetIpForwardEntry</fct>
+        <fct>AddIPAddress</fct>
+        <fct>FlushIpNetTable</fct>
+        <fct>GetIpNetTable</fct>
+        <fct>SetAdapterIpAddress</fct>
+        <fct>NhpAllocateAndGetInterfaceInfoFromStack</fct>
+        <fct>NhGetGuidFromInterfaceName</fct>
+        <fct>InternalGetUdpTable</fct>
+        <fct>UnenableRouter</fct>
+        <fct>register_icmp</fct>
+        <fct>_PfUnBindInterface@4</fct>
+        <fct>_PfDeleteInterface@4</fct>
+        <fct>_PfCreateInterface@24</fct>
+        <fct>_PfAddFiltersToInterface@24</fct>
+      </fcts>
+    </lib>
+    <lib name="dbghelp.dll" flag="1" desc="Windows Image Helper">
+      <fcts>
+        <fct>EnumDirTree</fct>
+        <fct>SymFromAddr</fct>
+        <fct>SymGetModuleBase64</fct>
+        <fct>SymFunctionTableAccess64</fct>
+        <fct>SymCleanup</fct>
+        <fct>StackWalk64</fct>
+        <fct>SymInitialize</fct>
+        <fct>SymFunctionTableAccess64</fct>
+        <fct>SymGetModuleBase64</fct>
+        <fct>StackWalk64</fct>
+        <fct>ImageNtHeader</fct>
+        <fct>SymUnloadModule64</fct>
+        <fct>SymLoadModule64</fct>
+        <fct>SymLoadModuleEx</fct>
+        <fct>SymGetOptions</fct>
+        <fct>SymSetOptions</fct>
+        <fct>MiniDumpWriteDump</fct>
+        <fct>MiniDumpWithTokenInformation</fct>
+        <fct>MiniDumpIgnoreInaccessibleMemory</fct>
+        <fct>MiniDumpWithPrivateWriteCopyMemory</fct>
+        <fct>MiniDumpWithFullAuxiliaryState</fct>
+        <fct>MiniDumpWithoutAuxiliaryState</fct>
+        <fct>MiniDumpWithCodeSegs</fct>
+        <fct>MiniDumpWithThreadInfo</fct>
+        <fct>MiniDumpWithFullMemoryInfo</fct>
+        <fct>MiniDumpWithoutOptionalData</fct>
+        <fct>MiniDumpWithPrivateReadWriteMemory</fct>
+        <fct>MiniDumpWithProcessThreadData</fct>
+        <fct>MiniDumpFilterModulePaths</fct>
+        <fct>MiniDumpWithIndirectlyReferencedMemory</fct>
+        <fct>MiniDumpWithUnloadedModules</fct>
+        <fct>MiniDumpScanMemory</fct>
+        <fct>MiniDumpFilterMemory</fct>
+        <fct>MiniDumpWithHandleData</fct>
+        <fct>MiniDumpWithFullMemory</fct>
+        <fct>MiniDumpWithDataSegs</fct>
+        <fct>MiniDumpNormal</fct>
+        <fct>SymGetSymFromName</fct>
+        <fct>SymFromAddr</fct>
+        <fct>SymCleanup</fct>
+        <fct>SymGetModuleInfoW64</fct>
+        <fct>SymRegisterCallback64</fct>
+        <fct>EnumerateLoadedModules</fct>
+        <fct>EnumerateLoadedModulesW64</fct>
+        <fct>SymInitialize</fct>
+        <fct>ImageDirectoryEntryToData</fct>
+        <fct>SymEnumSym</fct>
+        <fct>SymEnumProcesses</fct>
+        <fct>SymEnumerateSymbolsW</fct>
+      </fcts>
+    </lib>
+    <lib name="vaultsvc.dll" flag="1" desc="Credential Manager Service"></lib>
+    <lib name="vaultcli.dll" flag="1" desc="Credential Vault Client Library">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="pstorec.dll" flag="1" desc="Protected Storage COM interfaces">
+      <fcts>
+        <fct>PStoreCreateInstance</fct>
+        <fct>PStoreEnumProviders</fct>
+      </fcts>
+    </lib>
+    <lib name="atl.dll" flag="0" desc="Active Template Library">
+      <fcts>
+        <fct>AtlMarshalPtrInProc</fct>
+        <fct>AtlAxCreateDialog</fct>
+        <fct>AtlAxCreateControl</fct>
+        <fct>AtlAxAttachControl</fct>
+        <fct>AtlAxCreateControlEx</fct>
+        <fct>AtlAxWinInit</fct>
+        <fct>AtlAxGetHost</fct>
+        <fct>_DllRegisterServer</fct>
+        <fct>_DllUnregisterServer</fct>
+        <fct>AtlAxCreateControlLic</fct>
+        <fct>AtlAxCreateControlLicEx</fct>
+        <fct>AtlAxGetControl</fct>
+        <fct>AtlAxWinTerm</fct>
+      </fcts>
+    </lib>
+    <lib name="oleaut32.dll" flag="0" desc="oleaut32 library">
+      <fcts>
+        <fct>GetActiveObject</fct>
+        <fct>DispCallFunc</fct>
+        <fct>CreateTypeLib</fct>
+        <fct>LoadTypeLib</fct>
+        <fct>LoadRegTypeLib</fct>
+        <fct>RegisterTypeLib</fct>
+        <fct>RegisterTypeLibForUser</fct>
+        <fct>VarXor</fct>
+        <fct>LoadTypeLibEx</fct>
+        <fct>UnRegisterTypeLib</fct>
+      </fcts>
+    </lib>
+    <lib name="dnsapi.dll" flag="1" desc="DNS Client API library">
+      <fcts>
+        <fct>DnsAcquireContextHandle</fct>
+        <fct>DnsCancelQuery</fct>
+        <fct>DnsExtractRecordsFromMessage</fct>
+        <fct>DnsFree</fct>
+        <fct>DnsFreeProxyName</fct>
+        <fct>DnsGetProxyInformation</fct>
+        <fct>DnsModifyRecordsInSet</fct>
+        <fct>DnsNameCompare</fct>
+        <fct>DnsQuery_</fct>
+        <fct>DnsQueryConfig</fct>
+        <fct>DnsQueryEx</fct>
+        <fct>DnsRecordCompare</fct>
+        <fct>DnsRecordCopyEx</fct>
+        <fct>DnsRecordListFree</fct>
+        <fct>DnsRecordSetCompare</fct>
+        <fct>DnsRecordSetCopyEx</fct>
+        <fct>DnsRecordSetDetach</fct>
+        <fct>DnsReleaseContextHandle</fct>
+        <fct>DnsReplaceRecordSet</fct>
+        <fct>DnsValidateName</fct>
+        <fct>DnsValidateServerStatus</fct>
+        <fct>DnsWriteQuestionToBuffer</fct>
+      </fcts>
+    </lib>
+    <lib name="avicap32.dll" flag="0" desc="AVI Capture window class">
+      <fcts>
+        <fct>capControlCallback</fct>
+        <fct>capCreateCaptureWindow</fct>
+        <fct>capErrorCallback</fct>
+        <fct>capGetDriverDescription</fct>
+        <fct>capStatusCallback</fct>
+        <fct>capVideoStreamCallback</fct>
+        <fct>capWaveStreamCallback</fct>
+        <fct>capYieldCallback</fct>
+      </fcts>
+    </lib>
+    <lib name="samsrv.dll" flag="1">
+      <fcts>
+        <fct>SamQueryInformationUse</fct>
+        <fct>SamIConnect</fct>
+        <fct>SamIFree_SAMPR_ENUMERATION_BUFFER</fct>
+        <fct>SamIFree_SAMPR_USER_INFO_BUFFER</fct>
+        <fct>SamIGetPrivateData</fct>
+        <fct>SamrCloseHandle</fct>
+        <fct>SamrEnumerateUsersInDomain</fct>
+        <fct>SamrOpenDomain</fct>
+        <fct>SamrOpenUser</fct>
+        <fct>SamrQueryInformationUser</fct>
+      </fcts>
+    </lib>
+    <lib name="cabinet.dll" flag="1" desc="Microsoft Cabinet File API">
+      <fcts>
+      </fcts>
+    </lib>
+    <lib name="rpcns4.dll" flag="1" desc="Remote Procedure Call Name Service Client"></lib>
+    <lib name="Au3Zip.dll" flag="1">
+      <fcts>
+        <fct>AU3_GetPluginDetails</fct>
+        <fct>WinDetectHiddenText</fct>
+        <fct>WinSearchChildren</fct>
+        <fct>WinTextMatchMode</fct>
+        <fct>WinTitleMatchMode</fct>
+        <fct>WinWaitDelay</fct>
+        <fct>FileRecycle</fct>
+        <fct>GUICtrlSendMsg</fct>
+        <fct>GUICtrlSendToDummy</fct>
+        <fct>GUICtrlSetBkColor</fct>
+        <fct>GUICtrlSetColor</fct>
+        <fct>GUICtrlSetCursor</fct>
+        <fct>GUICtrlSetData</fct>
+        <fct>Send</fct>
+        <fct>SendKeyDelay</fct>
+        <fct>SendKeyDownDelay</fct>
+        <fct>SendKeepActive</fct>
+        <fct>SendCommandID</fct>
+        <fct>SendAttachMode</fct>
+        <fct>SendCapslockMode</fct>
+        <fct>ControlSend</fct>
+        <fct>UDPSend</fct>
+        <fct>_FTP_Command</fct>
+        <fct>_INetSmtpMail</fct>
+        <fct>_viExecCommand</fct>
+        <fct>_WinAPI_BroadcastSystemMessage</fct>
+        <fct>_WinAPI_SendMessageTimeout</fct>
+      </fcts>
+    </lib>
+    <lib name="rstrtmgr.dll" flag="1" desc="Restart Manager library">
+      <fcts>
+        <fct>RmAddFilter</fct>
+        <fct>RmCancelCurrentTask</fct>
+        <fct>RmEndSession</fct>
+        <fct>RmGetFilterList</fct>
+        <fct>RmGetList</fct>
+        <fct>RmJoinSession</fct>
+        <fct>RmRegisterResources</fct>
+        <fct>RmRemoveFilter</fct>
+        <fct>RmReserveHeap</fct>
+        <fct>RmRestart</fct>
+        <fct>RmShutdown</fct>
+        <fct>RmStartSession</fct>
+      </fcts>
+    </lib>
+    <lib name="mfc42.dll" flag="0" desc="MFCDLL Shared Library">
+      <fcts>
+        <fct>CWinThread::ProcessWndProcException</fct>
+      </fcts>
+    </lib>
+    <lib name="spoolss.dll" flag="0" desc="Spooler SubSystem library">
+      <fcts>
+        <fct>FindFirstPrinterChangeNotification</fct>
+        <fct>FindNextPrinterChangeNotification</fct>
+        <fct>FindClosePrinterChangeNotification</fct>
+      </fcts>
+    </lib>
+    
+
+    
+
+    
+
+    <lib name="" flag="0">
+      <fcts>
+        <fct>Decode</fct>
+        <fct>Encode</fct>
+        <fct>EncodeBlock</fct>
+        <fct>DecodeBlock</fct>
+        <fct>decrypter</fct>
+        <fct>FileEncrypt</fct>
+        <fct>FileDecrypt</fct>
+        <fct>Decompress</fct>
+        <fct>Compress</fct>
+        <fct>CompressBlock</fct>
+        <fct>MemoryStream</fct>
+        <fct>Registry</fct>
+        <fct>RegistryHive</fct>
+        <fct>RegistryKey</fct>
+        <fct>RegistryKeyPermissionCheck</fct>
+        <fct>Process</fct>
+        <fct>ProcessStartInfo</fct>
+        <fct>PsGetProcessWow64Process</fct>
+        <fct>FromBase64CharArray</fct>
+        <fct>RelayCommand</fct>
+        <fct>HalDispatchTable</fct>
+        <fct>Navigate</fct>
+        <fct>Navigate2</fct>
+        <fct>ExecWB</fct>
+        <fct>PasswordChangeNotif</fct>
+        <fct>InstallHook</fct>
+        <fct>SetHookWnd</fct>
+        <fct>UninstallHook</fct>
+        <fct>GetRandomFileName</fct>
+        <fct>GetProcessesByName</fct>
+        <fct>DownloadFileAsync</fct>
+        <fct>ServiceDllUnloadOnStop</fct>
+      </fcts>
+    </lib>
+  </libs>
+</xml>
