@@ -1,10 +1,11 @@
 <!--
 This file is part of the pestudio solution (www.winitor.com).
-Any usage of this file outside of the context of pestudio (e.g. in third-party application, tools
-chain, etc...) must be explicitely authorized.
+Any usage of this file outside of the context of pestudio (e.g. in third-party application, tools chain, etc...) must be explicitely authorized.
+
 Please note that this file can be modified when running pestudio.
 -->
 <xml version="1.0" encoding="utf-8">
+
   <libs>
     <lib name="hal.dll" flag="0" desc="Hardware Abstraction Layer"></lib>
     <lib name="storageusage.dll" flag="1" desc="Storage Usage Library"></lib>
@@ -176,7 +177,7 @@ Please note that this file can be modified when running pestudio.
     <lib name="mtxoci.dll" flag="1"></lib>
     <lib name="msoert2.dll" flag="1"></lib>
     <lib name="iassam.dll" flag="1"></lib>
-    <lib name="wlanui.dll" flag="1"></lib>
+    <lib name="wlanui.dll" flag="1" ></lib>
     <lib name="sqlunirl.dll" flag="1"></lib>
     <lib name="adsldpc.dll" flag="1"></lib>
     <lib name="mprddm.dll" flag="1"></lib>
@@ -217,7 +218,6 @@ Please note that this file can be modified when running pestudio.
     <lib name="cryptdlg.dll" flag="1"></lib>
     <lib name="cygcrypto-1.0.0.dll" flag="1"></lib>
     <lib name="wdigest.dll" flag="1"></lib>
-    
 
     <lib name="msxfs.dll" flag="1" desc="Extension for Financial Services (XFS)">
       <fcts>
@@ -226,6 +226,7 @@ Please note that this file can be modified when running pestudio.
         <fct>WFSExecute</fct>
       </fcts>
     </lib>
+
     <lib name="schannel.dll" flag="1" desc="TLS/SSL Security provider">
       <fcts>
         <fct>SslFreeCertificate</fct>
@@ -233,6 +234,7 @@ Please note that this file can be modified when running pestudio.
         <fct>SslGetServerIdentity</fct>
       </fcts>
     </lib>
+
     <lib name="fltmgr.sys" flag="1" desc="Windows Filesystem Filter Manager">
       <fcts>
         <fct>FltEnumerateInstances</fct>
@@ -240,6 +242,7 @@ Please note that this file can be modified when running pestudio.
         <fct>FltGetVolumeFromInstance</fct>
       </fcts>
     </lib>
+
     <lib name="lz32.dll" flag="1" desc="LZ Expand/Compress Library">
       <fcts>
         <fct>LZRead</fct>
@@ -250,25 +253,25 @@ Please note that this file can be modified when running pestudio.
         <fct>LZClose</fct>
       </fcts>
     </lib>
+
     <lib name="certcli.dll" flag="1" desc="Microsoft Active Directory Certificate Services Client">
       <fcts>
       </fcts>
     </lib>
-    
-
-    
 
     <lib name="bcrypt.dll" flag="1" desc="Windows Cryptographic Primitives Library">
       <fcts>
       </fcts>
     </lib>
-    <lib name="rdpcfgex.dll" flag="1"
-      desc="Remote Desktop Session Host Server Connection Configuration Extension for the RDP protocol">
+
+    <lib name="rdpcfgex.dll" flag="1" desc="Remote Desktop Session Host Server Connection Configuration Extension for the RDP protocol">
     </lib>
+
     <lib name="rdpwsx.dll" flag="1" desc="RDP Extension Library">
       <fcts>
       </fcts>
     </lib>
+
     <lib name="activeds.dll" flag="1" desc="Active Directory Router Layer">
       <fcts>
       </fcts>
@@ -291,11 +294,13 @@ Please note that this file can be modified when running pestudio.
         <fct>SamGetAliasMembership</fct>
       </fcts>
     </lib>
+
     <lib name="avifil32.dll" flag="0" desc="Microsoft AVI File support library">
       <fcts>
         <fct>AVIFileWriteData</fct>
       </fcts>
     </lib>
+
     <lib name="wlanapi.dll" flag="1" desc="WLAN AutoConfig Client Side Library">
       <fcts>
         <fct>WinDbgExtensionDllInit</fct>
@@ -318,15 +323,10 @@ Please note that this file can be modified when running pestudio.
         <fct>AtlCreateRegistrar</fct>
       </fcts>
     </lib>
-    <lib name="drprov.dll" flag="1"
-      desc="Microsoft Remote Desktop Session Host Server Network Provider">
+    <lib name="drprov.dll" flag="1" desc="Microsoft Remote Desktop Session Host Server Network Provider">
       <fcts>
       </fcts>
     </lib>
-    
-
-    
-
     <lib name="packet.dll" flag="1">
       <fcts>
         <fct>PacketAllocatePacket</fct>
@@ -363,9 +363,7 @@ Please note that this file can be modified when running pestudio.
         <fct>PacketStopDriver</fct>
       </fcts>
     </lib>
-    
-
-    <lib name="winshfhc.dll" flag="1">
+    <lib name="winshfhc.dll" flag="1" >
       <fcts>
       </fcts>
     </lib>
@@ -379,6 +377,8 @@ Please note that this file can be modified when running pestudio.
     </lib>
     <lib name="wldap32.dll" flag="1" desc="Win32 LDAP Library">
       <fcts>
+-
+-
       </fcts>
     </lib>
     <lib name="scarddlg.dll" flag="1" desc="SCardDlg - Smart Card Common Dialog">
@@ -435,6 +435,7 @@ Please note that this file can be modified when running pestudio.
         <fct>EngLoadModule</fct>
       </fcts>
     </lib>
+
     <lib name="security.dll" flag="1" desc="Security Support Provider Interface">
       <fcts>
       </fcts>
@@ -1387,63 +1388,32 @@ Please note that this file can be modified when running pestudio.
         <fct>SHUnlockShared</fct>
         <fct>AssocCreate</fct>
         <fct>UrlHash</fct>
-        <fct
-          flag="1">UrlIsNoHistory</fct>
+        <fct>UrlIsNoHistory</fct>
         <fct>StopWatchFlush</fct>
         <fct>StopWatchMode</fct>
-       
-       
-       
-       
-       
-        <fct
-          flag="1">OutputDebugStringWrap</fct>
-       
-       
-       
-       
-       
+        <fct>OutputDebugStringWrap</fct>
         <fct>PathRemoveFileSpec</fct>
-       
-       
-       
-       
-       
-        <fct>
-        PathFindExtension</fct>
+        <fct>PathFindExtension</fct>
         <fct>PathGetDriveNumber</fct>
         <fct>PathFindFileName</fct>
-        <fct
-          flag="1">PathRenameExtension</fct>
+        <fct>PathRenameExtension</fct>
         <fct>PathIsDirectory</fct>
-        <fct>
-        PathIsDirectoryEmpty</fct>
+        <fct>PathIsDirectoryEmpty</fct>
         <fct>kernel32.FindFirstFileW</fct>
-        <fct>
-        kernel32.FindResourceW</fct>
+        <fct>kernel32.FindResourceW</fct>
         <fct>kernel32.EnumResourceNames</fct>
-        <fct>
-        user32.FindWindow</fct>
-       
-       
-       
+        <fct>user32.FindWindow</fct>
         <fct>IStream_Write</fct>
         <fct>IStream_Reset</fct>
-       
-       
-        <fct
-          flag="1">AssocQueryString</fct>
+        <fct>AssocQueryString</fct>
         <fct>PathIsURL</fct>
         <fct>UrlEscape</fct>
-        <fct
-          flag="1">SHCopyKey</fct>
+        <fct>SHCopyKey</fct>
         <fct>SHRegQueryInfoUSKey</fct>
-        <fct>
-        UrlCreateFromPath</fct> - <fct>IStream_WritePidl</fct>
+        <fct>UrlCreateFromPath</fct>
+        <fct>IStream_WritePidl</fct>
         <fct>IStream_Copy</fct>
-       
-        <fct
-          flag="1">IStream_WriteStr</fct>
+        <fct>IStream_WriteStr</fct>
       </fcts>
     </lib>
     <lib name="mssign32.dll" flag="1">
@@ -1869,6 +1839,7 @@ Please note that this file can be modified when running pestudio.
         <fct group="32" flag="1">SCardListReaders</fct>
       </fcts>
     </lib>
+
     <lib name="ntdll.dll" flag="0" desc="NT Layer">
       <fcts>
         <fct>NtQueryEaFile</fct>
@@ -2247,7 +2218,6 @@ Please note that this file can be modified when running pestudio.
         <fct>DsGetDcName</fct>
       </fcts>
     </lib>
-    
 
     <lib name="comctl32.dll" flag="0" desc="Common Controls Library">
       <fcts>
@@ -2364,8 +2334,6 @@ Please note that this file can be modified when running pestudio.
         <fct>ConfusedByAttribute</fct>
       </fcts>
     </lib>
-    
-
     <lib name="advapi32.dll" flag="0" desc="Advanced Windows 32 Base API">
       <fcts>
         <fct>SaferComputeTokenFromLevel</fct>
@@ -2655,8 +2623,6 @@ Please note that this file can be modified when running pestudio.
         <fct>WinHttpSetStatusCallback</fct>
       </fcts>
     </lib>
-    
-
     <lib name="ntdsapi.dll" flag="1" desc="Active Directory Domain Services Library">
       <fcts>
         <fct>DsListSites</fct>
@@ -2679,8 +2645,6 @@ Please note that this file can be modified when running pestudio.
         <fct></fct>
       </fcts>
     </lib>
-    
-
     <lib name="nddeapi.dll" flag="1" desc="Network DDE Share Management APIs">
       <fcts>
         <fct>NDdeShareAdd</fct>
@@ -2817,8 +2781,6 @@ Please note that this file can be modified when running pestudio.
         <fct>QueryWorkingSetEx</fct>
       </fcts>
     </lib>
-    
-
     <lib name="fwpuclnt.dll" flag="1" desc="FWP/IPsec User-Mode Library">
       <fcts>
         <fct>WSASetSocketPeerTargetName</fct>
@@ -3072,6 +3034,7 @@ Please note that this file can be modified when running pestudio.
         <fct>WritePwrScheme</fct>
       </fcts>
     </lib>
+
     <lib name="ntoskrnl.exe" flag="0" desc="NT Kernel and System">
       <fcts>
         <fct>SePrivilegeCheck</fct>
@@ -3131,7 +3094,6 @@ Please note that this file can be modified when running pestudio.
         <fct>ZwDeleteFile</fct>
       </fcts>
     </lib>
-    
 
     <lib name="user32.dll" flag="0" desc="Multi-User Windows USER API Client Library">
       <fcts>
@@ -3236,6 +3198,7 @@ Please note that this file can be modified when running pestudio.
         <fct>IsValidLinkInfo</fct>
       </fcts>
     </lib>
+
     <lib name="credui.dll" flag="1" desc="Credential Manager User Interface Library">
       <fcts>
         <fct>CredUnPackAuthenticationBuffer</fct>
@@ -3297,20 +3260,24 @@ Please note that this file can be modified when running pestudio.
         <fct group="30" flag="1">ASN1BERDecCharString</fct>
       </fcts>
     </lib>
+    
     <lib name="ntshrui.dll" flag="1" desc="Shell extensions for sharing">
       <fcts>
         <fct>GetNetResourceFromLocalPath</fct>
         <fct>CanShareFolderW</fct>
       </fcts>
     </lib>
+    
     <lib name="dhcpcsvc.dll" flag="1" desc="DHCP Client Service">
       <fcts>
       </fcts>
     </lib>
+
     <lib name="verifier.dll" flag="1" desc="Standard application verifier provider">
       <fcts>
       </fcts>
     </lib>
+    
     <lib name="imagehlp.dll" flag="1" desc="Windows Image Helper">
       <fcts>
         <fct>UpdateDebugInfoFileEx</fct>
@@ -3556,8 +3523,6 @@ Please note that this file can be modified when running pestudio.
       <fcts>
       </fcts>
     </lib>
-    
-
     <lib name="usp10.dll" flag="1" desc="Uniscribe Unicode script processor">
       <fcts>
         <fct>ScriptBreak</fct>
@@ -3734,6 +3699,7 @@ Please note that this file can be modified when running pestudio.
         <fct>AtlAxWinTerm</fct>
       </fcts>
     </lib>
+
     <lib name="oleaut32.dll" flag="0" desc="oleaut32 library">
       <fcts>
         <fct>GetActiveObject</fct>
@@ -3800,6 +3766,7 @@ Please note that this file can be modified when running pestudio.
         <fct>SamrQueryInformationUser</fct>
       </fcts>
     </lib>
+
     <lib name="cabinet.dll" flag="1" desc="Microsoft Cabinet File API">
       <fcts>
       </fcts>
@@ -3864,11 +3831,6 @@ Please note that this file can be modified when running pestudio.
         <fct>FindClosePrinterChangeNotification</fct>
       </fcts>
     </lib>
-    
-
-    
-
-    
 
     <lib name="" flag="0">
       <fcts>
@@ -3904,6 +3866,7 @@ Please note that this file can be modified when running pestudio.
         <fct>GetProcessesByName</fct>
         <fct>DownloadFileAsync</fct>
         <fct>ServiceDllUnloadOnStop</fct>
+
       </fcts>
     </lib>
   </libs>
